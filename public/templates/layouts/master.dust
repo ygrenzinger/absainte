@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{+title /}</title>
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+
+<header class="navigation">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      <img src="img/absainte-paris-logo.jpg" alt="Absainte Paris">
+    </a>
+    <a href="" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li class="nav-link more"><a href="javascript:void(0)">Collections</a>
+          <ul class="submenu">
+            <li><a href="javascript:void(0)">Love me tender</a></li>
+            <li><a href="javascript:void(0)">Sweet aristocratie</a></li>
+          </ul>
+        </li>
+        <li class="nav-link"><a href="javascript:void(0)">News</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Buy</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+      </ul>
+    </div>
+    <div class="navigation-tools">
+      <div class="search-bar">
+        <div class="search-and-submit">
+          <input type="search" placeholder="Enter Search" />
+          <button type="submit">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="">
+          </button>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="sign-up">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<div class="main">
+    {+body /}
+    <div class="push"></div>
+</div>
+
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
+  </div>
+    <ul>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
+    </ul>
+
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="">
+          </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="">
+        </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="">
+        </a></li>
+      </ul>
+    </div>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

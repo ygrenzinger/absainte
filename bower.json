@@ -1,0 +1,16 @@
+{
+  "name": "absainte",
+  "authors": [
+    "yannick grenzinger <yannick.grenzinger@gmail.com>"
+  ],
+  "description": "Absainte website",
+  "dependencies": {
+    "dustjs-linkedin-helpers": "^1.1.1",
+    "dustjs-linkedin": "^2.0.3",
+    "refills": "~0.0.2",
+    "bourbon": "~3.1.8",
+    "neat": "~1.5.0",
+    "bitters": "~0.10.0",
+    "jquery": "~2.1.1"
+  }
+}
