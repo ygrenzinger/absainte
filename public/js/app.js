@@ -1,9 +1,8 @@
 'use strict';
 
 $(document).ready(function() {
-  var menu = $('#navigation-menu');
-  var menuToggle = $('#js-mobile-menu');
-  var signUp = $('.sign-up');
+  var menu = $('.centered-navigation-menu');
+  var menuToggle = $('.centered-navigation-menu-button');
 
   $(menuToggle).on('click', function(e) {
     e.preventDefault();
@@ -12,14 +11,5 @@ $(document).ready(function() {
         menu.removeAttr('style');
       }
     });
-  });
-
-  // underline under the active nav item
-  $(".nav .nav-link").click(function() {
-    $(".nav .nav-link").each(function() {
-      $(this).removeClass("active-nav-item");
-    });
-    $(this).addClass("active-nav-item");
-    $(".nav .more").removeClass("active-nav-item");
   });
 });
