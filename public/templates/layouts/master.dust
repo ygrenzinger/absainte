@@ -7,62 +7,52 @@
 </head>
 <body>
 
-
-
-<div class="main">
+<header>
   <div class="logo">
     <a href="/">
       <img src="img/absainte-paris-logo.jpg" alt="Absainte Paris">
     </a>
   </div>
-  <header class="centered-navigation">
+  <div class="centered-navigation">
     <div class="centered-navigation-wrapper">
-      <a href="" class="centered-navigation-menu-button">Navigation</a>
+      <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
       <ul class="centered-navigation-menu">
-        <li class="nav-link more"><a href="javascript:void(0)">Collections</a>
+      <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="newsMenu"/}</a></li>
+        <li class="nav-link more"><a href="javascript:void(0)">{@pre type="content" key="collectionMenu"/}</a>
           <ul class="submenu">
             <li><a href="javascript:void(0)">Love me tender</a></li>
             <li><a href="javascript:void(0)">Sweet aristocratie</a></li>
           </ul>
         </li>
-        <li class="nav-link"><a href="javascript:void(0)">News</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">Buy</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="illustrationMenu"/}</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="shopMenu"/}</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="aboutMenu"/}</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="contactMenu"/}</a></li>
       </ul>
     </div>
-  </header>
+  </div>
+</header>
+
+<div class="main">
 
 
     {+body /}
 
 
     <footer class="footer">
-      <div class="footer-logo">
-        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
-      </div>
         <ul>
-          <li><a href="javascript:void(0)">About</a></li>
+          <li><a href="javascript:void(0)">Newsletter</a></li>
           <li><a href="javascript:void(0)">Contact</a></li>
           <li><a href="javascript:void(0)">Products</a></li>
         </ul>
 
         <div class="footer-secondary-links">
           <ul>
+            <li><a href="javascript:void(0)">Size, Fit & Care</a></li>
             <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-            <li><a href="javascript:void(0)">Privacy Policy</a></li>
           </ul>
 
           <ul class="footer-social">
-            <li><a href="javascript:void(0)">
-              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="">
-              </a></li>
-            <li><a href="javascript:void(0)">
-              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="">
-            </a></li>
-            <li><a href="javascript:void(0)">
-              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="">
-            </a></li>
           </ul>
         </div>
     </footer>

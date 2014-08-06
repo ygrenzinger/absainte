@@ -1,3 +1,10 @@
+header {
+  width:100%;
+  position:fixed;
+  top:0px;
+  left: 0px;
+  background-color: #000;
+}
 
 .logo {
   text-align: center;
@@ -5,7 +12,7 @@
 
 .centered-navigation {
   $centered-navigation-padding: 1em;
-  $centered-navigation-background: lighten(#000, 10%);
+  $centered-navigation-background: #000;
   $centered-navigation-color: #fff;
   $centered-navigation-color-hover: transparentize(#fff, 0.3);
   $centered-navigation-height: 60px;
@@ -20,7 +27,6 @@
   font-family: $sans-serif;
   height: $centered-navigation-height;
   width: 100%;
-  z-index: 9999;
 
   .centered-navigation-menu-button {
     color: $centered-navigation-color;
@@ -41,15 +47,6 @@
     }
   }
 
-  // Nav menu
-
-  .centered-navigation-wrapper {
-    @include outer-container;
-    @include clearfix;
-    position: relative;
-    z-index: 999;
-  }
-
   ul.centered-navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
@@ -58,7 +55,6 @@
     overflow: visible;
     padding: 0;
     width: 100%;
-    z-index: 99999;
 
     @include media ($horizontal-bar-mode) {
       display: block;
