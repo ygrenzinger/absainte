@@ -10,9 +10,14 @@ module.exports = function (router) {
 
 
     router.get('/', function (req, res) {
-        
+
         res.render('index', model);
-        
+
+    });
+    
+    router.get('/setLocale/:locale', function (req, res) {
+        res.cookie('locale', req.params.locale);
+        res.redirect('/');
     });
 
 };
