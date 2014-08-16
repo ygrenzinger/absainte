@@ -15,7 +15,15 @@ module.exports = function (router) {
 
     router.get('/setLocale/:locale', function (req, res) {
         res.cookie('locale', req.params.locale);
-        res.redirect('/');
+        res.send(200);
+    });
+
+    router.get('/getLocale', function (req, res) {
+        if (!req.cookies.locale) {
+          res.send({ locale: 'en-US' });
+        } else {
+          res.send({ locale: req.cookies.locale });
+        }
     });
 
     router.get('/admin', function (req, res) {

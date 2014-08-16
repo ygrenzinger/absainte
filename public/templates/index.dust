@@ -2,5 +2,5 @@
 
 {<body}
     {@pre type="content" key="greeting"/}
-    <img src="img/absainte-home.jpg" alt="">
+    <img class="splash-screen" src="img/absainte-home.jpg" alt="">
 {/body}

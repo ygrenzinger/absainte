@@ -1,1 +1,19 @@
 $black: #000;
+$white: #fff;
+$dark-blue: #0000cd;
+
+@function grayscale($value) {
+  @return #{ "grayscale(" + $value + ")" };
+}
+
+@mixin filter($properties) {
+  @include prefixer(filter, $properties, webkit moz spec);
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

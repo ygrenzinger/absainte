@@ -1,12 +1,49 @@
 header {
   width:100%;
-  position:fixed;
-  top:0px;
-  left: 0px;
   background-color: #000;
 }
 
+.top-bar {
+  color: $white;
+  background-color: $black;
+  position:fixed;
+  top:0px;
+  left: 0px;
+  padding: 0.2em 1em;
+  width: 100%;
+
+  div {
+    display: inline-block;
+  }
+
+  .language {
+    float: right;
+    .flag {
+      padding: 0 5px;
+      vertical-align: bottom;
+
+      @include filter(grayscale(100%));
+      &.selected {
+        @include filter(grayscale(0%));
+      }
+      &:hover {
+        @include filter(grayscale(0%));
+      }
+    }
+  }
+
+  .share {
+    padding: 0 8px;
+    font-size: 20px;
+    color: darken($white, 40%);
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
 .logo {
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -49,12 +86,10 @@ header {
 
   ul.centered-navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
-    clear: both;
     display: none;
     margin: 0 auto;
     overflow: visible;
     padding: 0;
-    width: 100%;
 
     @include media ($horizontal-bar-mode) {
       display: block;

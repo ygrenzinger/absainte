@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8" />
     <title>{+title /}</title>
@@ -9,16 +9,30 @@
 <body>
 
 <header>
+  <div class="top-bar">
+    <div>
+      <span>{@pre type="content" key="sharePitch"/}
+      <i class="share fa fa-facebook" data-share-url="https://www.facebook.com/sharer/sharer.php?u="></i>
+      <i class="share fa fa-google-plus" data-share-url="https://plus.google.com/share?url="></i>
+      <i class="share fa fa-pinterest" data-share-url="http://pinterest.com/pinthis?url="></i>
+      <i class="share fa fa-twitter" data-share-url='http://twitter.com/share?text={@pre type="content" key="twitterShare"/}&url='></i>
+    </div>
+    <div class="language">
+      <img class="flag" data-locale="fr-FR" src="img/fr-FR.png"/>
+      <img class="flag" data-locale="en-US" src="img/en-US.png"/>
+    </div>
+  </div>
+
   <div class="logo">
     <a href="/">
-      <img src="img/absainte-paris-logo.jpg" alt="Absainte Paris">
+      <img src="img/absainte-paris-logo.jpg" alt="Absainte Paris"/>
     </a>
   </div>
   <div class="centered-navigation">
     <div class="centered-navigation-wrapper">
       <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
       <ul class="centered-navigation-menu">
-      <li class="nav-link"><a href="javascript:void(0)"><i class="fa fa-home fa-fw"></i>{@pre type="content" key="newsMenu"/}</a></li>
+      <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="newsMenu"/}</a></li>
         <li class="nav-link more"><a href="javascript:void(0)">{@pre type="content" key="collectionMenu"/}</a>
           <ul class="submenu">
             <li><a href="javascript:void(0)">Love me tender</a></li>
@@ -41,21 +55,10 @@
 
 
     <footer class="footer">
-        <ul>
-          <li><a href="javascript:void(0)">Newsletter</a></li>
-          <li><a href="javascript:void(0)">Contact</a></li>
-          <li><a href="javascript:void(0)">Products</a></li>
-        </ul>
-
-        <div class="footer-secondary-links">
-          <ul>
-            <li><a href="javascript:void(0)">Size, Fit & Care</a></li>
-            <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-          </ul>
-
-          <ul class="footer-social">
-          </ul>
-        </div>
+      <div class="center">
+        <a href="javascript:void(0)">Size, Fit & Care</a>
+        <a href="javascript:void(0)">Terms and Conditions</a>
+      </div>
     </footer>
 </div>
 
