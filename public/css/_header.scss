@@ -1,20 +1,13 @@
 header {
   width:100%;
   background-color: #000;
+  position: relative;
 }
 
 .top-bar {
   color: $white;
   background-color: $black;
-  position:fixed;
-  top:0px;
-  left: 0px;
-  padding: 0.2em 1em;
   width: 100%;
-
-  div {
-    display: inline-block;
-  }
 
   .language {
     float: right;
@@ -31,19 +24,10 @@ header {
       }
     }
   }
-
-  .share {
-    padding: 0 8px;
-    font-size: 20px;
-    color: darken($white, 40%);
-    &:hover {
-      color: $white;
-    }
-  }
+  @include clearfix;
 }
 
 .logo {
-  margin-top: 30px;
   text-align: center;
 }
 

@@ -1,10 +1,38 @@
 .footer {
+  position:fixed;
+  bottom:0px;
+  left: 0px;
+  width: 100%;
   color: $white;
-  width:100%;
-  
-  .center {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
+  background-color: $black;
+  text-align: center;
+  padding: 0 1em;
+  line-height: 30px;
+  @include row();
+
+  .social {
+    @include media(480px) {
+      @include span-columns(6);
+    }
+    .share {
+      padding: 0 5px;
+      font-size: 20px;
+      color: $pink;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .follow {
+
+    @include media(480px) {
+        @include span-columns(6);
+    }
+
+    a {
+      padding: 0 5px;
+      font-size: 20px;
+    }
   }
 }

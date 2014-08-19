@@ -12,7 +12,8 @@
     "neat": "~1.5.0",
     "bitters": "~0.10.0",
     "jquery": "~2.1.1",
-    "ionicons": "~1.5.2",
-    "bootstrap": "~3.2.0"
+    "angular": "~1.2.22",
+    "ngUpload": "~0.5.11",
+    "foundation": "~5.3.3"
   }
 }

@@ -1,5 +1,33 @@
 {>"layouts/master_admin" /}
 
 {<body}
-    Angular
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="#">
+        Absainte
+        </a>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon">
+      <a href="#">
+        <span>menu</span>
+      </a>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li><a href="#/illustrations">Illustrations</a></li>
+      <li class="divider"></li>
+    </ul>
+  </section>
+</nav>
+
+
+<div ng-view class="small-11 small-centered columns">
+
 {/body}

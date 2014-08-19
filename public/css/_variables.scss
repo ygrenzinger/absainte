@@ -1,6 +1,9 @@
 $black: #000;
 $white: #fff;
 $dark-blue: #0000cd;
+$pink: #FFB6C1;
+
+$mobile: 420px;
 
 @function grayscale($value) {
   @return #{ "grayscale(" + $value + ")" };

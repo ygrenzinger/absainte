@@ -1,6 +1,5 @@
 {>"layouts/master_front" /}
 
 {<body}
-    {@pre type="content" key="greeting"/}
     <img class="splash-screen" src="img/absainte-home.jpg" alt="">
 {/body}

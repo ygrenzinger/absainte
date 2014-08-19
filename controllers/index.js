@@ -1,16 +1,15 @@
 'use strict';
 
 
-var IndexModel = require('../models/index');
-
+//var IndexModel = require('../models/index');
 
 module.exports = function (router) {
 
-    var model = new IndexModel();
+    //var model = new IndexModel();
 
 
     router.get('/', function (req, res) {
-        res.render('index', model);
+        res.render('index');
     });
 
     router.get('/setLocale/:locale', function (req, res) {
@@ -24,10 +23,6 @@ module.exports = function (router) {
         } else {
           res.send({ locale: req.cookies.locale });
         }
-    });
-
-    router.get('/admin', function (req, res) {
-        res.render('admin', model);
     });
 
 };

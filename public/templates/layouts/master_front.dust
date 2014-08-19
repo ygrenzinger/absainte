@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{+title /}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css"/>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 
 <header>
   <div class="top-bar">
-    <div>
-      <span>{@pre type="content" key="sharePitch"/}
-      <i class="share fa fa-facebook" data-share-url="https://www.facebook.com/sharer/sharer.php?u="></i>
-      <i class="share fa fa-google-plus" data-share-url="https://plus.google.com/share?url="></i>
-      <i class="share fa fa-pinterest" data-share-url="http://pinterest.com/pinthis?url="></i>
-      <i class="share fa fa-twitter" data-share-url='http://twitter.com/share?text={@pre type="content" key="twitterShare"/}&url='></i>
-    </div>
     <div class="language">
       <img class="flag" data-locale="fr-FR" src="img/fr-FR.png"/>
       <img class="flag" data-locale="en-US" src="img/en-US.png"/>
@@ -49,21 +45,36 @@
 </header>
 
 <div class="main">
-
-
     {+body /}
-
-
-    <footer class="footer">
-      <div class="center">
-        <a href="javascript:void(0)">Size, Fit & Care</a>
-        <a href="javascript:void(0)">Terms and Conditions</a>
-      </div>
-    </footer>
 </div>
 
+<footer class="footer">
+  <div class="social">
+    <span>{@pre type="content" key="sharePitch"/}</span>
+    <i class="share fa fa-facebook" data-share-url="https://www.facebook.com/sharer/sharer.php?u="></i>
+    <i class="share fa fa-google-plus" data-share-url="https://plus.google.com/share?url="></i>
+    <i class="share fa fa-pinterest" data-share-url="http://pinterest.com/pinthis?url="></i>
+    <i class="share fa fa-twitter" data-share-url='http://twitter.com/share?text={@pre type="content" key="twitterShare"/}&url='></i>
+  </div>
+  <div class="follow">
+    <span>{@pre type="content" key="follow"/}</span>
+    <a href="http://eepurl.com/1a_51"><i class="fa fa-envelope"></i></a>
+    <a href="https://www.facebook.com/pages/Absainte-Harnais-bijoux-de-corps/209587772440048?fref=ts"><i class="fa fa-thumbs-o-up"></i></a>
+  </div>
+</footer>
 
-<script src="/components/jquery/dist/jquery.js"></script>
-<script src="/js/app.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/front.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
 </body>
 </html>

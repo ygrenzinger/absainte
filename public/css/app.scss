@@ -9,6 +9,10 @@
 @import "_footer";
 @import "_index";
 
+a {
+  color: $pink;
+}
+
 html, body {
  height: 100%;
  background-color: $black;
@@ -18,4 +22,10 @@ html, body {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  margin-bottom: 80px;
+
+  @include media(480px) {
+    margin-bottom: 40px;
+  }
 }
