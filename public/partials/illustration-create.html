@@ -1,14 +1,13 @@
 
 <div class="row">
   <div class="small-12">
-    <form ng-upload="uploadComplete(content)" action="/admin/illustration/create">
-    <input type="hidden" name="_crsf" value="<%= _csrf %>" />
+    <form ng-submit="submit()" >
     <div class="row">
       <div class="small-3 columns">
         <label for="name" class="right inline">Nom</label>
       </div>
       <div class="small-9 columns">
-        <input type="text" id="name" name="name" placeholder="Nom de l'illustration">
+        <input type="text" id="name" ng-model="name" placeholder="Nom de l'illustration">
       </div>
     </div>
     <div class="row">
@@ -16,12 +15,12 @@
         <label for="file" class="right inline">Image</label>
       </div>
       <div class="small-9 columns">
-        <input type="file" id="file" name="file" />
+        <input type="file" ng-file-select="onFileSelect($files)">
       </div>
     </div>
     <div class="row">
       <div class="small-12 columns">
-        <input type="submit" class="button expand" value="Submit" ng-disabled="$isLoading"  />
+        <input type="submit" class="button expand" value="Submit"  />
       </div>
     </div>
     </form>

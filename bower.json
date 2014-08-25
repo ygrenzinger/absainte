@@ -13,7 +13,9 @@
     "bitters": "~0.10.0",
     "jquery": "~2.1.1",
     "angular": "~1.2.22",
-    "ngUpload": "~0.5.11",
-    "foundation": "~5.3.3"
+    "foundation": "~5.3.3",
+    "ng-file-upload": "~1.6.5",
+    "angular-route": "~1.2.23",
+    "angular-cookies": "~1.2.23"
   }
 }

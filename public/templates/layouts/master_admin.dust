@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{+title /}</title>
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/normalize.min.css" rel="stylesheet">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/foundation.min.css" rel="stylesheet">
+    <link href="/components/foundation/css/normalize.css" rel="stylesheet">
+    <link href="/components/foundation/css/foundation.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/admin.css"/>
 </head>
 <body>
@@ -17,11 +17,12 @@
     <div>Angular seed app: v<span app-version></span></div>
 </div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/js/foundation.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
-<script src="/components/ngUpload/ng-upload.js"></script>
+<script src="/components/jquery/dist/jquery.min.js"></script>
+<script src="/components/foundation/js/foundation.min.js"></script>
+<script src="/components/angular/angular.min.js"></script>
+<script src="/components/angular-route/angular-route.min.js"></script>
+<script src="/components/angular-cookies/angular-cookies.min.js"></script>
+<script src="/components/ng-file-upload/angular-file-upload.min.js"></script>
 <script src="/js/admin/app.js"></script>
 <script src="/js/admin/services.js"></script>
 <script src="/js/admin/controllers/illustrations.js"></script>

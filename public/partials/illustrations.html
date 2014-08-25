@@ -1,7 +1,7 @@
 <p><a href="#/illustrations/create">Nouvelle illustration</a></p>
 <div class="row">
   <div class="medium-4 small-6 columns" ng-repeat="illustration in illustrations">
-    <img style="width: 100%;" src="http://absainte.com/wp-content/uploads/2013/03/chatwomen-208x294.jpg">
+    <img style="width: 100%;" src="{{illustration.url}}">
     <h6 class="panel">{{illustration.name}}</h6>
   </div>
 </div>
