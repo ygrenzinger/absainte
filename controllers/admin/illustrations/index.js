@@ -2,7 +2,7 @@
 var _ = require('lodash'),
   fs = require('fs'),
   image = require('../../../lib/image.js'),
-  permalink = require('../../../lib/permalink.js'),
+  stringUtil = require('../../../lib/stringUtil.js'),
   Illustration = require('../../../models/illustrationModel.js');
 
 module.exports = function(router) {
@@ -62,8 +62,11 @@ module.exports = function(router) {
       res.send(400, 'No name');
     } else {
       var name = req.body.name;
+      var file = req.files.file;
+      var permalink = stringUtil.createPermalink(name);
+      file.name = permalink + '.' + file.name.split('.').pop();
       Illustration.find({
-        permalink: permalink.create(name)
+        permalink: permalink
       }, function(err, illustration) {
         if (!_.isEmpty(illustration)) {
           res.send(409, name + ' existe déjà !');
