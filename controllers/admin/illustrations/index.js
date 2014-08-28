@@ -34,7 +34,7 @@ module.exports = function(router) {
     var name = req.body.name;
     var newIllustration = new Illustration({
       name: name,
-      permalink: permalink.create(name),
+      permalink: stringUtil.createPermalink(name),
       url: ''
     });
     image.saveToDisk('illustrations', file)
