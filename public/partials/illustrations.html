@@ -2,6 +2,6 @@
 <div class="row">
   <div class="medium-4 small-6 columns" ng-repeat="illustration in illustrations">
     <img style="width: 100%;" src="{{illustration.url}}">
-    <h6 class="panel">{{illustration.name}}</h6>
+    <h6 class="panel"><a ng-href="#/illustrations/{{illustration.permalink}}">{{illustration.name}}</a></h6>
   </div>
 </div>

@@ -19,13 +19,13 @@ module.exports = function(router) {
 
   router.get('/:permalink', function(req, res) {
 
-    Illustration.find({
-      name: req.params.name
-    }, function(err, illustrations) {
+    Illustration.findOne({
+      permalink: req.params.permalink
+    }, function(err, illustration) {
       if (err) {
         res.send(500, err);
       }
-      res.send(illustrations);
+      res.send(illustration);
     });
   });
 

@@ -26,6 +26,7 @@
 <script src="/js/admin/app.js"></script>
 <script src="/js/admin/services.js"></script>
 <script src="/js/admin/controllers/illustrations.js"></script>
+<script src="/js/admin/controllers/illustration.js"></script>
 <script src="/js/admin/controllers/illustration-create.js"></script>
 <script src="/js/admin/filters.js"></script>
 <script src="/js/admin/directives.js"></script>

@@ -1,0 +1,25 @@
+
+<div class="row">
+  <div class="small-12">
+    <form ng-submit="submit()" >
+    <div class="row">
+      <div class="small-3 columns">
+        <label for="name" class="right inline">Nom</label>
+      </div>
+      <div class="small-9 columns">
+        <input type="text" id="name" ng-model="illustration.name" placeholder="Nom de l'illustration">
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <img style="width: 100%;" src="{{illustration.url}}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <input type="submit" class="button expand" value="Change" />
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
