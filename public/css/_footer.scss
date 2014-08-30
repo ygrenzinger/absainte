@@ -11,7 +11,10 @@
   @include row();
 
   a {
-    color: $pink;
+    color: $gold;
+    &:hover {
+      color: $white;
+    }
   }
 
   .social {
@@ -21,7 +24,7 @@
     .share {
       padding: 0 5px;
       font-size: 20px;
-      color: $pink;
+      color: $gold;
       &:hover {
         color: $white;
       }
