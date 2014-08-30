@@ -3,7 +3,7 @@ $white: #fff;
 $dark-blue: #0000cd;
 $pink: #FFB6C1;
 
-$mobile: 420px;
+$mobile: new-breakpoint(max-width 480px 4);
 
 @function grayscale($value) {
   @return #{ "grayscale(" + $value + ")" };

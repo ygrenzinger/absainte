@@ -35,11 +35,13 @@ module.exports = function(router) {
     var newIllustration = new Illustration({
       name: name,
       permalink: stringUtil.createPermalink(name),
-      url: ''
+      imageUrl: '',
+      thumbnailUrl: ''
     });
     image.saveToDisk('illustrations', file)
-      .then(function(relativeUrl) {
-        newIllustration.url = relativeUrl;
+      .then(function(result) {
+        newIllustration.imageUrl = result.imageUrl;
+        newIllustration.thumbnailUrl = result.thumbnailUrl;
         newIllustration.save(function(err) {
           if (err) {
             console.log('newIllustration.save error', err);

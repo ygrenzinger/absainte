@@ -1,0 +1,103 @@
+.illustrations {
+
+	.illustration-thumbnail {
+		position: relative;
+		display: inline-block;
+
+		@include media(768px) {
+			@include span-columns(3);
+		}
+
+		@include media(min-width 480px max-width 768px) {
+			@include span-columns(6);
+		}
+
+		@include span-columns(12);
+	}
+
+	.full-size {
+			max-height: 80%;
+	}
+
+	.title {
+		font-size: 1.5em;
+		font-style: italic;
+		font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	}
+
+	a.illustration-link {
+		margin: 0 20px;
+		padding: 18px 20px;
+	}
+
+	a.illustration-link::before,
+	a.illustration-link::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0px;
+		background: #fff;
+		content: '';
+		opacity: 1;
+		-webkit-transition: opacity 0.3s, height 0.3s;
+		-moz-transition: opacity 0.3s, height 0.3s;
+		transition: opacity 0.3s, height 0.3s;
+	}
+
+	a.illustration-link::after {
+		top: 100%;
+		opacity: 1;
+		height: 0px;
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+		-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+		transition: transform 0.3s, opacity 0.3s;
+		-webkit-transform: translateY(-10px);
+		-moz-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	a.illustration-link span:first-child {
+		z-index: 2;
+		display: block;
+		font-weight: 300;
+	}
+
+	a.illustration-link span:last-child {
+		z-index: 1;
+		display: block;
+		padding: 8px 0 0 0;
+		color: $pink;
+		text-shadow: none;
+		text-transform: none;
+		font-style: italic;
+		font-size: 1.25em;
+		font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+		opacity: 0;
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+		-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+		transition: transform 0.3s, opacity 0.3s;
+		-webkit-transform: translateY(-100%);
+		-moz-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+
+	a.illustration-link:hover::before,
+	a.illustration-link:hover::after,
+	a.illustration-link:focus::before,
+	a.illustration-link:focus::after {
+		opacity: 1;
+		height: 1px;
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+
+	a.illustration-link:hover span:last-child,
+	a.illustration-link:focus span:last-child {
+		opacity: 1;
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+}

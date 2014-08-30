@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-controllers.controller('IllustrationCtrl', ['$scope', '$http', '$routeParams'
+controllers.controller('IllustrationCtrl', ['$scope', '$http', '$routeParams',
   function($scope, $http, $routeParams) {
     var permalink = $routeParams.permalink;
     $scope.illustration = null;

@@ -10,6 +10,10 @@
   line-height: 30px;
   @include row();
 
+  a {
+    color: $pink;
+  }
+
   .social {
     @include media(480px) {
       @include span-columns(6);

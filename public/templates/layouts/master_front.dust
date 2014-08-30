@@ -7,21 +7,21 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
 </head>
 <body>
 
 <header>
   <div class="top-bar">
     <div class="language">
-      <img class="flag" data-locale="fr-FR" src="img/fr-FR.png"/>
-      <img class="flag" data-locale="en-US" src="img/en-US.png"/>
+      <img class="flag" data-locale="fr-FR" src="/img/fr-FR.png"/>
+      <img class="flag" data-locale="en-US" src="/img/en-US.png"/>
     </div>
   </div>
 
   <div class="logo">
     <a href="/">
-      <img src="img/absainte-paris-logo.jpg" alt="Absainte Paris"/>
+      <img src="/img/absainte-paris-logo.jpg" alt="Absainte Paris"/>
     </a>
   </div>
   <div class="centered-navigation">
@@ -35,7 +35,7 @@
             <li><a href="javascript:void(0)">Sweet aristocratie</a></li>
           </ul>
         </li>
-        <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="illustrationMenu"/}</a></li>
+        <li class="nav-link"><a href="/illustrations">{@pre type="content" key="illustrationMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="shopMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="aboutMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="contactMenu"/}</a></li>

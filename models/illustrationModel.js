@@ -8,7 +8,8 @@ var illustrationModel = function () {
     var illustrationSchema = mongoose.Schema({
         name: String,
         permalink: String,
-        url: String
+        imageUrl: String,
+        thumbnailUrl: String
     });
 
     return mongoose.model('Illustration', illustrationSchema);

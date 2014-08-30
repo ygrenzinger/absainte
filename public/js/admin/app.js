@@ -14,8 +14,8 @@ angular.module('absainteAdmin', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/illustrations', {templateUrl: '/partials/illustrations.html', controller: 'IllustrationsCtrl'});
-  $routeProvider.when('/illustrations/:permalink', {templateUrl: '/partials/illustration.html', controller: 'IllustrationCtrl'});
-  $routeProvider.when('/illustrations/create', {templateUrl: '/partials/illustration-create.html', controller: 'IllustrationCreateCtrl'});
+  $routeProvider.when('/illustration/:permalink', {templateUrl: '/partials/illustration.html', controller: 'IllustrationCtrl'});
+  $routeProvider.when('/illustration-create', {templateUrl: '/partials/illustration-create.html', controller: 'IllustrationCreateCtrl'});
   $routeProvider.otherwise({redirectTo: '/'});
 }])
 .run(function ($http, $cookies) {
