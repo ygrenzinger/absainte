@@ -7,7 +7,7 @@
     <li class="name">
       <h1>
         <a href="#">
-        Absainte
+        Absainte <span app-version></span>
         </a>
       </h1>
     </li>
@@ -30,9 +30,6 @@
 
 <div ng-view class="small-11 small-centered columns"></div>
 
-<div ng-controller="AlertCtrl as alertCtrl">
-      <span>{{alertCtrl.test}}</span>
-      <alert ng-repeat="alert in alertCtrl.alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
-</div>
+<div ng-include src="'/partials/alert.html'"></div>
 
 {/body}

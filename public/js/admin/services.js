@@ -1,15 +1,12 @@
 'use strict';
 
 /* Services */
-function AlertService() {
+function AlertService($timeout) {
 
-  this.alerts = [
-    { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
-    { type: 'success round', msg: 'Well done! You successfully read this important alert message.' }
-  ];
+  this.alerts = [];
 
   this.addError = function(msg) {
-    this.alerts.push({type: 'danger round', msg: msg});
+    this.alerts.push({type: 'alert round', msg: msg});
   };
 
   this.addInfo = function(msg) {

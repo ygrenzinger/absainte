@@ -56,9 +56,6 @@ module.exports = function(router) {
 
   router.post('/', function(req, res) {
     res.setHeader('Content-Type', 'text/json');
-
-    // process file
-      res.send(400, 'No file uploaded');
     if (!req.files.file || req.files.file.size === 0) {
       res.send(400, 'No file uploaded');
     } else if (!req.body.name) {

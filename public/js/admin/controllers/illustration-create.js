@@ -1,12 +1,20 @@
 'use strict';
 
-controllers.controller('IllustrationCreateCtrl', ['$scope', '$upload', function($scope, $upload) {
-  $scope.files = [];
+controllers.controller('IllustrationCreateCtrl', ['$scope', '$upload', 'AlertService',
+function($scope, $upload, AlertService) {
+
+  $scope.response = null;
+
+  var reset = function() {
+    $scope.name = '';
+    $scope.files = [];
+    $scope.progress = 0;
+  };
+  reset();
+
   $scope.onFileSelect = function($files) {
     $scope.files = $files;
   };
-
-  $scope.name = '';
 
   $scope.submit = function() {
     $scope.upload = $upload.upload({
@@ -15,12 +23,14 @@ controllers.controller('IllustrationCreateCtrl', ['$scope', '$upload', function(
       data: {name: $scope.name},
       file: $scope.files,
     }).progress(function(evt) {
-      console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
+      var progress = parseInt(100.0 * evt.loaded / evt.total);
+      console.log('percent: ' + progress);
     }).success(function(data, status, headers, config) {
-      // file is uploaded successfully
+      $scope.response = {type: 'info radius', msg: data};
       console.log(data);
+      reset();
     }).error(function(data, status, headers, config) {
-      // file is uploaded successfully
+      $scope.response = {type: 'alert round', msg: data};
       console.log(status);
     });
   };

@@ -2,7 +2,7 @@
 
 controllers.controller('AlertCtrl', ['AlertService',
   function(AlertService) {
-    this.test ="sdfsqdf";
+    this.close = AlertService.close;
     this.alerts = AlertService.alerts;
   }
 ]);

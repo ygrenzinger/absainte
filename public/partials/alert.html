@@ -1,0 +1,3 @@
+<div ng-controller="AlertCtrl as alertCtrl">
+      <alert ng-repeat="alert in alertCtrl.alerts" type="alert.type" close="alertCtrl.close($index)">{{alert.msg}}</alert>
+</div>
