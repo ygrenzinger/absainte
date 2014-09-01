@@ -16,6 +16,7 @@
     "foundation": "~5.3.3",
     "ng-file-upload": "~1.6.5",
     "angular-route": "~1.2.23",
-    "angular-cookies": "~1.2.23"
+    "angular-cookies": "~1.2.23",
+    "angular-foundation": "~0.3.1"
   }
 }

@@ -7,6 +7,7 @@ angular.module('absainteAdmin', [
   'ngRoute',
   'ngCookies',
   'angularFileUpload',
+  'mm.foundation',
   'absainteAdmin.filters',
   'absainteAdmin.services',
   'absainteAdmin.directives',
