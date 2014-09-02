@@ -8,6 +8,7 @@ angular.module('absainteAdmin', [
   'ngCookies',
   'angularFileUpload',
   'mm.foundation',
+  'ngCkeditor',
   'absainteAdmin.filters',
   'absainteAdmin.services',
   'absainteAdmin.directives',
@@ -17,6 +18,7 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/illustrations', {templateUrl: '/partials/illustrations.html', controller: 'IllustrationsCtrl'});
   $routeProvider.when('/illustration/:permalink', {templateUrl: '/partials/illustration.html', controller: 'IllustrationCtrl'});
   $routeProvider.when('/illustration-create', {templateUrl: '/partials/illustration-create.html', controller: 'IllustrationCreateCtrl'});
+  $routeProvider.when('/blog-create', {templateUrl: '/partials/blog-create.html', controller: 'BlogCreateCtrl'});
   $routeProvider.otherwise({redirectTo: '/'});
 }])
 .run(function ($http, $cookies) {

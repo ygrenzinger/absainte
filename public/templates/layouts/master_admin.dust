@@ -18,12 +18,15 @@
 
 <script src="/components/jquery/dist/jquery.min.js"></script>
 <script src="/components/foundation/js/foundation.min.js"></script>
+<script src="/components/ckeditor/ckeditor.js"></script>
 <script src="/components/angular/angular.min.js"></script>
+<script src="/components/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="/components/angular-route/angular-route.min.js"></script>
 <script src="/components/angular-cookies/angular-cookies.min.js"></script>
 <script src="/components/ng-file-upload/angular-file-upload.min.js"></script>
 <script src="/components/angular-foundation/mm-foundation-tpls.min.js"></script>
 <script src="/components/ng-file-upload/angular-file-upload.min.js"></script>
+<script src="/components/ng-ckeditor/ng-ckeditor.min.js"></script>
 <script src="/js/admin/app.js"></script>
 <script src="/js/admin/services.js"></script>
 <script src="/js/admin/filters.js"></script>
@@ -31,6 +34,7 @@
 <script src="/js/admin/controllers/illustrations.js"></script>
 <script src="/js/admin/controllers/illustration.js"></script>
 <script src="/js/admin/controllers/illustration-create.js"></script>
+<script src="/js/admin/controllers/blog-create.js"></script>
 <script src="/js/admin/controllers/alert.js"></script>
 </body>
 </html>
