@@ -6,19 +6,9 @@ controllers.controller('BlogCreateCtrl', ['$scope', '$http',
         language: 'en',
         'skin': 'moono',
         'extraPlugins': "imagebrowser",
-        imageBrowser_listUrl: '/#/illustration-create',
+        imageBrowser_listUrl: '/admin/image_list',
         toolbarLocation: 'top',
-        toolbar: 'full',
-        toolbar_full: [
-            { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Strike', 'Underline' ] },
-            { name: 'paragraph', items: [ 'BulletedList', 'NumberedList', 'Blockquote' ] },
-            { name: 'editing', items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
-            { name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
-            { name: 'tools', items: [ 'SpellChecker', 'Maximize' ] },
-            { name: 'clipboard', items: [ 'Undo', 'Redo' ] },
-            { name: 'styles', items: [ 'Format', 'FontSize', 'TextColor', 'PasteText', 'PasteFromWord', 'RemoveFormat' ] },
-            { name: 'insert', items: [ 'Image', 'Table', 'SpecialChar' ] },'/',
-        ]
+        toolbar: 'full'
     };
 
       $scope.save = function() {

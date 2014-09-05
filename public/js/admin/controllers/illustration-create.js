@@ -1,7 +1,7 @@
 'use strict';
 
-controllers.controller('IllustrationCreateCtrl', ['$scope', '$upload', 'AlertService',
-function($scope, $upload, AlertService) {
+controllers.controller('IllustrationCreateCtrl', ['$scope', '$location', '$upload',
+function($scope, $location, $upload) {
 
   $scope.response = null;
 
@@ -26,8 +26,8 @@ function($scope, $upload, AlertService) {
       var progress = parseInt(100.0 * evt.loaded / evt.total);
       console.log('percent: ' + progress);
     }).success(function(data, status, headers, config) {
-      $scope.response = {type: 'info radius', msg: data};
       console.log(data);
+      $location.path('/illustration/'+data.permalink);
       reset();
     }).error(function(data, status, headers, config) {
       $scope.response = {type: 'alert round', msg: data};

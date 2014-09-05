@@ -3,13 +3,13 @@ var _ = require('lodash'),
   fs = require('fs'),
   image = require('../../../lib/image.js'),
   stringUtil = require('../../../lib/stringUtil.js'),
-  Illustration = require('../../../models/illustrationModel.js');
+  ImageModel = require('../../../models/imageModel.js');
 
 module.exports = function(router) {
 
   router.get('/', function(req, res) {
 
-    Illustration.find({}, function(err, illustrations) {
+    ImageModel.find({}, function(err, illustrations) {
       if (err) {
         res.send(500, err);
       }
@@ -19,7 +19,7 @@ module.exports = function(router) {
 
   router.get('/:permalink', function(req, res) {
 
-    Illustration.findOne({
+    ImageModel.findOne({
       permalink: req.params.permalink
     }, function(err, illustration) {
       if (err) {
@@ -32,22 +32,23 @@ module.exports = function(router) {
   var saveImageToDisk = function(req, res) {
     var file = req.files.file;
     var name = req.body.name;
-    var newIllustration = new Illustration({
+    var newImage = new ImageModel({
+      type: 'illustration',
       name: name,
       permalink: stringUtil.createPermalink(name),
       imageUrl: '',
       thumbnailUrl: ''
     });
-    image.saveToDisk('illustrations', file)
+    image.save('illustrations', file, true)
       .then(function(result) {
-        newIllustration.imageUrl = result.imageUrl;
-        newIllustration.thumbnailUrl = result.thumbnailUrl;
-        newIllustration.save(function(err) {
+        newImage.imageUrl = result.imageUrl;
+        newImage.thumbnailUrl = result.thumbnailUrl;
+        newImage.save(function(err) {
           if (err) {
-            console.log('newIllustration.save error', err);
+            console.log('newImage.save error', err);
             res.send(500, err);
           }
-          res.send(JSON.stringify(newIllustration));
+          res.send(newImage);
         });
       }).fail(function(err) {
         res.send(500, err);
@@ -65,7 +66,7 @@ module.exports = function(router) {
       var file = req.files.file;
       var permalink = stringUtil.createPermalink(name);
       file.name = permalink + '.' + file.name.split('.').pop();
-      Illustration.find({
+      ImageModel.find({
         permalink: permalink
       }, function(err, illustration) {
         if (!_.isEmpty(illustration)) {
