@@ -1,0 +1,48 @@
+
+<div class="row">
+  <div class="small-12">
+    <form ng-submit="submit()" >
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="collection" class="right inline">Collection</label>
+        </div>
+        <div class="small-9 columns">
+            <input type="text" id="collection" ng-model="collection" placeholder="Collecion's name">
+        </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <label for="name" class="right inline">Name</label>
+      </div>
+      <div class="small-9 columns">
+        <input type="text" id="name" ng-model="name" placeholder="Product's name">
+      </div>
+    </div>
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="price" class="right inline">Price</label>
+        </div>
+        <div class="small-9 columns">
+            <input type="number" id="price" ng-model="price">
+        </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <label for="main-image" class="right inline">Image principale</label>
+      </div>
+      <div class="small-9 columns">
+          <input type="text" id="main-image" ng-model="mainImage" readonly>
+          <button browse-image-modal class="button tiny" type="product">browse Image</button>
+          <button upload-image-modal class="button tiny" type="product">upload Image</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 columns">
+        <alert ng-show="response" type="response.type">{{response.msg}}</alert>
+      </div>
+      <div class="small-4 columns">
+        <input type="submit" class="button right" value="Submit"  />
+      </div>
+    </div>
+    </form>
+</div>

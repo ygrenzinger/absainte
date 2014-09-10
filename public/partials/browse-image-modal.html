@@ -1,0 +1,5 @@
+<h3>Browse Images</h3>
+<img ng-click="selectImage(image)" ng-repeat="image in images" ng-src="{{image.thumb}}"/>
+<p>Selected: <b>{{ selectedImage.name }}</b></p>
+<button class="button small" ng-click="ok()">OK</button>
+<a class="close-reveal-modal" ng-click="cancel()">&#215;</a>

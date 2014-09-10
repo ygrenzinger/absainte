@@ -1,6 +1,6 @@
 'use strict';
 
-controllers.controller('IllustrationCreateCtrl', ['$scope', '$location', '$upload',
+controllers.controller('ProductCreateCtrl', ['$scope', '$location', '$upload',
 function($scope, $location, $upload) {
 
   $scope.response = null;
@@ -18,16 +18,16 @@ function($scope, $location, $upload) {
 
   $scope.submit = function() {
     $scope.upload = $upload.upload({
-      url: '/admin/illustrations',
+      url: '/admin/products',
       method: 'POST',
       data: {name: $scope.name},
-      file: $scope.files
+      file: $scope.files,
     }).progress(function(evt) {
       var progress = parseInt(100.0 * evt.loaded / evt.total);
       console.log('percent: ' + progress);
     }).success(function(data, status, headers, config) {
       console.log(data);
-      $location.path('/illustration/'+data.permalink);
+      $location.path('/product/'+data.permalink);
       reset();
     }).error(function(data, status, headers, config) {
       $scope.response = {type: 'alert round', msg: data};

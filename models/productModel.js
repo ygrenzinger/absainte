@@ -2,21 +2,20 @@
 
 var mongoose = require('mongoose');
 
-var illustrationModel = function () {
+var productModel = function () {
 
-    //Define a super simple schema for our products.
-    var illustrationSchema = mongoose.Schema({
+    var productSchema = mongoose.Schema({
+        collection:   String,
         name:         String,
-        permalink:    String,
-        imageUrl:     String,
-        thumbnailUrl: String,
         price:        { type: Number, min: 0 },
-        description:  String
+        mainImage:    mongoose.Schema.ObjectId,
+        description:  String,
+        otherImages:  String
 
     });
 
-    return mongoose.model('Illustration', illustrationSchema);
+    return mongoose.model('Product', productSchema);
 
 };
 
-module.exports = new illustrationModel();
+module.exports = new productModel();

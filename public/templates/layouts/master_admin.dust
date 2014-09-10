@@ -8,6 +8,7 @@
 
     <link href="/components/foundation/css/normalize.css" rel="stylesheet">
     <link href="/components/foundation/css/foundation.css" rel="stylesheet">
+    <link href="/components/foundation-icon-fonts/foundation-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/admin.css"/>
 </head>
 <body>
@@ -27,14 +28,23 @@
 <script src="/components/angular-foundation/mm-foundation-tpls.min.js"></script>
 <script src="/components/ng-file-upload/angular-file-upload.min.js"></script>
 <script src="/components/ng-ckeditor/ng-ckeditor.min.js"></script>
+
 <script src="/js/admin/app.js"></script>
 <script src="/js/admin/services.js"></script>
 <script src="/js/admin/filters.js"></script>
-<script src="/js/admin/directives.js"></script>
+
 <script src="/js/admin/controllers/illustrations.js"></script>
 <script src="/js/admin/controllers/illustration.js"></script>
 <script src="/js/admin/controllers/illustration-create.js"></script>
+<script src="/js/admin/controllers/products.js"></script>
+<script src="/js/admin/controllers/product.js"></script>
+<script src="/js/admin/controllers/product-create.js"></script>
 <script src="/js/admin/controllers/blog-create.js"></script>
 <script src="/js/admin/controllers/alert.js"></script>
+
+<script src="/js/admin/directives.js"></script>
+<script src="/js/admin/directives/browse-image-modal.js"></script>
+<script src="/js/admin/directives/upload-image-modal.js"></script>
+
 </body>
 </html>

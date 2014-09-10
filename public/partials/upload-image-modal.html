@@ -1,0 +1,33 @@
+<h3>Adding a new {{type}} image</h3>
+
+<div class="row">
+    <div class="small-12">
+        <form ng-submit="submit()">
+            <div class="row">
+                <div class="small-3 columns">
+                    <label for="name" class="right inline">Nom</label>
+                </div>
+                <div class="small-9 columns">
+                    <input type="text" id="name" ng-model="imageName" placeholder="Image's name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-3 columns">
+                    <label for="file" class="right inline">Image</label>
+                </div>
+                <div class="small-9 columns">
+                    <input type="file" id="file" ng-file-select="onFileSelect($files)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-8 columns">
+                    <alert ng-show="response" type="response.type">{{response.msg}}</alert>
+                </div>
+                <div class="small-4 columns">
+                    <input type="submit" class="button right" value="Upload"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<a class="close-reveal-modal" ng-click="cancel()"><i class="fi-x"></i></a>
