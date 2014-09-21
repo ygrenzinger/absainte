@@ -2,11 +2,9 @@
 
 var UploadImageModalCtrl = function ($scope, $modalInstance, $upload, type) {
 
-    $scope.type = type;
-    $scope.imageName = '';
-
-    $scope.imageSelected = {
-        test: 'test'
+    $scope.uploadFile = {
+        type: type,
+        name: ''
     };
 
     $scope.onFileSelect = function($files) {
@@ -17,10 +15,7 @@ var UploadImageModalCtrl = function ($scope, $modalInstance, $upload, type) {
         $scope.upload = $upload.upload({
             url: '/admin/image',
             method: 'POST',
-            data: {
-                type: type,
-                name: $scope.imageName
-            },
+            data:  $scope.uploadFile,
             file: $scope.files
         }).progress(function(evt) {
             $scope.progress = parseInt(100.0 * evt.loaded / evt.total);
@@ -43,6 +38,9 @@ directivesModule.directive('uploadImageModal', ['$modal', '$log',
     function ($modal, $log) {
         return {
             restrict: 'A',
+            scope: {
+                uploadedImage: "=uploadedImage"
+            },
             link: function ($scope, $element, $attrs) {
                 $element.on('click', function () {
                     upload();
@@ -60,8 +58,8 @@ directivesModule.directive('uploadImageModal', ['$modal', '$log',
                         }
                     });
 
-                    modalInstance.result.then(function (selectedImageId) {
-                        $scope.selectedImageId = selectedImageId;
+                    modalInstance.result.then(function (uploadedImage) {
+                        $scope.uploadedImage = uploadedImage;
                     }, function () {
                         $log.info('Modal dismissed at: ' + new Date());
                     });

@@ -11,7 +11,7 @@ module.exports = function (router) {
         res.cookie('XSRF-TOKEN', res.locals._csrf);
     });
 
-    router.get('/images', function (req, res) {
+    router.get('/images/:type', function (req, res) {
         ImageModel.find({}, function (err, images) {
             if (err) {
                 throw err;
@@ -31,6 +31,7 @@ module.exports = function (router) {
         });
     });
 
+    //TODO: Correct url
     router.post('/image', function(req, res) {
         image.uploadImage(req, res, req.body.type);
     });

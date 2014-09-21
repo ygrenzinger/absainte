@@ -7,7 +7,7 @@
             <label for="collection" class="right inline">Collection</label>
         </div>
         <div class="small-9 columns">
-            <input type="text" id="collection" ng-model="collection" placeholder="Collecion's name">
+            <input type="text" id="collection" ng-model="product.collection" placeholder="Collecion's name">
         </div>
     </div>
     <div class="row">
@@ -15,7 +15,7 @@
         <label for="name" class="right inline">Name</label>
       </div>
       <div class="small-9 columns">
-        <input type="text" id="name" ng-model="name" placeholder="Product's name">
+        <input type="text" id="name" ng-model="product.name" placeholder="Product's name">
       </div>
     </div>
     <div class="row">
@@ -23,7 +23,7 @@
             <label for="price" class="right inline">Price</label>
         </div>
         <div class="small-9 columns">
-            <input type="number" id="price" ng-model="price">
+            <input type="number" id="price" ng-model="product.price">
         </div>
     </div>
     <div class="row">
@@ -31,9 +31,9 @@
         <label for="main-image" class="right inline">Image principale</label>
       </div>
       <div class="small-9 columns">
-          <input type="text" id="main-image" ng-model="mainImage" readonly>
+          <input type="text" id="main-image" ng-model="product.mainImage.permalink" readonly>
           <button browse-image-modal class="button tiny" type="product">browse Image</button>
-          <button upload-image-modal class="button tiny" type="product">upload Image</button>
+          <button upload-image-modal class="button tiny" type="product" uploaded-image="product.mainImage">upload Image</button>
       </div>
     </div>
     <div class="row">
@@ -41,7 +41,7 @@
         <alert ng-show="response" type="response.type">{{response.msg}}</alert>
       </div>
       <div class="small-4 columns">
-        <input type="submit" class="button right" value="Submit"  />
+        <button ng-click="createProduct()" class="button right">Submit</button>
       </div>
     </div>
     </form>
