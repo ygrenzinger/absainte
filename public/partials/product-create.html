@@ -1,48 +1,92 @@
-
 <div class="row">
-  <div class="small-12">
-    <form ng-submit="submit()" >
-    <div class="row">
-        <div class="small-3 columns">
-            <label for="collection" class="right inline">Collection</label>
-        </div>
-        <div class="small-9 columns">
-            <input type="text" id="collection" ng-model="product.collection" placeholder="Collecion's name">
-        </div>
+    <div class="small-12">
+        <form ng-submit="submit()">
+            <div class="row">
+                <div class="small-3 columns">
+                    <label for="collection" class="right inline">Collection</label>
+                </div>
+                <div class="small-9 columns">
+                    <input type="text" id="collection" ng-model="product.collectionName" placeholder="Collecion's name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-3 columns">
+                    <label for="name" class="right inline">Name</label>
+                </div>
+                <div class="small-9 columns">
+                    <input type="text" id="name" ng-model="product.name" placeholder="Product's name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-3 columns">
+                    <label for="price" class="right inline">Price</label>
+                </div>
+                <div class="small-9 columns">
+                    <input type="number" id="price" ng-model="product.price">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-3 columns">
+                    <label for="main-image" class="right inline">Main image</label>
+                </div>
+                <div class="small-5 columns">
+                    <input type="text" id="main-image" ng-model="product.mainImage.permalink" readonly>
+                </div>
+                <div class="small-4 columns">
+                    <button browse-image-modal class="button tiny" type="product" selected-image="product.mainImage">
+                        browse Image
+                    </button>
+                    <button upload-image-modal class="button tiny" type="product" uploaded-image="product.mainImage">
+                        upload Image
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-3 columns">
+                    <label class="right inline">Description</label>
+                </div>
+                <div class="small-9 columns">
+                    <textarea cols="20" rows="10"
+                              ng-model="product.description"
+                              name="pageBody"
+                              ckeditor="editorOptions" required="required">
+                    </textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-3 columns">
+                    <label class="right inline">Other images</label>
+                </div>
+                <div class="small-9 columns">
+                    <button class="button tiny expand" ng-click="addOtherImage()">Add</button>
+                </div>
+            </div>
+            <div class="row" ng-repeat="image in product.otherImages">
+                <div class="small-3 columns">
+                    <label class="right inline">New image</label>
+                </div>
+                <div class="small-4 columns">
+                    <input type="text" class="small" id="main-image" ng-model="image.permalink" readonly>
+                </div>
+                <div class="small-1 columns">
+                    <i class="fi-x" ng-click="removeOtherImage($index)"></i>
+                </div>
+                <div class="small-4 columns">
+                    <button browse-image-modal class="button tiny inline" type="product" selected-image="image">
+                        browse Image
+                    </button>
+                    <button upload-image-modal class="button tiny inline" type="product" uploaded-image="image">
+                        upload Image
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-8 columns">
+                    <alert ng-show="response" type="response.type">{{response.msg}}</alert>
+                </div>
+                <div class="small-4 columns">
+                    <button ng-click="createProduct()" class="button right">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="row">
-      <div class="small-3 columns">
-        <label for="name" class="right inline">Name</label>
-      </div>
-      <div class="small-9 columns">
-        <input type="text" id="name" ng-model="product.name" placeholder="Product's name">
-      </div>
-    </div>
-    <div class="row">
-        <div class="small-3 columns">
-            <label for="price" class="right inline">Price</label>
-        </div>
-        <div class="small-9 columns">
-            <input type="number" id="price" ng-model="product.price">
-        </div>
-    </div>
-    <div class="row">
-      <div class="small-3 columns">
-        <label for="main-image" class="right inline">Image principale</label>
-      </div>
-      <div class="small-9 columns">
-          <input type="text" id="main-image" ng-model="product.mainImage.permalink" readonly>
-          <button browse-image-modal class="button tiny" type="product">browse Image</button>
-          <button upload-image-modal class="button tiny" type="product" uploaded-image="product.mainImage">upload Image</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-8 columns">
-        <alert ng-show="response" type="response.type">{{response.msg}}</alert>
-      </div>
-      <div class="small-4 columns">
-        <button ng-click="createProduct()" class="button right">Submit</button>
-      </div>
-    </div>
-    </form>
-</div>

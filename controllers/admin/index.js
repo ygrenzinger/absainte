@@ -11,7 +11,7 @@ module.exports = function (router) {
         res.cookie('XSRF-TOKEN', res.locals._csrf);
     });
 
-    router.get('/images/:type', function (req, res) {
+    var getImageList = function(res) {
         ImageModel.find({}, function (err, images) {
             if (err) {
                 throw err;
@@ -29,6 +29,10 @@ module.exports = function (router) {
                 res.send(image_list);
             }
         });
+    };
+
+    router.get('/images_list', function (req, res) {
+        getImageList(res);
     });
 
     //TODO: Correct url

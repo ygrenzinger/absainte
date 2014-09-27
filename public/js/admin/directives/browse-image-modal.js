@@ -2,10 +2,12 @@
 
 var BrowseImageModalCtrl = function ($scope, $modalInstance, $http, type) {
 
-    $http({method: 'GET', url: '/admin/images/'+type}).
+    $http({method: 'GET', url: '/admin/images_list'}).
         success(function (data) {
             $scope.images = data;
         });
+
+    $scope.search = {};
 
     $scope.selectedImage = null;
     $scope.selectImage = function(image) {
@@ -13,7 +15,7 @@ var BrowseImageModalCtrl = function ($scope, $modalInstance, $http, type) {
     };
 
     $scope.ok = function () {
-        $modalInstance.close($scope.selectedImage._id);
+        $modalInstance.close($scope.selectedImage);
     };
 
     $scope.cancel = function () {
@@ -25,6 +27,9 @@ directivesModule.directive('browseImageModal', ['$modal', '$log',
     function ($modal, $log) {
         return {
             restrict: 'A',
+            scope: {
+                selectedImage: "=selectedImage"
+            },
             link: function ($scope, $element, $attrs) {
                 $element.on('click', function () {
                     browse();
@@ -41,8 +46,8 @@ directivesModule.directive('browseImageModal', ['$modal', '$log',
                         }
                     });
 
-                    modalInstance.result.then(function (selectedImageId) {
-                        $scope.selectedImageId = selectedImageId;
+                    modalInstance.result.then(function (selectedImage) {
+                        $scope.selectedImage = selectedImage;
                     }, function () {
                         $log.info('Modal dismissed at: ' + new Date());
                     });

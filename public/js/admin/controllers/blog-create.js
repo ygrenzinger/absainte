@@ -6,7 +6,7 @@ controllers.controller('BlogCreateCtrl', ['$scope', '$http',
         language: 'en',
         'skin': 'moono',
         'extraPlugins': "imagebrowser",
-        imageBrowser_listUrl: '/admin/image_list',
+        imageBrowser_listUrl: '/admin/images_list',
         toolbarLocation: 'top',
         toolbar: 'full'
     };

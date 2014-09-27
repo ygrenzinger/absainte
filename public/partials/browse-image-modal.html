@@ -1,5 +1,11 @@
 <h3>Browse Images</h3>
-<img ng-click="selectImage(image)" ng-repeat="image in images" ng-src="{{image.thumb}}"/>
-<p>Selected: <b>{{ selectedImage.name }}</b></p>
-<button class="button small" ng-click="ok()">OK</button>
-<a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+<div class="row">
+    Search by name: <input type="text" ng-model="search.name">
+</div>
+<ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-6">
+    <li ng-repeat="image in images | filter:search">
+        <img ng-click="selectImage(image)" ng-src="{{image.thumb}}"/>
+        <button class="button expand" ng-show="image.name == selectedImage.name" ng-click="ok()">Select</button>
+    </li>
+</ul>
+<a class="close-reveal-modal" ng-click="cancel()"><i class="fi-x"></i></a>

@@ -1,18 +1,32 @@
 'use strict';
 
-var image = require('../../../lib/image.js');
+var ProductModel = require('../../../models/productModel.js'),
+    _ = require('lodash');
 
 module.exports = function(router) {
 
   router.get('/', function(req, res) {
-      //image.findAllImages(res);
   });
 
   router.get('/:permalink', function(req, res) {
-      //image.getImageFromPermalink(req, res);
   });
 
   router.post('/', function(req, res) {
-      //image.uploadImage(req, res, 'product');
+
+      var productImage = new ProductModel({
+          collectionName: req.body.collectionName,
+          name: req.body.name,
+          price: req.body.price,
+          mainImage: req.body.mainImage._id,
+          description: req.body.description,
+          otherImages: _.map(req.body.otherImages, function(img) { return img._id; })
+      });
+      productImage.save(function (err) {
+            if (err) {
+               res.send(500, "Product Save error");
+            } else {
+                res.send(200);
+            }
+      });
   });
 };

@@ -1,5 +1,10 @@
 'use strict';
 
+var lodash = angular.module('lodash', []);
+lodash.factory('_', function() {
+    return window._; // assumes lodash has already been loaded on the page
+});
+
 var controllers = angular.module('absainteAdmin.controllers', []);
 
 angular.module('absainteAdmin', [
@@ -8,6 +13,7 @@ angular.module('absainteAdmin', [
     'angularFileUpload',
     'mm.foundation',
     'ngCkeditor',
+    'lodash',
     'absainteAdmin.filters',
     'absainteAdmin.services',
     'absainteAdmin.directives',
