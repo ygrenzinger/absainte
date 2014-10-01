@@ -7,10 +7,11 @@ var productModel = function () {
     var productSchema = mongoose.Schema({
         collectionName: { type: String, required: true },
         name:           { type: String, required: true },
+        permalink:      { type: String, required: true },
         price:          { type: Number, min: 0 },
-        mainImage:      { type: mongoose.Schema.ObjectId, required: true },
+        mainImage:      { type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true },
         description:    String,
-        otherImages:    [mongoose.Schema.Types.ObjectId]
+        otherImages:    [{ type: mongoose.Schema.Types.ObjectId, ref: 'Image'}]
 
     });
 
