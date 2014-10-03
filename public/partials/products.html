@@ -1,7 +1,7 @@
 <p><a class="button expand" href="#/product">Nouveau produit</a></p>
 <div class="row">
   <div class="medium-4 small-6 columns" ng-repeat="product in products">
-    <img style="width: 100%;" ng-src="{{product.thumbnailUrl}}">
+    <img style="width: 100%;" ng-src="{{product.mainImage.thumbnailUrl}}">
     <h6 class="panel"><a ng-href="#/product/{{product.permalink}}">{{product.name}}</a></h6>
   </div>
 </div>

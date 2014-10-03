@@ -8,12 +8,16 @@ var ProductModel = require('../../../models/productModel.js'),
 module.exports = function(router) {
 
   router.get('/', function(req, res) {
-      ProductModel.find({}, function (err, products) {
-          if (err) {
-              res.send(500, err);
-          }
-          res.send(products);
-      });
+      ProductModel.find({})
+          .populate('mainImage')
+          .populate('otherImages')
+          .exec(function (err, products) {
+              if (err) {
+                  res.send(500, err);
+              } else {
+                  res.send(products);
+              }
+          });
   });
 
   router.get('/:permalink', function(req, res) {

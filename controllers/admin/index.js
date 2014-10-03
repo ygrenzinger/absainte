@@ -16,17 +16,7 @@ module.exports = function (router) {
             if (err) {
                 throw err;
             } else {
-                var image_list = _.map(images, function (image) {
-                    return {
-                        '_id': image._id,
-                        'name': image.name,
-                        'permalink': image.permalink,
-                        'image': image.imageUrl,
-                        'thumb': image.thumbnailUrl,
-                        'folder': image.type
-                    };
-                });
-                res.send(image_list);
+                res.send(images);
             }
         });
     };

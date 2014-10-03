@@ -4,7 +4,7 @@
 </div>
 <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-6">
     <li ng-repeat="image in images | filter:search">
-        <img ng-click="selectImage(image)" ng-src="{{image.thumb}}"/>
+        <img ng-click="selectImage(image)" ng-src="{{image.thumbnailUrl}}"/>
         <button class="button expand" ng-show="image.name == selectedImage.name" ng-click="ok()">Select</button>
     </li>
 </ul>
