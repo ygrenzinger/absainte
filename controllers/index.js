@@ -1,12 +1,9 @@
 'use strict';
 
 
-//var IndexModel = require('../models/index');
+var ProductModel = require('../models/productModel.js');
 
 module.exports = function (router) {
-
-    //var model = new IndexModel();
-
 
     router.get('/', function (req, res) {
         res.render('index');
@@ -23,6 +20,18 @@ module.exports = function (router) {
         } else {
           res.send({ locale: req.cookies.locale });
         }
+    });
+
+    router.get('/collections', function (req, res) {
+        ProductModel.find({})
+            .select('collectionName')
+            .exec(function(err, collectionNames) {
+                if (err) {
+                    res.send(500, err);
+                } else {
+                    res.send(collectionNames);
+                }
+            });
     });
 
 };

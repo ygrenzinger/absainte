@@ -1,0 +1,20 @@
+{>"layouts/master_front" /}
+{<title}
+    Absainte Products
+{/title}
+
+{<body}
+  <div class="illustrations">
+    {?products}
+      {#products}
+      <div class="illustration-thumbnail">
+        <a class="illustration-link" href="/products/{.permalink}">
+          <img src="{.mainImage.thumbnailUrl}"></img>
+        </a>
+      </div>
+      {/products}
+    {:else}
+        Nothing found :(
+    {/products}
+  </div>
+{/body}

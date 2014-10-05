@@ -5,7 +5,7 @@ $pink: #FFB6C1;
 $gold: #d4af37;
 
 @function grayscale($value) {
-  @return #{ "grayscale(" + $value + ")" };
+  @return #{ "grayscale(" + $value + ")"};
 }
 
 @mixin filter($properties) {
@@ -29,6 +29,8 @@ $xxlarge-range: (120.063em); /* 1921px */
 
 // Media Queries
 $screen: "only screen" !default;
+
+$mobile: new-breakpoint(max-width 480px 4);
 
 $landscape: "#{$screen} and (orientation: landscape)" !default;
 $portrait: "#{$screen} and (orientation: portrait)" !default;

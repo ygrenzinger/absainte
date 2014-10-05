@@ -48,7 +48,7 @@ module.exports = function(router) {
           res.send(400, 'Price is not correct');
           return false;
       }
-      if (!req.body.mainImage || !req.body.mainImage._id) {
+      if (!req.body.mainImage._id) {
           res.send(400, 'Main image is missing');
           return false;
       }
@@ -57,7 +57,9 @@ module.exports = function(router) {
 
   router.post('/', function(req, res) {
 
-      if (!isProductValid(req, res)) return;
+      if (!isProductValid(req, res)) {
+          return;
+      }
 
       var permalink = stringUtil.createPermalink(req.body.name);
 

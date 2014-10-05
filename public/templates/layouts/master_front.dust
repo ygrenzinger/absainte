@@ -29,7 +29,7 @@
       <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
       <ul class="centered-navigation-menu">
       <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="newsMenu"/}</a></li>
-        <li class="nav-link more"><a href="javascript:void(0)">{@pre type="content" key="collectionMenu"/}</a>
+        <li class="nav-link more"><a href="/products">{@pre type="content" key="collectionMenu"/}</a>
           <ul class="submenu">
             <li><a href="javascript:void(0)">Love me tender</a></li>
             <li><a href="javascript:void(0)">Sweet aristocratie</a></li>

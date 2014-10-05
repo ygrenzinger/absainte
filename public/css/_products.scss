@@ -1,0 +1,23 @@
+.product {
+  .left {
+    @include span-columns(6);
+    text-align: right;
+
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+
+  .right {
+    @include span-columns(6);
+
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+
+    .thumbnails img {
+      height: 100px;
+      margin: 5px;
+    }
+  }
+}

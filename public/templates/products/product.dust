@@ -1,0 +1,25 @@
+{>"layouts/master_front" /}
+{<title}
+    Collection {product.collectionName}
+{/title}
+
+{<body}
+  <div class="product">
+    <div class="left">
+        <img class="full-size" src="{product.mainImage.imageUrl}"></img>
+    </div>
+    <div class="right">
+        <div>{product.name}</div>
+        <div>{product.price}</div>
+        <div>{product.description|s}</div>
+
+        <div class="thumbnails">
+          <img data-url="{product.mainImage.imageUrl}" src="{product.mainImage.thumbnailUrl}"></img>
+          {#product.otherImages}
+            <img data-url="{.imageUrl}" src="{.thumbnailUrl}"></img>
+          {/product.otherImages}
+        </div>
+    </div>
+  </div>
+{/body}
+
