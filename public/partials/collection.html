@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="small-12">
+        <form ng-submit="submit()">
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="name" class="right inline">Name</label>
+                </div>
+                <div class="small-10 columns">
+                    <input type="text" id="name" ng-model="collection.name" placeholder="Collection's name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="main-image" class="right inline">Main image</label>
+                </div>
+                <div class="small-1 columns">
+                    <icon class="fi-folder" browse-image-modal type="collection" selected-image="collection.mainImage"/>
+                    <icon class="fi-upload" upload-image-modal type="collection" uploaded-image="collection.mainImage"/>
+                </div>
+                <div class="small-4 columns">
+                    <input type="text" id="main-image" ng-model="collection.mainImage.permalink" readonly>
+                </div>
+                <div class="small-5 columns">
+                    <img ng-src="{{collection.mainImage.thumbnailUrl}}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label class="right inline">Description</label>
+                </div>
+                <div class="small-10 columns">
+                    <textarea cols="20" rows="10"
+                              ng-model="collection.description"
+                              name="pageBody"
+                              ckeditor="editorOptions" required="required">
+                    </textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-8 columns">
+                    <alert ng-show="response" type="response.type">{{response.msg}}</alert>
+                </div>
+                <div class="small-4 columns">
+                    <button ng-click="saveCollection()" class="button right">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
