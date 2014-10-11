@@ -7,8 +7,8 @@ var ImageModel = require('../../models/imageModel.js'),
 module.exports = function (router) {
 
     router.get('/', function (req, res) {
-        res.render('admin');
         res.cookie('XSRF-TOKEN', res.locals._csrf);
+        res.render('admin');
     });
 
     var getImageList = function(res) {
