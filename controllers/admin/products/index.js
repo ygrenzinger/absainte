@@ -9,6 +9,7 @@ module.exports = function(router) {
 
   router.get('/', function(req, res) {
       ProductModel.find({})
+          .populate('collectionFrom')
           .populate('mainImage')
           .populate('otherImages')
           .exec(function (err, products) {
@@ -24,6 +25,7 @@ module.exports = function(router) {
       ProductModel.findOne({
           permalink: req.params.permalink
       })
+      .populate('collectionFrom')
       .populate('mainImage')
       .populate('otherImages')
       .exec(function (err, product) {
@@ -36,8 +38,8 @@ module.exports = function(router) {
   });
 
   var isProductValid = function(req, res) {
-      if (!req.body.collectionName) {
-          res.send(400, 'Collection name is missing');
+      if (!req.body.collectionFrom) {
+          res.send(400, 'Associated collection is missing');
           return false;
       }
       if (!req.body.name) {
@@ -64,7 +66,7 @@ module.exports = function(router) {
       var permalink = stringUtil.createPermalink(req.body.name);
 
       var product = {
-          collectionName: req.body.collectionName,
+          collectionFrom: req.body.collectionFrom._id,
           name: req.body.name,
           permalink: permalink,
           price: req.body.price,

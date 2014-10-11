@@ -1,8 +1,5 @@
 'use strict';
 
-
-var ProductModel = require('../models/productModel.js');
-
 module.exports = function (router) {
 
     router.get('/', function (req, res) {
@@ -20,18 +17,6 @@ module.exports = function (router) {
         } else {
           res.send({ locale: req.cookies.locale });
         }
-    });
-
-    router.get('/collections', function (req, res) {
-        ProductModel.find({})
-            .select('collectionName')
-            .exec(function(err, collectionNames) {
-                if (err) {
-                    res.send(500, err);
-                } else {
-                    res.send(collectionNames);
-                }
-            });
     });
 
 };

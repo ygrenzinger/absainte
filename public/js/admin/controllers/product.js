@@ -13,11 +13,20 @@ controllers.controller('ProductCtrl', ['$scope', '$http', '$location', '$routePa
         };
 
         $scope.product = {
-            collectionName: '',
+            collectionFrom: {},
             name: '',
             price: 0,
             mainImage: {},
             otherImages: []
+        };
+
+        $http({method: 'GET', url: '/admin/collections/'}).
+            success(function(data, status, headers, config) {
+                $scope.collections = data;
+            });
+
+        $scope.selectCollection = function(collection) {
+            $scope.product.collectionFrom = collection;
         };
 
         $scope.otherImage = {};

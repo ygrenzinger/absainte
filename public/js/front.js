@@ -19,8 +19,7 @@ $(document).ready(function() {
   });
 
   var sharePageUrl = function() {
-    //encodeURIComponent(location.href)
-    return 'http://absainte.com';
+    return encodeURIComponent(location.href);
   };
 
   $('.flag').on('click', function(e) {

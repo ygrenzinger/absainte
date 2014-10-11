@@ -5,7 +5,12 @@ var ProductModel = require('../../models/productModel.js');
 module.exports = function (router) {
 
     router.get('/', function(req, res) {
-        ProductModel.find({})
+        var query = {};
+        if (!!req.query.collection) {
+            query.collectionFrom = req.query.collection;
+        }
+
+        ProductModel.find(query)
             .populate('mainImage')
             .populate('otherImages')
             .exec(function (err, products) {

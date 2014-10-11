@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var productModel = function () {
 
     var productSchema = mongoose.Schema({
-        collectionName: { type: String, required: true },
+        collectionFrom: { type: mongoose.Schema.Types.ObjectId, ref: 'Collection', required: true },
         name:           { type: String, required: true },
         permalink:      { type: String, required: true },
         price:          { type: Number, min: 0 },

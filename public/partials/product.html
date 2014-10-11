@@ -6,7 +6,15 @@
                     <label for="collection" class="right inline">Collection</label>
                 </div>
                 <div class="small-10 columns">
-                    <input type="text" id="collection" ng-model="product.collectionName" placeholder="Collecion's name">
+                    <a class="button split">
+                        <span dropdown-toggle="#dropdown-example-3"></span>
+                        {{product.collectionFrom.name}}
+                    </a>
+                    <ul id="dropdown-example-3" class="f-dropdown">
+                        <li ng-repeat="collection in collections">
+                            <a ng-click="selectCollection(collection)">{{collection.name}}</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="row">

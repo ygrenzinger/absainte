@@ -31,8 +31,10 @@
       <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="newsMenu"/}</a></li>
         <li class="nav-link more"><a href="/products">{@pre type="content" key="collectionMenu"/}</a>
           <ul class="submenu">
-            <li><a href="javascript:void(0)">Love me tender</a></li>
-            <li><a href="javascript:void(0)">Sweet aristocratie</a></li>
+
+            {#collections}
+                <li><a href="/products/?collection={._id}">{.name}</a></li>
+            {/collections}
           </ul>
         </li>
         <li class="nav-link"><a href="/illustrations">{@pre type="content" key="illustrationMenu"/}</a></li>

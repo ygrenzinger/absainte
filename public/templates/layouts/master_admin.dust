@@ -37,6 +37,8 @@
 <script src="/js/admin/controllers/illustrations.js"></script>
 <script src="/js/admin/controllers/illustration.js"></script>
 <script src="/js/admin/controllers/illustration-create.js"></script>
+<script src="/js/admin/controllers/collections.js"></script>
+<script src="/js/admin/controllers/collection.js"></script>
 <script src="/js/admin/controllers/products.js"></script>
 <script src="/js/admin/controllers/product.js"></script>
 <script src="/js/admin/controllers/product-create.js"></script>
