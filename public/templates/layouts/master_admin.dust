@@ -41,7 +41,6 @@
 <script src="/js/admin/controllers/collection.js"></script>
 <script src="/js/admin/controllers/products.js"></script>
 <script src="/js/admin/controllers/product.js"></script>
-<script src="/js/admin/controllers/product-create.js"></script>
 <script src="/js/admin/controllers/blog-create.js"></script>
 <script src="/js/admin/controllers/alert.js"></script>
 
