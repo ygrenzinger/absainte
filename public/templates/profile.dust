@@ -1,0 +1,5 @@
+{>"layouts/master_front" /}
+
+{<body}
+    <p>You are <strong>{user.name}</strong> and your role is <strong>{user.role}</strong></p>
+{/body}

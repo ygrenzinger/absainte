@@ -1,23 +1,11 @@
 'use strict';
 
 var kraken = require('kraken-js'),
-    paypal = require('paypal-rest-sdk'),
     db = require('./lib/database'),
     app = require('express')(),
+    options = require('./lib/spec')(app),
     CollectionModel = require('./models/collectionModel.js'),
-    options = {
-        onconfig: function (config, next) {
-
-                //configure mongodb and paypal sdk
-                db.config(config.get('databaseConfig'));
-                paypal.configure(config.get('paypalConfig'));
-
-            //any config setup/overrides here
-            next(null, config);
-        }
-    },
     port = process.env.PORT || 8000;
-
 
 app.use(kraken(options));
 
