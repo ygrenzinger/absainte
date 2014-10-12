@@ -1,0 +1,34 @@
+{>"layouts/master_front" /}
+
+{<body}
+    <a href="/auth/google">Sign On with Google</a>
+    <div>
+        <form id="loginForm" method="post">
+        
+                <h2>Login</h2>
+                {?messages}
+                    <ul>
+                        {#messages}
+                            <li>{.}</li>
+                        {/messages}
+
+                    </ul>
+                {/messages}
+                    <p>
+                        <label for="username">Login: </label>
+                        <input id="username" name="username" type="text"/>
+                    </p>
+                    <p>
+                        <label for="password">Password: </label>
+                        <input id="password" name="password" type="password"/>
+                    </p>
+                    <p>
+                        <input type="submit" value="Login"/>
+                        <input type="hidden" name="_csrf" value="{_csrf}"/>
+                    </p>
+                </table>
+
+            </fieldset>
+        </form>
+    </div>
+{/body}
