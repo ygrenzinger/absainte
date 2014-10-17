@@ -1,5 +1,5 @@
 {>"layouts/master_front" /}
 
 {<body}
-    <img class="splash-screen" src="img/absainte-home.jpg" alt="">
+    <img class="splash-screen" src="img/Absainte_splash_screen.jpg" alt="">
 {/body}
