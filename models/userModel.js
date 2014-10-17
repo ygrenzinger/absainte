@@ -25,8 +25,7 @@ var userModel = function() {
   userSchema.pre('save', function(next) {
     var user = this;
 
-    if (user.email === 'absainte@yahoo.fr' || email ===
-      'yannick.grenzinger@gmail.com') {
+    if (user.email === 'absainte@yahoo.fr' || user.email === 'yannick.grenzinger@gmail.com') {
       user.role = 'admin';
     } else {
       user.role = 'client';
