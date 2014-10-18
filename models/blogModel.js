@@ -5,7 +5,7 @@
 
 var mongoose = require('mongoose');
 
-var userModel = function() {
+var blogModel = function() {
 
   var blogSchema = mongoose.Schema({
     title: String,
