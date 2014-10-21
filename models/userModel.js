@@ -25,12 +25,6 @@ var userModel = function() {
   userSchema.pre('save', function(next) {
     var user = this;
 
-    if (user.email === 'absainte@yahoo.fr' || user.email === 'yannick.grenzinger@gmail.com') {
-      user.role = 'admin';
-    } else {
-      user.role = 'client';
-    }
-
     //If the password has not been modified in this save operation, leave it alone (So we don't double hash it)
     if (!user.password || !user.isModified('password')) {
       next();

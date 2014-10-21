@@ -56,6 +56,14 @@
             }
         },
 
+        "method-override": {
+            "enabled": true,
+            "priority": 75,
+            "module": {
+                "name": "path:./lib/method-override",
+                "arguments": [ "_method" ]
+            }
+        },
 
         "expressView": {
             "priority": 100,

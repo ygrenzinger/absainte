@@ -1,6 +1,7 @@
 'use strict';
 
-var passport = require('passport');
+var passport = require('passport'),
+    mail = require('../lib/mail.js');
 
 module.exports = function (router) {
 
@@ -33,6 +34,11 @@ module.exports = function (router) {
         } else {
           res.send({ locale: req.cookies.locale });
         }
+    });
+
+    router.get('/mailTest', function(req, res) {
+        mail.send('yannick.grenzinger@gmail.com', 'test', 'hello world mail');
+        res.send(200);
     });
 
 };

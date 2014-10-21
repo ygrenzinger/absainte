@@ -13,6 +13,7 @@
 
 <header>
   <div class="top-bar">
+    Bonjour {user.firstname} {user.lastname}
     <div class="language">
       <img class="flag" data-locale="fr-FR" src="/img/fr-FR.png"/>
       <img class="flag" data-locale="en-US" src="/img/en-US.png"/>
