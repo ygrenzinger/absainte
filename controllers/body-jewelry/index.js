@@ -9,58 +9,44 @@ module.exports = function (router) {
         CollectionModel
             .findByPermalink(req.params.permalink)
             .then(function(collection) {
-                ProductModel.find({collectionFrom: collection._id})
-                    .populate('mainImage')
-                    .populate('otherImages')
-                    .exec(function (err, products) {
-                        if (err) {
-                            res.send(500, err);
-                        } else {
-                            var model =
-                            {
-                                products: products
-                            };
-                            res.render('products/products', model);
-                        }
-                    });
+                return ProductModel.findAllByCollectionId(collection.id);
+            }).then(function(products) {
+                var model =
+                {
+                    products: products
+                };
+                res.render('products/products', model);
             }).fail(function(err) {
                 res.send(500, err);
             });
     });
 
     router.get('/', function(req, res) {
-        ProductModel.find({})
-            .populate('mainImage')
-            .populate('otherImages')
-            .exec(function (err, products) {
-                if (err) {
-                    res.send(500, err);
-                } else {
-                    var model =
-                    {
-                        products: products
-                    };
-                    res.render('products/products', model);
-                }
+        ProductModel
+            .findAll()
+            .then(function (products) {
+                var model =
+                {
+                    products: products
+                };
+                res.render('products/products', model);
+            })
+            .fail(function (err) {
+                res.send(500, err);
             });
     });
 
     router.get('/:permalink', function(req, res) {
-        ProductModel.findOne({
-                permalink: req.params.permalink
+        ProductModel.findByPermalink(req.params.permalink)
+            .then(function (product) {
+                var model =
+                {
+                    product: product
+                };
+                res.render('products/product', model);
             })
-            .populate('mainImage')
-            .populate('otherImages')
-            .exec(function (err, product) {
-                if (err) {
-                    res.send(500, err);
-                } else {
-                    var model =
-                    {
-                        product: product
-                    };
-                    res.render('products/product', model);
-                }
+            .fail(function (err) {
+                res.send(500, err);
             });
     });
 

@@ -1,17 +1,18 @@
 'use strict';
 
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+    Q = require('q');
 
 var productModel = function () {
 
     var productSchema = mongoose.Schema({
-        collectionFrom: { type: mongoose.Schema.Types.ObjectId, ref: 'Collection', required: true },
-        name:           { type: String, required: true },
-        permalink:      { type: String, required: true },
-        price:          { type: Number, min: 0 },
-        mainImage:      { type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true },
-        description:    String,
-        otherImages:    [{ type: mongoose.Schema.Types.ObjectId, ref: 'Image'}]
+        collectionFrom: {type: mongoose.Schema.Types.ObjectId, ref: 'Collection', required: true},
+        name: {type: String, required: true},
+        permalink: {type: String, required: true},
+        price: {type: Number, min: 0},
+        mainImage: {type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true},
+        description: String,
+        otherImages: [{type: mongoose.Schema.Types.ObjectId, ref: 'Image'}]
 
     });
 
@@ -19,4 +20,67 @@ var productModel = function () {
 
 };
 
-module.exports = new productModel();
+var model = new productModel();
+module.exports.model = model;
+
+module.exports.findAll = function () {
+    var deferred = Q.defer();
+    model.find({})
+        .populate('collectionFrom')
+        .populate('mainImage')
+        .populate('otherImages')
+        .exec(function (err, products) {
+            if (err) {
+                deferred.reject(err);
+            } else {
+                deferred.resolve(products);
+            }
+        });
+    return deferred.promise;
+};
+
+module.exports.findByPermalink = function (permalink) {
+    var deferred = Q.defer();
+    model.findOne({
+        permalink: permalink
+    })
+        .populate('collectionFrom')
+        .populate('mainImage')
+        .populate('otherImages')
+        .exec(function (err, product) {
+            if (err) {
+                deferred.reject(err);
+            } else {
+                deferred.resolve(product);
+            }
+        });
+    return deferred.promise;
+};
+
+module.exports.findAllByCollectionId = function (collectionId) {
+    var deferred = Q.defer();
+    model.find({collectionFrom: collectionId})
+        .populate('collectionFrom')
+        .populate('mainImage')
+        .populate('otherImages')
+        .exec(function (err, products) {
+            if (err) {
+                deferred.reject(err);
+            } else {
+                deferred.resolve(products);
+            }
+        });
+    return deferred.promise;
+};
+
+module.exports.upsert = function (product) {
+    var deferred = Q.defer();
+    model.update({permalink: product.permalink}, product, {upsert: true}, function (err) {
+        if (err) {
+            deferred.reject(err);
+        } else {
+            res.send(product);
+        }
+    });
+    return deferred.promise;
+};

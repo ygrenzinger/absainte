@@ -2,39 +2,30 @@
 
 var ProductModel = require('../../../models/productModel.js'),
     stringUtil = require('../../../lib/stringUtil.js'),
-    imageLib = require('../../../lib/image.js'),
     _ = require('lodash');
 
 module.exports = function(router) {
 
   router.get('/', function(req, res) {
-      ProductModel.find({})
-          .populate('collectionFrom')
-          .populate('mainImage')
-          .populate('otherImages')
-          .exec(function (err, products) {
-              if (err) {
-                  res.send(500, err);
-              } else {
-                  res.send(products);
-              }
+      ProductModel
+          .findAll()
+          .then(function (products) {
+              res.send(products);
+          })
+          .fail(function (err) {
+              res.send(500, err);
           });
   });
 
   router.get('/:permalink', function(req, res) {
-      ProductModel.findOne({
-          permalink: req.params.permalink
-      })
-      .populate('collectionFrom')
-      .populate('mainImage')
-      .populate('otherImages')
-      .exec(function (err, product) {
-          if (err) {
-              res.send(500, err);
-          } else {
+      ProductModel
+          .findByPermalink(req.params.permalink)
+          .then(function (product) {
               res.send(product);
-          }
-      });
+          })
+          .fail(function (err) {
+              res.send(500, err);
+          });
   });
 
   var isProductValid = function(req, res) {
@@ -63,23 +54,23 @@ module.exports = function(router) {
           return;
       }
 
-      var permalink = stringUtil.createPermalink(req.body.name);
-
       var product = {
           collectionFrom: req.body.collectionFrom._id,
           name: req.body.name,
-          permalink: permalink,
+          permalink: stringUtil.createPermalink(req.body.name),
           price: req.body.price,
           mainImage: req.body.mainImage._id,
           description: req.body.description,
           otherImages: _.map(req.body.otherImages, function(img) { return img._id; })
       };
-      ProductModel.update({permalink: permalink}, product, {upsert: true}, function (err) {
-            if (err) {
-               res.send(500, err);
-            } else {
-                res.send(product);
-            }
-      });
+
+      ProductModel
+          .upsert(product)
+          .then(function (product) {
+              res.send(product);
+          })
+          .fail(function (err) {
+              res.send(500, err);
+          });
   });
 };
