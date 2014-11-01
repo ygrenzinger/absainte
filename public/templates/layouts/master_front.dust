@@ -13,7 +13,7 @@
 
 <header>
   <div class="top-bar">
-    Bonjour {user.firstname} {user.lastname}
+    {?user} Bonjour {user.firstname} {user.lastname} {/user}
     <div class="language">
       <img class="flag {@eq key=context.locality value="fr-FR"}selected{/eq}" data-lang="fr" src="/img/fr-FR.png"/>
       <img class="flag {@eq key=context.locality value="en-US"}selected{/eq}" data-lang="en" src="/img/en-US.png"/>
