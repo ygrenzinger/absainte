@@ -15,13 +15,13 @@
   <div class="top-bar">
     Bonjour {user.firstname} {user.lastname}
     <div class="language">
-      <img class="flag" data-locale="fr-FR" src="/img/fr-FR.png"/>
-      <img class="flag" data-locale="en-US" src="/img/en-US.png"/>
+      <img class="flag {@eq key=context.locality value="fr-FR"}selected{/eq}" data-lang="fr" src="/img/fr-FR.png"/>
+      <img class="flag {@eq key=context.locality value="en-US"}selected{/eq}" data-lang="en" src="/img/en-US.png"/>
     </div>
   </div>
 
   <div class="logo">
-    <a href="/">
+    <a href="{langPath}/">
       <img src="/img/absainte-paris-logo.jpg" alt="Absainte Paris"/>
     </a>
   </div>
@@ -30,15 +30,15 @@
       <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
       <ul class="centered-navigation-menu">
       <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="newsMenu"/}</a></li>
-        <li class="nav-link more"><a href="/products">{@pre type="content" key="collectionMenu"/}</a>
+        <li class="nav-link more"><a href="{langPath}/products">{@pre type="content" key="collectionMenu"/}</a>
           <ul class="submenu">
 
             {#collections}
-                <li><a href="/products/?collection={._id}">{.name}</a></li>
+                <li><a href="{langPath}/products/?collection={._id}">{.name}</a></li>
             {/collections}
           </ul>
         </li>
-        <li class="nav-link"><a href="/illustrations">{@pre type="content" key="illustrationMenu"/}</a></li>
+        <li class="nav-link"><a href="{langPath}/illustrations">{@pre type="content" key="illustrationMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="shopMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="aboutMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="contactMenu"/}</a></li>

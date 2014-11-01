@@ -23,19 +23,6 @@ module.exports = function (router) {
         passport.authenticate('google', { successRedirect: '/',
             failureRedirect: '/login' }));
 
-    router.get('/setLocale/:locale', function (req, res) {
-        res.cookie('locale', req.params.locale);
-        res.send(200);
-    });
-
-    router.get('/getLocale', function (req, res) {
-        if (!req.cookies.locale) {
-          res.send({ locale: 'en-US' });
-        } else {
-          res.send({ locale: req.cookies.locale });
-        }
-    });
-
     router.get('/mailTest', function(req, res) {
         mail.send('yannick.grenzinger@gmail.com', 'test', 'hello world mail');
         res.send(200);
