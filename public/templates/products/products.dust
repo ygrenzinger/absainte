@@ -8,7 +8,7 @@
     {?products}
       {#products}
       <div class="illustration-thumbnail">
-        <a class="illustration-link" href="/products/{.permalink}">
+        <a class="illustration-link" href="/body-jewelry/{.permalink}">
           <img src="{.mainImage.thumbnailUrl}"></img>
         </a>
       </div>

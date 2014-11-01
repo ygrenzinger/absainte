@@ -11,14 +11,9 @@ app.use(kraken(options));
 
 app.use(function (req, res, next) {
     if (!app.locals.collections) {
-        CollectionModel.find({})
-            .exec(function(err, collections) {
-                if (err) {
-                    res.send(500, err);
-                } else {
-                    app.locals.collections = collections;
-                }
-            });
+        CollectionModel.findAll().then(function(collections) {
+            app.locals.collections = collections;
+        });
     }
     next();
 });

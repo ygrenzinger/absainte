@@ -3,35 +3,31 @@
 var CollectionModel = require('../../../models/collectionModel.js'),
     stringUtil = require('../../../lib/stringUtil.js');
 
-module.exports = function(router) {
+module.exports = function (router) {
 
-  router.get('/', function(req, res) {
-      CollectionModel.find({})
-          .populate('mainImage')
-          .exec(function (err, collections) {
-              if (err) {
-                  res.send(500, err);
-              } else {
-                  res.send(collections);
-              }
-          });
-  });
+    router.get('/', function (req, res) {
+        CollectionModel
+            .findAll()
+            .then(function (collections) {
+                res.send(collections);
+            })
+            .fail(function (err) {
+                res.send(500, err);
+            });
+    });
 
-  router.get('/:permalink', function(req, res) {
-      CollectionModel.findOne({
-          permalink: req.params.permalink
-      })
-          .populate('mainImage')
-          .exec(function (err, collection) {
-              if (err) {
-                  res.send(500, err);
-              } else {
-                  res.send(collection);
-              }
-          });
-  });
+    router.get('/:permalink', function (req, res) {
+        CollectionModel
+            .findByPermalink(req.params.permalink)
+            .then(function (collection) {
+                res.send(collection);
+            })
+            .fail(function (err) {
+                res.send(500, err);
+            });
+    });
 
-    var isCollectionValid = function(req, res) {
+    var isCollectionValid = function (req, res) {
         if (!req.body.name) {
             res.send(400, 'Collection name is missing');
             return false;
@@ -43,26 +39,26 @@ module.exports = function(router) {
         return true;
     };
 
-    router.post('/', function(req, res) {
+    router.post('/', function (req, res) {
 
         if (!isCollectionValid(req, res)) {
             return;
         }
 
-        var permalink = stringUtil.createPermalink(req.body.name);
-
         var collection = {
             name: req.body.name,
-            permalink: permalink,
+            permalink: stringUtil.createPermalink(req.body.name),
             mainImage: req.body.mainImage._id,
             description: req.body.description
         };
-        CollectionModel.update({permalink: permalink}, collection, {upsert: true}, function (err) {
-            if (err) {
-                res.send(500, err);
-            } else {
+
+        CollectionModel
+            .upsert(collection)
+            .then(function (collection) {
                 res.send(collection);
-            }
-        });
+            })
+            .fail(function (err) {
+                res.send(500, err);
+            });
     });
 };

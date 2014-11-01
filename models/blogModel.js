@@ -3,13 +3,14 @@
  */
 'use strict';
 
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+    descriptionSchema = require('./descriptionSchema.js');
 
 var blogModel = function() {
 
   var blogSchema = mongoose.Schema({
     title: String,
-    description: String
+    description: descriptionSchema
   });
 
   return mongoose.model('Blog', blogSchema);
