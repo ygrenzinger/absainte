@@ -9,11 +9,7 @@ var mongoose = require('mongoose'),
 var userModel = function () {
 
     var userSchema = mongoose.Schema({
-        email: {
-            type: String,
-            unique: true,
-            required: true
-        },
+        email: {type: String, unique: true, required: true},
         displayname: String,
         firstname: String,
         lastname: String,
@@ -36,7 +32,7 @@ var userModel = function () {
     return mongoose.model('User', userSchema);
 };
 
-var model =  new userModel();
+var model = new userModel();
 module.exports.model = model;
 
 module.exports.findByEmail = function (email) {

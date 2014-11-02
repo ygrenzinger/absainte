@@ -7,7 +7,7 @@ var collectionModel = function () {
 
     var collectionSchema = mongoose.Schema({
         name:           { type: String, required: true },
-        permalink:      { type: String, required: true },
+        permalink:      { type: String, required: true, unique: true },
         mainImage:      { type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true },
         description:    String
 
@@ -52,7 +52,7 @@ module.exports.findByPermalink = function(permalink) {
 
 module.exports.upsert = function(collection) {
     var deferred = Q.defer();
-    model.update({permalink: collection.permalink}, collection, {upsert: true}, function (err) {
+    model.findOneAndUpdate({permalink: collection.permalink}, collection, {upsert: true}, function (err) {
         if (err) {
             deferred.reject(err);
         } else {
