@@ -6,18 +6,18 @@
 var mongoose = require('mongoose'),
     descriptionSchema = require('./descriptionSchema.js');
 
-var blogModel = function () {
+var articleModel = function () {
 
-    var blogSchema = mongoose.Schema({
+    var articleSchema = mongoose.Schema({
         title: String,
         permalink: {type: String, required: true, unique: true},
         description: descriptionSchema
     });
 
-    return mongoose.model('Blog', blogSchema);
+    return mongoose.model('Article', articleSchema);
 };
 
-var model = new blogModel();
+var model = new articleModel();
 module.exports.model = model;
 
 module.exports.findAll = function() {
@@ -38,7 +38,6 @@ module.exports.findByPermalink = function(permalink) {
     model.findOne({
         permalink: permalink
     })
-        .populate('mainImage')
         .exec(function (err, article) {
             if (err) {
                 deferred.reject(err);
