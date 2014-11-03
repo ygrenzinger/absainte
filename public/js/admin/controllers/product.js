@@ -5,6 +5,7 @@ controllers.controller('ProductCtrl', ['$scope', '$http', '$location', '$routePa
 
         $scope.editorOptions = {
             language: 'en',
+            height: '100px',
             'skin': 'moono',
             'extraPlugins': "imagebrowser",
             imageBrowser_listUrl: '/admin/images_list',

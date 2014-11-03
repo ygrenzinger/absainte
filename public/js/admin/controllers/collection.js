@@ -5,6 +5,7 @@ controllers.controller('CollectionCtrl', ['$scope', '$http', '$location', '$rout
 
         $scope.editorOptions = {
             language: 'en',
+            height: '100px',
             'skin': 'moono',
             'extraPlugins': "imagebrowser",
             imageBrowser_listUrl: '/admin/images_list',

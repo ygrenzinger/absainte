@@ -1,0 +1,6 @@
+<p><a class="button expand" href="#/article">Nouvel article</a></p>
+<div class="row">
+  <div ng-repeat="article in articles">
+    <h6 class="panel"><a ng-href="#/article/{{article.permalink}}">{{article.name}}</a></h6>
+  </div>
+</div>

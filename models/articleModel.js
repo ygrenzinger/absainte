@@ -4,14 +4,17 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    descriptionSchema = require('./descriptionSchema.js');
+    Q = require('q');
 
 var articleModel = function () {
 
     var articleSchema = mongoose.Schema({
         title: String,
         permalink: {type: String, required: true, unique: true},
-        description: descriptionSchema
+        description: [{
+            language: String,
+            content: String
+        }]
     });
 
     return mongoose.model('Article', articleSchema);

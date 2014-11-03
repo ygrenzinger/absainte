@@ -19,6 +19,8 @@ angular.module('absainteAdmin', [
     'absainteAdmin.directives',
     'absainteAdmin.controllers'
 ]).config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.when('/articles', {templateUrl: '/partials/articles.html', controller: 'ArticlesCtrl'});
+    $routeProvider.when('/article/:permalink?', {templateUrl: '/partials/article.html', controller: 'ArticleCtrl'});
     $routeProvider.when('/collections', {templateUrl: '/partials/collections.html', controller: 'CollectionsCtrl'});
     $routeProvider.when('/collection/:permalink?', {templateUrl: '/partials/collection.html', controller: 'CollectionCtrl'});
     $routeProvider.when('/products', {templateUrl: '/partials/products.html', controller: 'ProductsCtrl'});
