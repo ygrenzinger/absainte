@@ -11,7 +11,10 @@ var articleModel = function () {
     var articleSchema = mongoose.Schema({
         title: String,
         permalink: {type: String, required: true, unique: true},
-        description: String
+        descriptions: [{
+            language: String,
+            content: String
+        }]
     });
 
     return mongoose.model('Article', articleSchema);
