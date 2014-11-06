@@ -11,10 +11,7 @@ var articleModel = function () {
     var articleSchema = mongoose.Schema({
         title: String,
         permalink: {type: String, required: true, unique: true},
-        description: [{
-            language: String,
-            content: String
-        }]
+        description: String
     });
 
     return mongoose.model('Article', articleSchema);
@@ -53,11 +50,11 @@ module.exports.findByPermalink = function(permalink) {
 
 module.exports.upsert = function(article) {
     var deferred = Q.defer();
-    model.findOneAndUpdate({permalink: article.permalink}, article, {upsert: true}, function (err) {
+    model.findOneAndUpdate({id: article._id}, article, {upsert: true}, function (err) {
         if (err) {
             deferred.reject(err);
         } else {
-            res.send(article);
+            deferred.resolve(article);
         }
     });
     return deferred.promise;

@@ -15,30 +15,17 @@ directivesModule.directive('description', ['_',
         return {
             restrict: 'E',
             scope: {
-                descriptions: "=descriptions"
+                descriptions: "=descriptions",
+                lang: "=lang"
             },
             templateUrl: '/partials/description.html',
-            link: function ($scope, $element, $attrs) {
-                $scope.langSelected = 'en';
-
-                if (!$scope.descriptions) {
-                    $scope.descriptions = [
-                        {'language':'en', 'content':''},
-                        {'language':'fr', 'content':''}
-                    ];
-                }
-
-                $scope.content = {};
-                $scope.content.en = _.find($scope.descriptions, {'language': 'en'});
-                $scope.content.fr = _.find($scope.descriptions, {'language': 'fr'});
-                $scope.languages = ['en','fr'];
-
+            controller: function($scope, $element){
                 $scope.isFrSelected = function() {
-                    return $scope.langSelected === 'fr';
+                    return $scope.lang === 'fr';
                 };
 
                 $scope.isEnSelected = function() {
-                    return $scope.langSelected === 'en';
+                    return $scope.lang === 'en';
                 };
 
                 $scope.editorOptions = {

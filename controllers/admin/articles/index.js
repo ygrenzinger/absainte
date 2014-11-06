@@ -28,8 +28,8 @@ module.exports = function (router) {
     });
 
     var isArticleValid = function (req, res) {
-        if (!req.body.name) {
-            res.send(400, 'article name is missing');
+        if (!req.body.title) {
+            res.send(400, 'article title is missing');
             return false;
         }
         return true;
@@ -42,9 +42,9 @@ module.exports = function (router) {
         }
 
         var article = {
-            name: req.body.name,
-            permalink: stringUtil.createPermalink(req.body.name),
-            description: req.body.description
+            title: req.body.title,
+            permalink: stringUtil.createPermalink(req.body.title),
+            descriptions: req.body.descriptions
         };
 
         ArticleModel
