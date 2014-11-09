@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css"/>
+    <!--[if lt IE 11]><script src="/components/modernizr/modernizr.js"></script><![endif]-->
+
+
 </head>
 <body>
 
@@ -38,7 +41,6 @@
             {/collections}
           </ul>
         </li>
-        <li class="nav-link"><a href="{langPath}/illustrations">{@pre type="content" key="illustrationMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="shopMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="aboutMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="contactMenu"/}</a></li>

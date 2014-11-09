@@ -22,6 +22,7 @@
     "ng-ckeditor": "~0.2.1",
     "angular-sanitize": "~1.2.23",
     "foundation-icon-fonts": "zurb/foundation-icon-fonts",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "modernizr": "~2.8.3"
   }
 }
