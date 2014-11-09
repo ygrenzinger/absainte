@@ -1,16 +1,20 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Q = require('q');
+    Q = require('q'),
+    querystring = require('querystring');
+
 
 var collectionModel = function () {
 
     var collectionSchema = mongoose.Schema({
-        name:           { type: String, required: true },
-        permalink:      { type: String, required: true, unique: true },
-        mainImage:      { type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true },
-        description:    String
-
+        name: {type: String, required: true},
+        permalink: {type: String, required: true, unique: true},
+        mainImage: {type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true},
+        description: {
+            "en": String,
+            "fr": String
+        }
     });
 
     return mongoose.model('Collection', collectionSchema);
@@ -20,7 +24,7 @@ var collectionModel = function () {
 var model = new collectionModel();
 module.exports.model = model;
 
-module.exports.findAll = function() {
+module.exports.findAll = function () {
     var deferred = Q.defer();
     model.find({})
         .populate('mainImage')
@@ -34,10 +38,10 @@ module.exports.findAll = function() {
     return deferred.promise;
 };
 
-module.exports.findByPermalink = function(permalink) {
+module.exports.findByPermalink = function (permalink) {
     var deferred = Q.defer();
     model.findOne({
-        permalink: permalink
+        permalink: querystring.escape(permalink)
     })
         .populate('mainImage')
         .exec(function (err, collection) {
@@ -50,13 +54,13 @@ module.exports.findByPermalink = function(permalink) {
     return deferred.promise;
 };
 
-module.exports.upsert = function(collection) {
+module.exports.upsert = function (collection) {
     var deferred = Q.defer();
-    model.findOneAndUpdate({permalink: collection.permalink}, collection, {upsert: true}, function (err) {
+    model.findOneAndUpdate({_id: collection._id}, collection, {upsert: true}, function (err) {
         if (err) {
             deferred.reject(err);
         } else {
-            res.send(collection);
+            deferred.resolve(collection);
         }
     });
     return deferred.promise;

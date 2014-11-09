@@ -3,22 +3,24 @@
 controllers.controller('ProductCtrl', ['$scope', '$http', '$location', '$routeParams', '_',
     function ($scope, $http, $location, $routeParams, _) {
 
-        $scope.editorOptions = {
-            language: 'en',
-            height: '100px',
-            'skin': 'moono',
-            'extraPlugins': "imagebrowser",
-            imageBrowser_listUrl: '/admin/images_list',
-            toolbarLocation: 'top',
-            toolbar: 'full'
-        };
+        $scope.langSelected = 'en';
+        $scope.languages = ['en','fr'];
 
         $scope.product = {
             collectionFrom: {},
             name: '',
+            permalink: '',
             price: 0,
             mainImage: {},
+            description: {
+                'en': '',
+                'fr': ''
+            },
             otherImages: []
+        };
+
+        $scope.createPermalink = function() {
+            $scope.product.permalink = PermalinkService.createPermalink($scope.product.name);
         };
 
         $http({method: 'GET', url: '/admin/collections/'}).

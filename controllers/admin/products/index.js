@@ -55,12 +55,16 @@ module.exports = function(router) {
       }
 
       var product = {
+          _id: req.body._id,
           collectionFrom: req.body.collectionFrom._id,
           name: req.body.name,
-          permalink: stringUtil.createPermalink(req.body.name),
+          permalink: req.body.name,
           price: req.body.price,
           mainImage: req.body.mainImage._id,
-          description: req.body.description,
+          description: {
+              'en': req.body.description.en,
+              'fr': req.body.description.fr
+          },
           otherImages: _.map(req.body.otherImages, function(img) { return img._id; })
       };
 
@@ -70,7 +74,7 @@ module.exports = function(router) {
               res.send(product);
           })
           .fail(function (err) {
-              res.send(500, err);
+              res.status(500).send(err);
           });
   });
 };

@@ -1,6 +1,20 @@
 <p><a class="button expand" href="#/article">Nouvel article</a></p>
-<div class="row">
-  <div ng-repeat="article in articles">
-    <h6 class="panel"><a ng-href="#/article/{{article.permalink}}">{{article.title}}</a></h6>
-  </div>
-</div>
+<table class="fullWidth">
+    <thead>
+    <tr>
+        <th width="20%">Is published ?</th>
+        <th width="20%">Published date</th>
+        <th width="60%">Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="article in articles">
+        <td>
+            <i class="fi-checkmark" ng-if="article.published"></i>
+            <i class="fi-minus" ng-if="!article.published"></i>
+        </td>
+        <td>{{article.publishedDate}}</td>
+        <td><a ng-href="#/article/{{article.permalink}}">{{article.title}}</a></td>
+    </tr>
+    </tbody>
+</table>

@@ -1,7 +1,6 @@
 'use strict';
 
-var ArticleModel = require('../../../models/articleModel.js'),
-    stringUtil = require('../../../lib/stringUtil.js');
+var ArticleModel = require('../../../models/articleModel.js');
 
 module.exports = function (router) {
 
@@ -12,7 +11,7 @@ module.exports = function (router) {
                 res.send(articles);
             })
             .fail(function (err) {
-                res.send(500, err);
+                res.status(500).send(err);
             });
     });
 
@@ -23,13 +22,29 @@ module.exports = function (router) {
                 res.send(article);
             })
             .fail(function (err) {
-                res.send(500, err);
+                res.status(500).send(err);
             });
     });
 
     var isArticleValid = function (req, res) {
         if (!req.body.title) {
             res.send(400, 'article title is missing');
+            return false;
+        }
+        if (!req.body.permalink) {
+            res.send(400, 'article permalink is missing');
+            return false;
+        }
+        if (!req.body.summary) {
+            res.send(400, 'article summary is missing');
+            return false;
+        }
+        if (!req.body.content) {
+            res.send(400, 'article content is missing');
+            return false;
+        }
+        if (!req.body.language) {
+            res.send(400, 'article language is missing');
             return false;
         }
         return true;
@@ -41,11 +56,8 @@ module.exports = function (router) {
             return;
         }
 
-        var article = {
-            title: req.body.title,
-            permalink: stringUtil.createPermalink(req.body.title),
-            descriptions: req.body.descriptions
-        };
+        var article = req.body;
+        delete article.__v;
 
         ArticleModel
             .upsert(article)
@@ -53,7 +65,7 @@ module.exports = function (router) {
                 res.send(article);
             })
             .fail(function (err) {
-                res.send(500, err);
+                res.status(500).send(err);
             });
     });
 };

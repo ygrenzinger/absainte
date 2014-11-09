@@ -1,23 +1,24 @@
 'use strict';
 
-controllers.controller('CollectionCtrl', ['$scope', '$http', '$location', '$routeParams', '_',
-    function ($scope, $http, $location, $routeParams, _) {
+controllers.controller('CollectionCtrl', ['$scope', '$http', '$location', '$routeParams', '_', 'PermalinkService',
+    function ($scope, $http, $location, $routeParams, _, PermalinkService) {
 
-        $scope.editorOptions = {
-            language: 'en',
-            height: '100px',
-            'skin': 'moono',
-            'extraPlugins': "imagebrowser",
-            imageBrowser_listUrl: '/admin/images_list',
-            toolbarLocation: 'top',
-            toolbar: 'full'
-        };
+        $scope.langSelected = 'en';
+        $scope.languages = ['en','fr'];
 
         $scope.collection = {
             name: '',
-            price: 0,
+            permalink: '',
+            description: {
+                'en': '',
+                'fr': ''
+            },
             mainImage: {},
             otherImages: []
+        };
+
+        $scope.createPermalink = function() {
+            $scope.collection.permalink = PermalinkService.createPermalink($scope.collection.name);
         };
 
         $scope.otherImage = {};

@@ -1,7 +1,9 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Q = require('q');
+    Q = require('q'),
+    querystring = require('querystring');
+
 
 var productModel = function () {
 
@@ -11,7 +13,10 @@ var productModel = function () {
         permalink: {type: String, required: true, unique: true},
         price: {type: Number, min: 0},
         mainImage: {type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true},
-        description: String,
+        description:    {
+            "en" : String,
+            "fr" : String
+        },
         otherImages: [{type: mongoose.Schema.Types.ObjectId, ref: 'Image'}]
 
     });
@@ -42,7 +47,7 @@ module.exports.findAll = function () {
 module.exports.findByPermalink = function (permalink) {
     var deferred = Q.defer();
     model.findOne({
-        permalink: permalink
+        permalink: querystring.escape(permalink)
     })
         .populate('collectionFrom')
         .populate('mainImage')
@@ -75,11 +80,11 @@ module.exports.findAllByCollectionId = function (collectionId) {
 
 module.exports.upsert = function (product) {
     var deferred = Q.defer();
-    model.update({permalink: product.permalink}, product, {upsert: true}, function (err) {
+    model.update({_id: product._id}, product, {upsert: true}, function (err) {
         if (err) {
             deferred.reject(err);
         } else {
-            res.send(product);
+            deferred.resolve(product);
         }
     });
     return deferred.promise;

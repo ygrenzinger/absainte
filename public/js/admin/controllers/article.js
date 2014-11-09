@@ -1,26 +1,26 @@
 'use strict';
 
-controllers.controller('ArticleCtrl', ['$scope', '$http', '$location', '$routeParams', 'DescriptionsService',
-    function ($scope, $http, $location, $routeParams, DescriptionsService) {
-
-        $scope.langSelected = 'en';
-        $scope.languages = ['en','fr'];
+controllers.controller('ArticleCtrl', ['$scope', '$http', '$location', '$routeParams', 'PermalinkService',
+    function ($scope, $http, $location, $routeParams, PermalinkService) {
 
         $scope.article = {
             title: '',
-            descriptions: [
-                {'language':'en', 'content':''},
-                {'language':'fr', 'content':''}
-            ]
+            permalink: '',
+            summary: '',
+            content: '',
+            language: '',
+            published: false
         };
+        $scope.languages = ['en','fr'];
 
-        $scope.descriptions = DescriptionsService.convertArrayToObject($scope.article.descriptions);
+        $scope.createPermalink = function() {
+            $scope.article.permalink = PermalinkService.createPermalink($scope.article.title);
+        };
 
         if (!!$routeParams.permalink) {
             $http({method: 'GET', url: '/admin/articles/' + $routeParams.permalink}).
                 success(function(data, status, headers, config) {
                     $scope.article = data;
-                    $scope.descriptions = DescriptionsService.convertArrayToObject($scope.article.descriptions);
                 }).
                 error(function(data, status, headers, config) {
                 });
@@ -29,7 +29,6 @@ controllers.controller('ArticleCtrl', ['$scope', '$http', '$location', '$routePa
         $scope.response = null;
 
         $scope.saveArticle = function () {
-            $scope.article.descriptions = DescriptionsService.convertObjectToArray($scope.descriptions);
 
             $http.post('/admin/articles', $scope.article)
                 .success(function(data, status, headers, config) {

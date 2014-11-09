@@ -22,25 +22,13 @@ function AlertService($timeout) {
     };
 }
 
-function DescriptionsService(_) {
+function PermalinkService() {
 
-    this.convertArrayToObject = function (descriptionsArray) {
-        var descriptions = {};
-        _.each(descriptionsArray, function(description) {
-            descriptions[description.language] = description.content;
-        });
-        return descriptions;
-    };
-
-    this.convertObjectToArray = function (descriptionsObject) {
-        var descriptions = [];
-        for (var key in descriptionsObject) {
-            descriptions.push({
-                'language': key,
-                'content': descriptionsObject[key]
-            });
-        }
-        return descriptions;
+    this.createPermalink = function (str) {
+        var permalink = str.trim();
+        permalink = permalink.toLowerCase();
+        permalink = permalink.replace(/\s{1,}/g, '-');
+        return encodeURIComponent( permalink );
     };
 }
 
@@ -50,4 +38,4 @@ function DescriptionsService(_) {
 angular.module('absainteAdmin.services', [])
     .value('version', '0.1')
     .service('AlertService', AlertService)
-    .service('DescriptionsService', DescriptionsService);
+    .service('PermalinkService', PermalinkService);

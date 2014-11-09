@@ -10,27 +10,19 @@ directivesModule.directive('appVersion', ['version',
     }
 ]);
 
-directivesModule.directive('description', ['_',
+directivesModule.directive('richTextEditor', ['_',
     function (_) {
         return {
             restrict: 'E',
             scope: {
-                descriptions: "=descriptions",
-                lang: "=lang"
+                content: "=content"
             },
-            templateUrl: '/partials/description.html',
+            templateUrl: '/partials/richTextEditor.html',
             controller: function($scope, $element){
-                $scope.isFrSelected = function() {
-                    return $scope.lang === 'fr';
-                };
-
-                $scope.isEnSelected = function() {
-                    return $scope.lang === 'en';
-                };
 
                 $scope.editorOptions = {
                     language: 'en',
-                    height: '100px',
+                    height: '200px',
                     'skin': 'moono',
                     'extraPlugins': "imagebrowser",
                     imageBrowser_listUrl: '/admin/images_list',

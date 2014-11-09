@@ -3,30 +3,53 @@
         <form ng-submit="submit()">
             <div class="row">
                 <div class="small-2 columns">
-                    <label for="title" class="right inline">Name</label>
+                    <div><label class="right inline">Language</label></div>
                 </div>
                 <div class="small-10 columns">
-                    <input type="text" id="title" ng-model="article.title" placeholder="Article's title">
-                    <input type="text" id="title" ng-model="article.title" placeholder="Article's title">
+                    <select ng-model="article.language" ng-options="language for language in languages"></select>
                 </div>
             </div>
             <div class="row">
                 <div class="small-2 columns">
-                    <div><label class="right inline">Description</label></div>
+                    <label for="title" class="right inline">Title</label>
                 </div>
                 <div class="small-10 columns">
-                    <textarea cols="20" rows="10"
-                              ng-model="description"
-                              name="textEditor"
-                              ckeditor="editorOptions" required="required">
-                    </textarea>
+                    <input type="text" id="title" ng-change="createPermalink()" ng-model="article.title" placeholder="Article's title" maxlength="60" required="true"/>
                 </div>
             </div>
             <div class="row">
                 <div class="small-2 columns">
-                    <select ng-model="langSelected" ng-options="language for language in languages"></select>
+                    <label for="permalink" class="right inline">Permalink</label>
                 </div>
-                <div class="small-6 columns">
+                <div class="small-10 columns">
+                    <input type="text" id="permalink" ng-model="article.permalink" placeholder="Article's permalink" required="true"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="summary" class="right inline">Summary</label>
+                </div>
+                <div class="small-10 columns">
+                    <textarea type="text" id="summary" ng-model="article.summary" ng-maxlength="255" required="true"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <div><label class="right inline">Content</label></div>
+                </div>
+                <div class="small-10 columns">
+                    <rich-text-editor content="article.content"></rich-text-editor>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <div><label class="right inline">Is published ?</label></div>
+                </div>
+                <div class="small-10 columns"><input type="checkbox" ng-model="article.published">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-8 columns">
                     <alert ng-show="response" type="response.type">{{response.msg}}</alert>
                 </div>
                 <div class="small-4 columns">

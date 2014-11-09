@@ -45,12 +45,9 @@ module.exports = function (router) {
             return;
         }
 
-        var collection = {
-            name: req.body.name,
-            permalink: stringUtil.createPermalink(req.body.name),
-            mainImage: req.body.mainImage._id,
-            description: req.body.description
-        };
+        var collection = req.body;
+        collection.mainImage = req.body.mainImage._id;
+        delete collection.__v;
 
         CollectionModel
             .upsert(collection)
@@ -58,7 +55,7 @@ module.exports = function (router) {
                 res.send(collection);
             })
             .fail(function (err) {
-                res.send(500, err);
+                res.status(500).send(err);
             });
     });
 };
