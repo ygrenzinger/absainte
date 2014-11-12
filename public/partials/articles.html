@@ -10,10 +10,10 @@
     <tbody>
     <tr ng-repeat="article in articles">
         <td>
-            <i class="fi-checkmark" ng-if="article.published"></i>
+            <i class="fi-check" ng-if="!!article.published"></i>
             <i class="fi-minus" ng-if="!article.published"></i>
         </td>
-        <td>{{article.publishedDate}}</td>
+        <td>{{article.publishedDate | date:'yyyy-MM-dd'}}</td>
         <td><a ng-href="#/article/{{article.permalink}}">{{article.title}}</a></td>
     </tr>
     </tbody>

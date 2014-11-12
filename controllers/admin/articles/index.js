@@ -50,6 +50,29 @@ module.exports = function (router) {
         return true;
     };
 
+    var upsertArticle = function(article) {
+        ArticleModel
+            .upsert(article)
+            .then(function (article) {
+                res.send(article);
+            })
+            .fail(function (err) {
+                res.status(500).send(err);
+            });
+    };
+
+    router.post('/copy', function (req, res) {
+        var article = req.body;
+        article.title = article.title + ' copy';
+        article.permalink = article.permalink + '-copy';
+        article.publishedDate = null;
+        article.published = false;
+        delete article._id;
+        delete article.__v;
+
+        upsertArticle(article);
+    });
+
     router.post('/', function (req, res) {
 
         if (!isArticleValid(req, res)) {
@@ -59,13 +82,12 @@ module.exports = function (router) {
         var article = req.body;
         delete article.__v;
 
-        ArticleModel
-            .upsert(article)
-            .then(function (article) {
-                res.send(article);
-            })
-            .fail(function (err) {
-                res.status(500).send(err);
-            });
+        if (article.published && !article.publishedDate) {
+            article.publishedDate = Date.now();
+        } else {
+            article.publishedDate = null;
+        }
+
+        upsertArticle(article);
     });
 };

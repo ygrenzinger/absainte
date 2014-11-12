@@ -56,7 +56,8 @@ module.exports.findByPermalink = function (permalink) {
 
 module.exports.upsert = function (collection) {
     var deferred = Q.defer();
-    model.findOneAndUpdate({_id: collection._id}, collection, {upsert: true}, function (err) {
+    var id = !!collection._id ? collection._id : new mongoose.Types.ObjectId();
+    model.findByIdAndUpdate(id, collection, {upsert: true}, function (err) {
         if (err) {
             deferred.reject(err);
         } else {

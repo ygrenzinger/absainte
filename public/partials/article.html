@@ -49,10 +49,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="small-8 columns">
+                <div ng-if="!!article._id" class="small-3 columns">
+                    <button ng-click="copyArticle()" class="button right">Copy</button>
+                </div>
+                <div class="small-6 columns">
                     <alert ng-show="response" type="response.type">{{response.msg}}</alert>
                 </div>
-                <div class="small-4 columns">
+                <div class="small-3 columns">
                     <button ng-click="saveArticle()" class="button right">Submit</button>
                 </div>
             </div>

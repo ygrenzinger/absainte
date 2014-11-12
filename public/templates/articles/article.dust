@@ -1,0 +1,12 @@
+{>"layouts/master_front" /}
+{<title}
+    Collection {article.title}
+{/title}
+
+{<body}
+  <div>
+    <h1>{article.title}</h1>
+    <div>{article.content|s}</div>
+  </div>
+{/body}
+

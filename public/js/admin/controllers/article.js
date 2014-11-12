@@ -28,12 +28,23 @@ controllers.controller('ArticleCtrl', ['$scope', '$http', '$location', '$routePa
 
         $scope.response = null;
 
+        $scope.copyArticle = function () {
+            $http.post('/admin/articles/copy', $scope.article)
+                .success(function(data, status, headers, config) {
+                    console.log(data);
+                    $location.path('/articles');
+                }).error(function(data, status, headers, config) {
+                    console.log(status);
+                    $scope.response = {type: 'alert round', msg: data};
+                });
+        };
+
         $scope.saveArticle = function () {
 
             $http.post('/admin/articles', $scope.article)
                 .success(function(data, status, headers, config) {
                     console.log(data);
-                    $location.path('/article/'+data.permalink);
+                    $location.path('/articles');
                 }).error(function(data, status, headers, config) {
                     console.log(status);
                     $scope.response = {type: 'alert round', msg: data};

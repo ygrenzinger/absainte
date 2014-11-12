@@ -38,7 +38,7 @@ controllers.controller('CollectionCtrl', ['$scope', '$http', '$location', '$rout
             $http.post('/admin/collections', $scope.collection)
                 .success(function(data, status, headers, config) {
                     console.log(data);
-                    $location.path('/collection/'+data.permalink);
+                    $location.path('/collections');
                 }).error(function(data, status, headers, config) {
                     console.log(status);
                     $scope.response = {type: 'alert round', msg: data};

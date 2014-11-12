@@ -40,12 +40,41 @@ module.exports.findAll = function() {
     return deferred.promise;
 };
 
+module.exports.findPublishedByLanguage = function(language) {
+    var deferred = Q.defer();
+    model.find({
+        language: language,
+        published: true
+    }).exec(function (err, articles) {
+            if (err) {
+                deferred.reject(err);
+            } else {
+                deferred.resolve(articles);
+            }
+        });
+    return deferred.promise;
+};
+
 module.exports.findByPermalink = function(permalink) {
     var deferred = Q.defer();
     model.findOne({
         permalink: querystring.escape(permalink)
-    })
-        .exec(function (err, article) {
+    }).exec(function (err, article) {
+        if (err) {
+            deferred.reject(err);
+        } else {
+            deferred.resolve(article);
+        }
+    });
+    return deferred.promise;
+};
+
+module.exports.findByLanguageAndPermalink = function(language, permalink) {
+    var deferred = Q.defer();
+    model.findOne({
+        language: language,
+        permalink: querystring.escape(permalink)
+    }).exec(function (err, article) {
             if (err) {
                 deferred.reject(err);
             } else {
@@ -57,11 +86,12 @@ module.exports.findByPermalink = function(permalink) {
 
 module.exports.upsert = function(article) {
     var deferred = Q.defer();
-    model.findOneAndUpdate({_id: article._id}, article, {upsert: true}, function (err) {
+    var id = !!article._id ? article._id : new mongoose.Types.ObjectId();
+    model.findByIdAndUpdate(id, article, {upsert: true}, function (err, articleFromDB) {
         if (err) {
             deferred.reject(err);
         } else {
-            deferred.resolve(article);
+            deferred.resolve(articleFromDB);
         }
     });
     return deferred.promise;

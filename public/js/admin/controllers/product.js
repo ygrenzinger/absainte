@@ -59,7 +59,7 @@ controllers.controller('ProductCtrl', ['$scope', '$http', '$location', '$routePa
             $http.post('/admin/products', $scope.product)
                 .success(function(data, status, headers, config) {
                     console.log(data);
-                    $location.path('/product/'+data.permalink);
+                    $location.path('/products');
                 }).error(function(data, status, headers, config) {
                     console.log(status);
                     $scope.response = {type: 'alert round', msg: data};

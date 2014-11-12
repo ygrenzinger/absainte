@@ -32,7 +32,7 @@
     <div class="centered-navigation-wrapper">
       <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
       <ul class="centered-navigation-menu">
-      <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="newsMenu"/}</a></li>
+      <li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>
         <li class="nav-link more"><a href="{langPath}/body-jewelry">{@pre type="content" key="collectionMenu"/}</a>
           <ul class="submenu">
 

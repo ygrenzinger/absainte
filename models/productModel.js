@@ -80,7 +80,8 @@ module.exports.findAllByCollectionId = function (collectionId) {
 
 module.exports.upsert = function (product) {
     var deferred = Q.defer();
-    model.update({_id: product._id}, product, {upsert: true}, function (err) {
+    var id = !!product._id ? product._id : new mongoose.Types.ObjectId();
+    model.findByIdAndUpdate(id, product, {upsert: true}, function (err) {
         if (err) {
             deferred.reject(err);
         } else {

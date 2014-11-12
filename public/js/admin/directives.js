@@ -27,6 +27,7 @@ directivesModule.directive('richTextEditor', ['_',
                     'extraPlugins': "imagebrowser",
                     imageBrowser_listUrl: '/admin/images_list',
                     toolbarLocation: 'top',
+                    format_tags: 'p;h2;h3;h4;h5;h6;pre;address;div',
                     toolbar: 'full'
                 };
             }
