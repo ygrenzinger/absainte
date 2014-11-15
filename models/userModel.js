@@ -4,7 +4,8 @@
 'use strict';
 var mongoose = require('mongoose'),
     bcrypt = require('bcrypt'),
-    Q = require('q');
+    Q = require('q'),
+    _ = require('lodash');
 
 var userModel = function () {
 
@@ -55,7 +56,7 @@ module.exports.upsert = function (user, isNewPassword) {
         user.password = bcrypt.hashSync(user.password, 8);
     }
 
-    if (user.email === 'absainte@yahoo.fr' || user.email === 'yannick.grenzinger@gmail.com') {
+    if (_.contains(process.env.ADMINS, user.email)) {
         user.role = 'admin';
     } else {
         user.role = 'client';

@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/css/app.css"/>
     <!--[if lt IE 11]><script src="/components/modernizr/modernizr.js"></script><![endif]-->
 
-
 </head>
 <body>
 
@@ -18,8 +17,8 @@
   <div class="top-bar">
     {?user} Bonjour {user.firstname} {user.lastname} {/user}
     <div class="language">
-      <img class="flag {@eq key=context.locality value="fr-FR"}selected{/eq}" data-lang="fr" src="/img/fr-FR.png"/>
-      <img class="flag {@eq key=context.locality value="en-US"}selected{/eq}" data-lang="en" src="/img/en-US.png"/>
+      <a href="/fr/"><img class="flag {@eq key=context.locality value="fr-FR"}selected{/eq}" src="/img/fr-FR.png"/></a>
+      <a href="/"><img class="flag {@eq key=context.locality value="en-US"}selected{/eq}" src="/img/en-US.png"/></a>
     </div>
   </div>
 
@@ -42,7 +41,7 @@
           </ul>
         </li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="aboutMenu"/}</a></li>
-        <li class="nav-link"><a href="/contact">{@pre type="content" key="contactMenu"/}</a></li>
+        <li class="nav-link"><a href="{langPath}/contact">{@pre type="content" key="contactMenu"/}</a></li>
       </ul>
     </div>
   </div>
