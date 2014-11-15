@@ -1,6 +1,6 @@
 {>"layouts/master_front" /}
 {<title}
-    Collection {article.title}
+    {article.title}
 {/title}
 
 {<body}

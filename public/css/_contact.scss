@@ -1,0 +1,25 @@
+.contact-form {
+
+    margin: auto;
+
+    button {
+        width: 100%;
+    }
+
+    @include media($not-tablet) {
+        width: 600px;
+
+        input, textarea {
+            display: inline-block;
+            width: 400px;
+        }
+
+        label {
+            display: inline-block;
+            vertical-align: top;
+            width: 180px;
+            text-align: right;
+            margin-right: 10px;
+        }
+    }
+}

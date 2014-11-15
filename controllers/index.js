@@ -1,7 +1,6 @@
 'use strict';
 
-var passport = require('passport'),
-    mail = require('../lib/mail.js');
+var passport = require('passport');
 
 var addOauthProvider = function(provider, router) {
 
@@ -40,10 +39,5 @@ module.exports = function (router) {
 
     addOauthProvider('google', router);
     addOauthProvider('facebook', router);
-
-    router.get('/mailTest', function(req, res) {
-        mail.send('yannick.grenzinger@gmail.com', 'test', 'hello world mail');
-        res.send(200);
-    });
 
 };

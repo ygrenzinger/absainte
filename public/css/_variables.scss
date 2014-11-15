@@ -31,6 +31,10 @@ $xxlarge-range: (120.063em); /* 1921px */
 $screen: "only screen" !default;
 
 $mobile: new-breakpoint(max-width 480px 4);
+$not-mobile: new-breakpoint(min-width 480px 4);
+
+$tablet: new-breakpoint(max-width 768px 4);
+$not-tablet: new-breakpoint(min-width 768px 4);
 
 $landscape: "#{$screen} and (orientation: landscape)" !default;
 $portrait: "#{$screen} and (orientation: portrait)" !default;

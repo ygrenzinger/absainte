@@ -41,9 +41,8 @@
             {/collections}
           </ul>
         </li>
-        <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="shopMenu"/}</a></li>
         <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="aboutMenu"/}</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="contactMenu"/}</a></li>
+        <li class="nav-link"><a href="/contact">{@pre type="content" key="contactMenu"/}</a></li>
       </ul>
     </div>
   </div>
