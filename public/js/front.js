@@ -32,4 +32,14 @@ $(document).ready(function () {
             $('.product .left img').attr('src', imageUrl);
         })
     });
+
+    $('#buy-test').click(function (e) {
+        e.preventDefault();
+        $.post("buy", $("#buy-form").serialize()).done(function (data) {
+            $('#buy-success').show();
+        }).fail(function () {
+            $('#buy-error').show();
+        });
+    });
+
 });

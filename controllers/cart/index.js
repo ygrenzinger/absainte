@@ -42,42 +42,4 @@ module.exports = function (router) {
         });
 
     });
-
-    /**
-     * Add an item to the shopping cart
-     */
-    router.post('/', function (req, res) {
-
-        //Load (or initialize) the cart
-        req.session.cart = req.session.cart || {};
-        var cart = req.session.cart;
-
-        //Read the incoming product data
-        var id = req.param('item_id');
-
-        //Locate the product to be added
-        Product.findById(id, function (err, prod) {
-            if (err) {
-                console.log('Error adding product to cart: ', err);
-                res.redirect('/cart');
-                return;
-            }
-
-            //Add or increase the product quantity in the shopping cart.
-            if (cart[id]) {
-                cart[id].qty++;
-            }
-            else {
-                cart[id] = {
-                    name: prod.name,
-                    price: prod.price,
-                    prettyPrice: prod.prettyPrice(),
-                    qty: 1
-                };
-            }
-
-            res.redirect('/cart');
-
-        });
-    });
 };

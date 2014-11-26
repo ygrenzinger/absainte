@@ -9,8 +9,15 @@
         <img class="full-size" src="{product.mainImage.imageUrl}"></img>
     </div>
     <div class="right">
-        <div>{product.name}</div>
-        <div>{product.price}</div>
+
+        <form method="POST" action="{product.permalink}/buy" id="buy-form">
+            <input type="hidden" name="item_id" value="{product.id}">
+            <input type="hidden" name="_csrf" value="{_csrf}">
+
+            <div>{product.name}</div>
+            <span>{product.prettyPrice}</span>
+            <button id="buy" type="submit">{@pre type="content" key="addToCart"/}</button>
+        </form>
         <div>{product.description|s}</div>
 
         <div class="thumbnails">

@@ -21,6 +21,11 @@ var productModel = function () {
 
     });
 
+
+    productSchema.methods.prettyPrice = function () {
+        return (this && this.price) ? '€' + this.price.toFixed(2) : '€';
+    };
+
     return mongoose.model('Product', productSchema);
 
 };

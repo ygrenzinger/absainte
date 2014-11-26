@@ -101,6 +101,14 @@
             }
         },
 
+        "cartInfo": {
+            "priority": 110,
+            "enabled": true,
+            "module": {
+                "name": "path:./lib/cartInfo"
+            }
+        },
+
         //flash messaging middleware
         "flash": {
             "priority": 91,

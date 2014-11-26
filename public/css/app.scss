@@ -4,33 +4,32 @@
 @import "base";
 
 @import "_variables.scss";
-
 @import "_header";
 @import "_footer";
 @import "_index";
-
 @import "_contact";
-
 @import "_illustrations";
 @import "_products";
 
 html, body {
- height: 100%;
- background-color: $black;
- color: $white;
+    height: 100%;
+    background-color: $black;
+    color: $white;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
 }
 
 .main {
-  @include outer-container;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 80px;
+    @include outer-container;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
 
-  @include media(480px) {
-    margin-bottom: 40px;
-  }
+    @include media(480px) {
+        margin-bottom: 40px;
+    }
 }
 
 .full-size {
-  max-height: 80%;
+    max-height: 80%;
 }

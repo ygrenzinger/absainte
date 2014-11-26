@@ -16,10 +16,13 @@
 <header>
   <div class="top-bar">
     {?user} Bonjour {user.firstname} {user.lastname} {/user}
-    <div class="language">
+
+    <span class="language">
       <a href="/fr/"><img class="flag {@eq key=context.locality value="fr-FR"}selected{/eq}" src="/img/fr-FR.png"/></a>
       <a href="/"><img class="flag {@eq key=context.locality value="en-US"}selected{/eq}" src="/img/en-US.png"/></a>
-    </div>
+    </span>
+
+    <span class="cart-info">{cart.qty}<i class="fa fa-shopping-cart"></i></span>
   </div>
 
   <div class="logo">
