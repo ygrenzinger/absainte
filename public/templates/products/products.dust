@@ -4,12 +4,12 @@
 {/title}
 
 {<body}
-  <div class="illustrations">
+  <div class="main products">
     {?products}
       {#products}
-      <div class="illustration-thumbnail">
-        <a class="illustration-link" href="/body-jewelry/{.permalink}">
-          <img src="{.mainImage.thumbnailUrl}"></img>
+      <div class="product-thumbnail">
+        <a class="product-link" href="{langPath}/body-jewelry/{.permalink}">
+          <img src="{.mainImage.thumbnailUrl}"/>
         </a>
       </div>
       {/products}

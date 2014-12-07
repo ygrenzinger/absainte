@@ -4,26 +4,28 @@
 {/title}
 
 {<body}
-    <form class="contact-form" action="/contact" method="post">
-        <div>
-        <label for="contact-email">{@pre type="content" key="email"/}</label>
-        <input type="text" name="email" id="contact-email"></input>
-        </div>
-        <div>
-        <label for="contact-firstname">{@pre type="content" key="firstname"/}</label>
-        <input type="text" name="firstname" id="contact-firstname"></input>
-        </div>
-        <div>
-        <label for="contact-lastname">{@pre type="content" key="lastname"/}</label>
-        <input type="text" name="lastname" id="contact-lastname"></input>
-        </div>
-        <div>
-        <label for="contact-message">{@pre type="content" key="message"/}</label>
-        <textarea rows="5" cols="50" name="message" id="contact-message"></textarea>
-        </div>
-        <div>
-        <input type="hidden" name="_csrf" value="{_csrf}">
-        <button type="submit">{@pre type="content" key="send"/}</button>
-        </div>
-    </form>
+    <div class="main">
+        <form class="contact-form" action="/contact" method="post">
+            <div>
+                <label for="contact-email">{@pre type="content" key="email"/}</label>
+                <input type="text" name="email" id="contact-email"></input>
+            </div>
+            <div>
+                <label for="contact-firstname">{@pre type="content" key="firstname"/}</label>
+                <input type="text" name="firstname" id="contact-firstname"></input>
+            </div>
+            <div>
+                <label for="contact-lastname">{@pre type="content" key="lastname"/}</label>
+                <input type="text" name="lastname" id="contact-lastname"></input>
+            </div>
+            <div>
+                <label for="contact-message">{@pre type="content" key="message"/}</label>
+                <textarea rows="5" cols="50" name="message" id="contact-message"></textarea>
+            </div>
+            <div>
+                <input type="hidden" name="_csrf" value="{_csrf}">
+                <button type="submit">{@pre type="content" key="send"/}</button>
+            </div>
+        </form>
+    </div>
 {/body}

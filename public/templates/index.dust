@@ -1,5 +1,13 @@
 {>"layouts/master_front" /}
 
 {<body}
-    <img class="splash-screen" src="/img/Absainte_splash_screen.jpg" alt="">
+    <div class="homepage">
+        <div class="blank-container"></div>
+        <img src="/img/Absainte1.jpg" alt="Absainte body jewelry">
+        <img src="/img/Absainte2.jpg" alt="Absainte body jewelry">
+        <img src="/img/Absainte3.jpg" alt="Absainte body jewelry">
+        <img src="/img/Absainte4.jpg" alt="Absainte body jewelry">
+        <img src="/img/Absainte5.jpg" alt="Absainte body jewelry">
+        <img src="/img/Absainte6.jpg" alt="Absainte body jewelry">
+    </div>
 {/body}

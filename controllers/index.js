@@ -30,7 +30,7 @@ var addOauthProvider = function(provider, router) {
 module.exports = function (router) {
 
     router.get('/', function (req, res) {
-        res.render('index');
+        res.render('index', {homepage: true});
     });
 
     router.get('/profile', function(req, res) {

@@ -6,7 +6,7 @@
         width: 100%;
     }
 
-    @include media($not-tablet) {
+    @include media($tablet) {
         width: 600px;
 
         input, textarea {

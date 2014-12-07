@@ -6,67 +6,75 @@
     <title>{+title /}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css"/>
-    <!--[if lt IE 11]><script src="/components/modernizr/modernizr.js"></script><![endif]-->
+    <!--[if lt IE 11]>
+    <script src="/components/modernizr/modernizr.js"></script><![endif]-->
 
 </head>
 <body>
+<div>{?user} {user.firstname} {user.lastname} {/user}</div>
 
 <header>
-  <div class="top-bar">
-    {?user} Bonjour {user.firstname} {user.lastname} {/user}
 
-    <span class="language">
-      <a href="/fr/"><img class="flag {@eq key=context.locality value="fr-FR"}selected{/eq}" src="/img/fr-FR.png"/></a>
-      <a href="/"><img class="flag {@eq key=context.locality value="en-US"}selected{/eq}" src="/img/en-US.png"/></a>
-    </span>
+    <div class="top-bar">
 
-    <span class="cart-info">{cart.qty}<i class="fa fa-shopping-cart"></i></span>
-  </div>
+        <span>
+            <a href="/cart">{cart.qty}<i class="ion-bag"></i></a>
+        </span>
 
-  <div class="logo">
-    <a href="{langPath}/">
-      <img src="/img/absainte-paris-logo.jpg" alt="Absainte Paris"/>
-    </a>
-  </div>
-  <div class="centered-navigation">
-    <div class="centered-navigation-wrapper">
-      <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
-      <ul class="centered-navigation-menu">
-      <li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>
-        <li class="nav-link more"><a href="{langPath}/body-jewelry">{@pre type="content" key="collectionMenu"/}</a>
-          <ul class="submenu">
+        <span>
+            <a href="/login" title=""><i class="ion-ios-locked-outline"></i></a>
 
-            {#collections}
-                <li><a href="{langPath}/body-jewelry/collection/{.permalink}">{.name}</a></li>
-            {/collections}
-          </ul>
-        </li>
-        <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="aboutMenu"/}</a></li>
-        <li class="nav-link"><a href="{langPath}/contact">{@pre type="content" key="contactMenu"/}</a></li>
-      </ul>
+        </span>
+
+        <span>
+            <a href="https://www.facebook.com/pages/Absainte-Harnais-bijoux-de-corps/209587772440048?fref=ts"
+               title='{@pre type="content" key="followFacebook"/}' class="tooltip">
+                <i class="ion-android-favorite-outline"></i>
+            </a>
+            <a href="http://eepurl.com/1a_51" title='{@pre type="content" key="newsletter"/}' class="tooltip">
+                <i class="ion-paper-airplane"></i>
+            </a>
+        </span>
+
+        <span class="language">
+          <a href="/fr/" {@eq key=context.locality value="fr-FR"}class="selected"{/eq}>FR</a>
+          <a href="/" {@eq key=context.locality value="en-US"}class="selected"{/eq}>EN</a>
+        </span>
     </div>
-  </div>
+
+    <nav class="centered-navigation">
+        <a class="logo" href="{langPath}/">
+            <img src="/img/logo-absainte.jpg" alt="Absainte Paris" />
+        </a>
+        <div class="centered-navigation-wrapper">
+            <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
+            <ul class="centered-navigation-menu">
+                <li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>
+                <li class="nav-link"><a href="{langPath}/body-jewelry">{@pre type="content" key="collectionMenu"/}</a>
+                    <!--ul class="submenu">
+
+                        {#collections}
+                        <li><a href="{langPath}/body-jewelry/collection/{.permalink}">{.name}</a></li>
+                        {/collections}
+                    </ul-->
+                </li>
+                <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="aboutMenu"/}</a></li>
+                <li class="nav-link"><a href="{langPath}/contact">{@pre type="content" key="contactMenu"/}</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
-<div class="main">
-    {+body /}
-</div>
+{+body /}
 
-<footer class="footer">
-  <div class="social">
-    <span>{@pre type="content" key="sharePitch"/}</span>
-    <i class="share fa fa-facebook" data-share-url="https://www.facebook.com/sharer/sharer.php?u="></i>
-    <i class="share fa fa-google-plus" data-share-url="https://plus.google.com/share?url="></i>
-    <i class="share fa fa-pinterest" data-share-url="http://pinterest.com/pinthis?url="></i>
-    <i class="share fa fa-twitter" data-share-url='http://twitter.com/share?text={@pre type="content" key="twitterShare"/}&url='></i>
-  </div>
-  <div class="follow">
-    <span>{@pre type="content" key="follow"/}</span>
-    <a href="http://eepurl.com/1a_51"><i class="fa fa-envelope"></i></a>
-    <a href="https://www.facebook.com/pages/Absainte-Harnais-bijoux-de-corps/209587772440048?fref=ts"><i class="fa fa-thumbs-o-up"></i></a>
-  </div>
+<footer>
+    <ul>
+        <li><a href="http://eepurl.com/1a_51">Newsletter</a></li>
+        <li><a>{@pre type="content" key="cgv"/}</a></li>
+        <li><a>{@pre type="content" key="sizeGuide"/}</a></li>
+    </ul>
 </footer>
 
 
@@ -75,12 +83,20 @@
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
 </script>
 </body>
 </html>

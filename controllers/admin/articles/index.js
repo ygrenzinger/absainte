@@ -50,7 +50,7 @@ module.exports = function (router) {
         return true;
     };
 
-    var upsertArticle = function(article) {
+    var upsertArticle = function(article, res) {
         ArticleModel
             .upsert(article)
             .then(function (article) {
@@ -70,7 +70,7 @@ module.exports = function (router) {
         delete article._id;
         delete article.__v;
 
-        upsertArticle(article);
+        upsertArticle(article, res);
     });
 
     router.post('/', function (req, res) {
@@ -88,6 +88,6 @@ module.exports = function (router) {
             article.publishedDate = null;
         }
 
-        upsertArticle(article);
+        upsertArticle(article, res);
     });
 };

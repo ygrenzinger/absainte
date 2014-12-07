@@ -4,6 +4,10 @@ $dark-blue: #0000cd;
 $pink: #FFB6C1;
 $gold: #d4af37;
 
+$img-width: 252px;
+$img-height: 504px;
+$logo-size: 100px;
+
 @function grayscale($value) {
   @return #{ "grayscale(" + $value + ")"};
 }
@@ -31,10 +35,10 @@ $xxlarge-range: (120.063em); /* 1921px */
 $screen: "only screen" !default;
 
 $mobile: new-breakpoint(max-width 480px 4);
-$not-mobile: new-breakpoint(min-width 480px 4);
+$bigger-than-mobile: new-breakpoint(min-width 480px 4);
 
-$tablet: new-breakpoint(max-width 768px 4);
-$not-tablet: new-breakpoint(min-width 768px 4);
+$tablet: new-breakpoint(min-width 768px 4);
+$desktop: new-breakpoint(min-width 1024px 4);
 
 $landscape: "#{$screen} and (orientation: landscape)" !default;
 $portrait: "#{$screen} and (orientation: portrait)" !default;

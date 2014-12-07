@@ -1,23 +1,160 @@
 .product {
-  .left {
-    @include span-columns(6);
-    text-align: right;
+    .left {
+        @include span-columns(6);
+        text-align: right;
 
-    @include media($mobile) {
-      @include span-columns(4);
+        @include media($mobile) {
+            @include span-columns(4);
+        }
+
+        .main-img {
+            max-height: 400px;
+        }
+
+        .thumbnails img {
+            height: 80px;
+            margin: 4px;
+        }
     }
-  }
 
-  .right {
-    @include span-columns(6);
+    .right {
+        div {
+            margin: 1em 0;
+        }
 
-    @include media($mobile) {
-      @include span-columns(4);
+        select {
+            display: inline;
+            width: auto;
+        }
+
+        @include span-columns(6);
+
+        @include media($mobile) {
+            @include span-columns(4);
+        }
+
+        .social {
+            i {
+                margin: 0 0.5em;
+                color: #ffffff;
+                &:hover {
+                    color: darken(#ffffff, 20%);
+                }
+            }
+        }
+
+        .price {
+            text-align: right;
+            font-weight: 600;
+            border-bottom: 1px solid #ffffff;
+        }
     }
 
-    .thumbnails img {
-      height: 100px;
-      margin: 5px;
-    }
-  }
+    @include clearfix;
 }
+
+.recommendations {
+    img {
+        width: 150px;
+        margin: 0 5px;
+    }
+}
+
+@include media($mobile) {
+    .recommendations {
+        text-align: center;
+        img {
+            width: 100px;
+            margin: 0 5px;
+        }
+    }
+    .product .left, .product .right {
+        text-align: center;
+    }
+}
+
+.products {
+
+    .title {
+        font-size: 1.5em;
+        font-style: italic;
+        //font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    }
+
+    .product-thumbnail {
+        position: relative;
+        display: inline-block;
+        margin: 0 1em;
+        padding: 2px 0;
+        /*
+          @include media(64.063em) {
+              @include span-columns(3);
+              @include omega(4n);
+          }
+
+          @include media(min-width 40.063em max-width 64em) {
+              @include span-columns(6);
+              @include omega(2n);
+          }
+
+          @include span-columns(12);
+          */
+    }
+
+    a.product-link {
+        padding: 10px;
+        color: #237546;
+        font-weight: 700;
+        text-shadow: none;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s;
+    }
+
+    a.product-link::before,
+    a.product-link::after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $gold;
+        content: '';
+        opacity: 0;
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+        -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+        transition: opacity 0.3s, transform 0.3s;
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    a.product-link::before {
+        top: 0;
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    a.product-link::after {
+        bottom: 0;
+        -webkit-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+
+    a.product-link:hover,
+    a.product-link:focus {
+        color: $gold;
+    }
+
+    a.product-link:hover::before,
+    a.product-link:focus::before,
+    a.product-link:hover::after,
+    a.product-link:focus::after {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+

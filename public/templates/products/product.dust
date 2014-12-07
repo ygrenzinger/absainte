@@ -1,32 +1,60 @@
 {>"layouts/master_front" /}
+
 {<title}
-    Collection {product.collectionName}
+Collection {product.collectionName}
 {/title}
 
 {<body}
-  <div class="product">
-    <div class="left">
-        <img class="full-size" src="{product.mainImage.imageUrl}"></img>
-    </div>
-    <div class="right">
+<div class="main">
+    <div class="product">
+        <div class="left">
+            <img class="main-img" src="{product.mainImage.imageUrl}"/>
 
-        <form method="POST" action="{product.permalink}/buy" id="buy-form">
-            <input type="hidden" name="item_id" value="{product.id}">
-            <input type="hidden" name="_csrf" value="{_csrf}">
+            <div class="thumbnails">
+                <img data-url="{product.mainImage.imageUrl}" src="{product.mainImage.thumbnailUrl}"/>
+                {#product.otherImages}
+                <img data-url="{.imageUrl}" src="{.thumbnailUrl}"/>
+                {/product.otherImages}
+            </div>
+        </div>
+        <div class="right">
 
-            <div>{product.name}</div>
-            <span>{product.prettyPrice}</span>
-            <button id="buy" type="submit">{@pre type="content" key="addToCart"/}</button>
-        </form>
-        <div>{product.description|s}</div>
+            <form method="POST" action="{product.permalink}/buy" id="buy-form">
+                <input type="hidden" name="item_id" value="{product.id}">
+                <input type="hidden" name="_csrf" value="{_csrf}">
 
-        <div class="thumbnails">
-          <img data-url="{product.mainImage.imageUrl}" src="{product.mainImage.thumbnailUrl}"></img>
-          {#product.otherImages}
-            <img data-url="{.imageUrl}" src="{.thumbnailUrl}"></img>
-          {/product.otherImages}
+                <h1>{product.name}</h1>
+
+                <div class="social">
+                    <i data-share-url="https://www.facebook.com/sharer/sharer.php?u=" class="share ion-social-facebook"></i>
+                    <i data-share-url="https://plus.google.com/share?url=" class="share fa ion-social-googleplus"></i>
+                    <i data-share-url="http://pinterest.com/pinthis?url=" class="share fa ion-social-pinterest"></i>
+                    <i data-share-url='http://twitter.com/share?text={@pre type="content" key="twitterShare"/}&url='
+                       class="share ion-social-twitter"></i>
+                </div>
+
+                <div>{product.descriptionToDisplay|s}</div>
+                <div class="price">{product.prettyPrice}</div>
+                <div>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <button id="buy" type="submit"><i class="ion-heart"></i> {@pre type="content" key="addToCart"/}</button>
+                </div>
+            </form>
         </div>
     </div>
-  </div>
+    <div class="recommendations">
+        <div>{@pre type="content" key="recommendation"/}</div>
+        {#product.recommendations}
+        <a class="product-link" href="/body-jewelry/{.permalink}">
+            <img src="{.mainImage.thumbnailUrl}"/>
+        </a>
+        {/product.recommendations}
+    </div>
+</div>
 {/body}
 

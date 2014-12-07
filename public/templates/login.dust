@@ -1,7 +1,7 @@
 {>"layouts/master_front" /}
 
 {<body}
-    <div>
+    <div class="main">
         <form id="loginForm" method="post">
 
                 <h2>Login</h2>

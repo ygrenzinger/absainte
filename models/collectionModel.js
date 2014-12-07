@@ -12,8 +12,8 @@ var collectionModel = function () {
         permalink: {type: String, required: true, unique: true},
         mainImage: {type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true},
         description: {
-            "en": String,
-            "fr": String
+            'en': String,
+            'fr': String
         }
     });
 

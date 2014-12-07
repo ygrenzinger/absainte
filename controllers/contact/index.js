@@ -17,9 +17,9 @@ module.exports = function (router) {
         };
 
         mail.templates(res.locals.context.locality, model).then(function(templates) {
-            var contactMessage = "Message de " + req.body.firstname + " " + req.body.lastname + " " + req.body.email + "<br/>";
+            var contactMessage = 'Message de ' + req.body.firstname + ' ' + req.body.lastname + ' ' + req.body.email + '<br/>';
             contactMessage += req.body.message;
-            mail.send("contact@absainte.com", "Demande de Contact - Absainte", contactMessage).then(function() {
+            mail.send('contact@absainte.com', 'Demande de Contact - Absainte', contactMessage).then(function() {
                 return mail.send(req.body.email, templates.confirmSubject, templates.confirmMessage);
             }).then(function() {
                 res.render('contact', {sended: false});

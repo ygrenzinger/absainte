@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose'),
     Q = require('q'),
+    _ = require('lodash'),
     querystring = require('querystring');
 
 
@@ -14,8 +15,8 @@ var productModel = function () {
         price: {type: Number, min: 0},
         mainImage: {type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true},
         description:    {
-            "en" : String,
-            "fr" : String
+            'en' : String,
+            'fr' : String
         },
         otherImages: [{type: mongoose.Schema.Types.ObjectId, ref: 'Image'}]
 
@@ -44,6 +45,22 @@ module.exports.findAll = function () {
                 deferred.reject(err);
             } else {
                 deferred.resolve(products);
+            }
+        });
+    return deferred.promise;
+};
+
+module.exports.findRandom = function (number) {
+    if (!number) { number = 3; }
+    var deferred = Q.defer();
+    model.find({})
+        .populate('mainImage')
+        .exec(function (err, products) {
+            if (err) {
+                deferred.reject(err);
+            } else {
+                var randomProducts = _.sample(products, number);
+                deferred.resolve(randomProducts);
             }
         });
     return deferred.promise;

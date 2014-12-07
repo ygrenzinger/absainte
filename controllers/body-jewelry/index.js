@@ -39,11 +39,18 @@ module.exports = function (router) {
     router.get('/:permalink', function(req, res) {
         ProductModel.findByPermalink(req.params.permalink)
             .then(function (product) {
-                var model =
-                {
-                    product: product
-                };
-                res.render('products/product', model);
+                product.descriptionToDisplay = product.description[res.locals.language];
+                ProductModel.findRandom(10).then(function(recommendations) {
+                    product.recommendations = recommendations;
+                    var model =
+                    {
+                        product: product
+                    };
+                    res.render('products/product', model);
+
+                }).fail(function (err) {
+                    res.send(500, err);
+                });
             })
             .fail(function (err) {
                 res.send(500, err);
@@ -82,8 +89,8 @@ module.exports = function (router) {
                     qty: 1
                 };
             }
-            //res.status(200).send("Product added to cart");
-            res.redirect("/body-jewelry/"+req.params.permalink);
+            //res.status(200).send('Product added to cart');
+            res.redirect('/body-jewelry/'+req.params.permalink);
 
         });
     });

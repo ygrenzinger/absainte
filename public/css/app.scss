@@ -6,9 +6,7 @@
 @import "_variables.scss";
 @import "_header";
 @import "_footer";
-@import "_index";
 @import "_contact";
-@import "_illustrations";
 @import "_products";
 
 html, body {
@@ -17,19 +15,76 @@ html, body {
     color: $white;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
+
+    z-index:200;
 }
 
-.main {
-    @include outer-container;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px;
-
-    @include media(480px) {
-        margin-bottom: 40px;
+a {
+    color: #ffffff;
+    &:hover {
+        color: darken(#ffffff, 20%);
     }
 }
 
-.full-size {
-    max-height: 80%;
+button {
+    background-color: #ffffff;
+    color: #000000;
+
+    &:hover {
+        background-color: #808080;
+    }
 }
+
+
+@include media($desktop) {
+    .main {
+       margin-left: $img-width;
+    }
+}
+
+.homepage {
+    white-space: nowrap;
+    overflow-x: auto;
+    .blank-container {
+        display: none;
+        @include media($desktop) {
+            display: inline-block;
+            width: $img-width;
+            height: $img-height;
+        }
+    }
+    img {
+        margin: 0 5px;
+        width: $img-width;
+        height: $img-height;
+    }
+}
+
+.tooltip{
+    display: inline;
+    position: relative;
+    &:hover:after{
+        background: #333;
+        background: rgba(0,0,0,.8);
+        border-radius: 5px;
+        bottom: 26px;
+        color: #fff;
+        content: attr(title);
+        left: 20%;
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 98;
+        width: 220px;
+    }
+    &:hover:before{
+        border: solid;
+        border-color: #333 transparent;
+        border-width: 6px 6px 0 6px;
+        bottom: 20px;
+        content: "";
+        left: 50%;
+        position: absolute;
+        z-index: 99;
+    }
+}
+
