@@ -78,8 +78,7 @@ header {
 
     @include media($horizontal-bar-mode) {
         width: auto;
-        //height: auto;
-
+        text-align: center;
     }
 
     .centered-navigation-menu-button {

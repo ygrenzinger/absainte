@@ -1,18 +1,23 @@
 footer {
-    border-top: 1px dotted white;
-    margin-top: 1em;
-    li {
-        margin: 10px 0;
-        display: block;
-        text-align: center;
+    ul {
+        li {
+            margin: 10px 0;
+            display: block;
+            text-align: center;
+        }
     }
 }
 
 @include media($bigger-than-mobile) {
     footer {
-        li {
-            margin: 0 10px;
-            display: inline-block;
+        ul {
+            margin: 1em;
+            float: right;
+
+            li {
+                margin: 0 10px;
+                display: inline-block;
+            }
         }
     }
 }

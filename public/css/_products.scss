@@ -4,7 +4,7 @@
         text-align: right;
 
         @include media($mobile) {
-            @include span-columns(4);
+            @include span-columns(12);
         }
 
         .main-img {
@@ -30,7 +30,7 @@
         @include span-columns(6);
 
         @include media($mobile) {
-            @include span-columns(4);
+            @include span-columns(12);
         }
 
         .social {
@@ -74,36 +74,39 @@
 }
 
 .products {
+    @include clearfix;
 
-    .title {
-        font-size: 1.5em;
+    h1 {
+        width: 100%;
+        text-align: center;
         font-style: italic;
-        //font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+        padding-bottom: 1em;
     }
 
     .product-thumbnail {
         position: relative;
         display: inline-block;
-        margin: 0 1em;
-        padding: 2px 0;
-        /*
-          @include media(64.063em) {
-              @include span-columns(3);
-              @include omega(4n);
-          }
+        text-align: center;
 
-          @include media(min-width 40.063em max-width 64em) {
-              @include span-columns(6);
-              @include omega(2n);
-          }
+        @include span-columns(12);
 
-          @include span-columns(12);
-          */
+        @include media($bigger-than-mobile) {
+            @include span-columns(6);
+        }
+
+        @include media($desktop) {
+            @include span-columns(3);
+            @include omega(4n);
+        }
+
+        img {
+            margin-top: 5px;
+        }
     }
 
     a.product-link {
-        padding: 10px;
-        color: #237546;
+        margin: 10px;
+        color: $white;
         font-weight: 700;
         text-shadow: none;
         -webkit-transition: color 0.3s;
@@ -117,7 +120,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: $gold;
+        background: $white;
         content: '';
         opacity: 0;
         -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -144,7 +147,7 @@
 
     a.product-link:hover,
     a.product-link:focus {
-        color: $gold;
+        color: $white;
     }
 
     a.product-link:hover::before,

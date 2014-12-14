@@ -1,0 +1,22 @@
+{>"layouts/master_front" /}
+{<title}
+Absainte collections
+{/title}
+
+{<body}
+<div class="main products">
+    <h1><span>Collections Absainte</span></h1>
+    {?collections}
+    {#collections}
+        <div class="product-thumbnail">
+            <a class="product-link" href="{langPath}/body-jewelry/collection/{.permalink}">
+                <img src="{.mainImage.thumbnailUrl}" alt="">
+                <h4>{.name}</h4>
+            </a>
+        </div>
+    {/collections}
+    {:else}
+    Nothing found :(
+    {/collections}
+</div>
+{/body}

@@ -4,9 +4,11 @@
 {/title}
 
 {<body}
-  <div>
-    <h1>{article.title}</h1>
-    <div>{article.content|s}</div>
+  <div class="main">
+      <div class="article">
+          <h1>{article.title}</h1>
+          <div>{article.content|s}</div>
+      </div>
   </div>
 {/body}
 

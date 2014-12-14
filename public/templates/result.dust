@@ -1,8 +1,8 @@
 {>"layouts/master_front" /}
 
 {<body}
-    <main role="main">
+    <div class="main">
         {.result}
         <h3><a href="/">{.continueMessage}</a></h3>
-    </main>
+    </div>
 {/body}

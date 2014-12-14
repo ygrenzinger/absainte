@@ -1,7 +1,7 @@
 {>"layouts/master_front" /}
 
 {<body}
-    <main role="main">
+    <div class="main">
         <div class="products mb2">
             <h2>{@pre type="content" key="yourcart"/}</h2>
             <p>{itemsInCart}</p>
@@ -37,9 +37,7 @@
                 You can use any valid Amex, Visa, MC or Discover credit card number
                 (<a target="_blank" href="http://www.darkcoding.net/credit-card-numbers/">Random Generator</a>)<br>
                 along with any cvv and expiration date in the future.
-
-
             </p>
         </div>
-    </main>
+    </div>
 {/body}

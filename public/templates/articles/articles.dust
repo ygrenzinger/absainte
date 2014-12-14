@@ -1,20 +1,29 @@
 {>"layouts/master_front" /}
+
 {<title}
-    Absainte Products
+Absainte News
 {/title}
 
 {<body}
-  <div>
-    {?articles}
-      {#articles}
-      <div>
-        <h2>{.title}</h2>
-        <p>{.summary}</p>
-        <a href="{langPath}/news/{.permalink}">{@pre type="content" key="readNext"/}</a>
-      </div>
-      {/articles}
-    {:else}
+<div class="main">
+    <div class="cards">
+        {?articles}
+        {#articles}
+            <a class="card" href="{langPath}/news/{.permalink}">
+
+                <div class="card-header">
+                    {.title}
+                </div>
+
+                <div class="card-copy">
+                    <p>{.summary}</p>
+                </div>
+
+            </a>
+        {/articles}
+        {:else}
         Nothing found :(
-    {/articles}
-  </div>
+        {/articles}
+    </div>
+</div>
 {/body}

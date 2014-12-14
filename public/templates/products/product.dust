@@ -23,7 +23,7 @@ Collection {product.collectionName}
                 <input type="hidden" name="item_id" value="{product.id}">
                 <input type="hidden" name="_csrf" value="{_csrf}">
 
-                <h1>{product.name}</h1>
+                <h2>{product.name}</h2>
 
                 <div class="social">
                     <i data-share-url="https://www.facebook.com/sharer/sharer.php?u=" class="share ion-social-facebook"></i>
@@ -36,11 +36,9 @@ Collection {product.collectionName}
                 <div>{product.descriptionToDisplay|s}</div>
                 <div class="price">{product.prettyPrice}</div>
                 <div>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
+                    <select name="color">
+                        <option value="gold">{@pre type="content" key="gold"/}</option>
+                        <option value="silver">{@pre type="content" key="silver"/}</option>
                     </select>
                     <button id="buy" type="submit"><i class="ion-heart"></i> {@pre type="content" key="addToCart"/}</button>
                 </div>

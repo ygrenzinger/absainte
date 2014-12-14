@@ -1,20 +1,20 @@
 {>"layouts/master_front" /}
 {<title}
-    Absainte Products
+Absainte Products
 {/title}
 
 {<body}
-  <div class="main products">
+<div class="main products">
     {?products}
-      {#products}
-      <div class="product-thumbnail">
+    {#products}
+    <div class="product-thumbnail">
         <a class="product-link" href="{langPath}/body-jewelry/{.permalink}">
-          <img src="{.mainImage.thumbnailUrl}"/>
+            <img src="{.mainImage.thumbnailUrl}"/>
         </a>
-      </div>
-      {/products}
-    {:else}
-        Nothing found :(
+    </div>
     {/products}
-  </div>
+    {:else}
+    Nothing found :(
+    {/products}
+</div>
 {/body}

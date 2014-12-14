@@ -9,14 +9,14 @@ module.exports = function (router) {
      */
     router.get('/', getBundle, function (req, res) {
 
+        var locals = res.locals;
+        var i18n = res.app.kraken.get('i18n');
+        var locality = locals && locals.context && locals.context.locality || i18n.fallback;
+
         //Retrieve the shopping cart from memory
         var cart = req.session.cart,
             displayCart = {items: [], total: 0},
             total = 0;
-        var locals = res.locals;
-        var i18n = res.app.kraken.get('i18n');
-        var locality = locals && locals.context && locals.context.locality || i18n.fallback;
-        var cartLength;
         if (!cart) {
             res.bundle.get({'bundle': 'messages', 'model': {}, 'locality': locality}, function bundleReturn(err, messages) {
                 res.render('result', {result: messages.empty, continueMessage: messages.keepShopping});
@@ -30,8 +30,9 @@ module.exports = function (router) {
             displayCart.items.push(cart[item]);
             total += (cart[item].qty * cart[item].price);
         }
+
         req.session.total = displayCart.total = total.toFixed(2);
-        cartLength = Object.keys(cart).length;
+        var cartLength = Object.keys(cart).length;
         var model =
         {
             cart: displayCart

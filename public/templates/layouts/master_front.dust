@@ -20,7 +20,7 @@
     <div class="top-bar">
 
         <span>
-            <a href="/cart">{cart.qty}<i class="ion-bag"></i></a>
+            <a href="/cart">{cartQty}<i class="ion-bag"></i></a>
         </span>
 
         <span>
@@ -52,7 +52,7 @@
             <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
             <ul class="centered-navigation-menu">
                 <li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>
-                <li class="nav-link"><a href="{langPath}/body-jewelry">{@pre type="content" key="collectionMenu"/}</a>
+                <li class="nav-link"><a href="{langPath}/body-jewelry/collection">{@pre type="content" key="collectionMenu"/}</a>
                     <!--ul class="submenu">
 
                         {#collections}
@@ -71,9 +71,9 @@
 
 <footer>
     <ul>
-        <li><a href="http://eepurl.com/1a_51">Newsletter</a></li>
-        <li><a>{@pre type="content" key="cgv"/}</a></li>
-        <li><a>{@pre type="content" key="sizeGuide"/}</a></li>
+        <li><a href="http://eepurl.com/1a_51">{@pre type="content" key="newsletter"/}</a></li>
+        <li><a href="/">{@pre type="content" key="cgv"/}</a></li>
+        <li><a href="/">{@pre type="content" key="sizeGuide"/}</a></li>
     </ul>
 </footer>
 

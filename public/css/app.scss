@@ -8,15 +8,15 @@
 @import "_footer";
 @import "_contact";
 @import "_products";
+@import "_articles";
+@import "_cards";
 
 html, body {
-    height: 100%;
     background-color: $black;
     color: $white;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-
-    z-index:200;
+    font-size: 14px;
 }
 
 a {
