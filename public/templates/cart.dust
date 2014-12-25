@@ -5,6 +5,7 @@
     <h2>{@pre type="content" key="yourcart"/}</h2>
 
     <p>{itemsInCart}</p>
+
     <table class="table-minimal">
         <thead>
         <tr>
@@ -33,6 +34,103 @@
         </tr>
         </tbody>
     </table>
-    <button>{@pre type="content" key="finalize"/}<img src="/img/paypal.jpg"/></button>
+
+    <form action="/cart/finalize" method="post" id="contact-form">
+        <div class="panel">
+            <h5>{@pre type="content" key="identityPanelTitle"/}</h5>
+            <div>
+                <label for="pay-firstname">{@pre type="content" key="firstname"/}*</label>
+                <input type="text" name="firstname" id="pay-firstname" required="true"/>
+            </div>
+            <div>
+                <label for="pay-lastname">{@pre type="content" key="lastname"/}*</label>
+                <input type="text" name="lastname" id="pay-lastname" required="true"/>
+            </div>
+            <div>
+                <label for="pay-email">{@pre type="content" key="email"/}*</label>
+                <input type="email" name="email" id="pay-email" required="true"/>
+            </div>
+        </div>
+        <div class="panel">
+            <h5>{@pre type="content" key="addressPanelTitle"/}</h5>
+            <div>
+                <label for="pay-address1">{@pre type="content" key="address1"/}*</label>
+                <input type="text" name="address1" id="pay-address1" required="true"/>
+
+                <div>
+                    <label for="pay-address2"></label>
+                    <input type="text" name="address2" id="pay-address2"/>
+                </div>
+                <div>
+                    <label for="pay-postalcode">{@pre type="content" key="postalcode"/}*</label>
+                    <input type="text" name="postalcode" id="pay-postalcode" required="true"/>
+                </div>
+                <div>
+                    <label for="pay-city">{@pre type="content" key="city"/}*</label>
+                    <input type="text" name="city" id="pay-city" required="true"/>
+                </div>
+                <div>
+                    <label for="pay-state">{@pre type="content" key="state"/}*</label>
+                    <input type="text" name="state" id="pay-state" required="true"/>
+                </div>
+                <div>
+                    <label for="pay-country">{@pre type="content" key="country"/}*</label>
+                    <select name="country" id="pay-country" required="true">
+
+                        <optgroup label="France">
+                            <option selected="selected" value="FR">France</option>
+                            <option value="AD">Andorra</option>
+                            <option value="GP">Guadeloupe</option>
+                            <option value="MQ">Martinique</option>
+                            <option value="MC">Monaco</option>
+                        </optgroup>
+                        <optgroup label="Europe">
+                            <option value="AT">Austria</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="CY">Cyprus</option>
+                            <option value="CZ">Czech Republic</option>
+                            <option value="DK">Denmark</option>
+                            <option value="EE">Estonia</option>
+                            <option value="FI">Finland</option>
+                            <option value="DE">Germany</option>
+                            <option value="GR">Greece</option>
+                            <option value="HR">Croatia</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IT">Italy</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MT">Malta</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="RO">Romania</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="ES">Spain</option>
+                            <option value="SE">Sweden</option>
+                            <option value="TR">Turkey</option>
+                            <option value="GB">United Kingdom</option>
+                        </optgroup>
+                        <optgroup label='{@pre type="content" key="country"/}'>
+                            <option value="CA">Canada</option>
+                            <option value="JP">Japan</option>
+                            <option value="NO">Norway</option>
+                            <option value="QA">Qatar</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="US">United States</option>
+                            <option value="RU">Russian Federation</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="contact-form-error"></div>
+            <input type="hidden" name="_csrf" value="{_csrf}">
+            <button>{@pre type="content" key="finalize"/}<img src="/img/paypal.jpg"/></button>
+        </div>
+    </form>
 </div>
 {/body}

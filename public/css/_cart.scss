@@ -2,8 +2,8 @@
     color: $black;
     $table-border-color: $black;
     $table-border: 1px solid $table-border-color;
-    $table-background: $white;
-    $table-header-color: lighten($table-background, 10);
+    $table-background: darken($white, 20);
+    $table-header-color: darken($table-background, 5);
     $table-hover-color: darken($table-background, 2);
     $table-stripe-color: darken($table-background, 4);
     $table-stripe-color-hover: darken($table-stripe-color, 5);
@@ -62,14 +62,53 @@
 .cart {
     @include clearfix;
 
-    button {
-        width: auto;
-        float: right;
+    form {
+        @include outer-container;
+        .panel {
+            h5 {
+                text-align: center;
+            }
 
-        img {
-            margin-left: 5px;
-            vertical-align: middle;
-            height: 30px;
+            vertical-align: top;
+            @include box-sizing(border-box);
+            display: inline-block;
+            width: 400px;
+
+            @include media($mobile) {
+                @include span-columns(12);
+            }
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+            text-align: right;
+            padding-right: 5px;
+            @include box-sizing(border-box);
+
+        }
+
+        input, select {
+            display: inline-block;
+            width: 230px;
+        }
+
+        span.error {
+            display: block;
+            text-align: left;
+            margin-left: 120px;
+        }
+
+        button {
+            width: 100%;
+            //float: right;
+
+            img {
+                margin-left: 5px;
+                vertical-align: middle;
+                height: 30px;
+            }
         }
     }
 }
+
+

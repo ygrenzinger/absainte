@@ -136,6 +136,13 @@
                 "name":"path:./lib/auth",
                 "method": "injectUser"
             }
+        },
+        "compress": {
+            "enabled": true,
+            "priority": 10,
+            "module": {
+                "name": "compression"
+            }
         }
 
     }

@@ -1,13 +1,25 @@
 {>"layouts/master_front" /}
 
 {<body}
-    <div class="homepage">
+    <div id="homepage" class="homepage">
         <div class="blank-container"></div>
         <img src="/img/Absainte1.jpg" alt="Absainte body jewelry">
         <img src="/img/Absainte2.jpg" alt="Absainte body jewelry">
         <img src="/img/Absainte3.jpg" alt="Absainte body jewelry">
-        <img src="/img/Absainte4.jpg" alt="Absainte body jewelry">
-        <img src="/img/Absainte5.jpg" alt="Absainte body jewelry">
-        <img src="/img/Absainte6.jpg" alt="Absainte body jewelry">
+        <img class="b-lazy"
+             src="data:image/jpg;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="/img/Absainte4.jpg"
+             alt="Absainte's fashion harness & body jewelry"
+            />
+        <img class="b-lazy"
+             src="data:image/jpg;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="/img/Absainte5.jpg"
+             alt="Absainte's fashion harness & body jewelry"
+            />
+        <img class="b-lazy"
+             src="data:image/jpg;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="/img/Absainte6.jpg"
+             alt="Absainte's fashion harness & body jewelry"
+            />
     </div>
 {/body}

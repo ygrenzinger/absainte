@@ -8,6 +8,18 @@ $img-width: 252px;
 $img-height: 504px;
 $logo-size: 100px;
 
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(3);
+
+label {
+    font-weight: normal;
+}
+
+input {
+    padding: 0.2em 0.2em;
+}
+
 @function grayscale($value) {
   @return #{ "grayscale(" + $value + ")"};
 }

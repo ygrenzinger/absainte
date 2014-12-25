@@ -1,21 +1,19 @@
 'use strict';
 
-var neat = require('node-neat');
-var path = require('path');
+var refills = require('node-refills');
 
 module.exports = function sass(grunt) {
 	// Load task
 	grunt.loadNpmTasks('grunt-sass');
-	var neatPaths = neat.includePaths;
-	var bitterPaths = path.join(__dirname, '../public/components/bitters/app/assets/stylesheets');
-	var refillsPaths = path.join(__dirname, '../public/components/refills/app/assets/stylesheets');
+	var refillPaths = refills.includePaths;
+    console.log("refillPaths: " +refillPaths);
 
 	// Options
 	return {
         build: {
             options: {
                 style: 'compressed',
-        				includePaths: neatPaths.concat(bitterPaths).concat(refillsPaths)
+        				includePaths: refillPaths
             },
             files: [{
                 expand: true,
