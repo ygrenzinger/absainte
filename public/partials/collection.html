@@ -3,6 +3,22 @@
         <form ng-submit="submit()">
             <div class="row">
                 <div class="small-2 columns">
+                    <label class="right inline">Type</label>
+                </div>
+                <div class="small-10 columns">
+                    <a class="button split">
+                        <span dropdown-toggle="#dropdown-example-3"></span>
+                        {{collection.type}}
+                    </a>
+                    <ul id="dropdown-example-3" class="f-dropdown">
+                        <li ng-repeat="type in types">
+                            <a ng-click="selectType(type.value)">{{type.label}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
                     <label for="name" class="right inline">Name</label>
                 </div>
                 <div class="small-10 columns">

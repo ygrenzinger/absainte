@@ -128,7 +128,6 @@
 
             }
         },
-        //add the user to the response object
         "injectUser": {
             "enabled": true,
             "priority": 112,
@@ -139,9 +138,16 @@
         },
         "compress": {
             "enabled": true,
-            "priority": 10,
+            "priority": 60,
             "module": {
                 "name": "compression"
+            }
+        },
+        "responseTime": {
+            "enabled": true,
+            "priority": 113,
+            "module": {
+                "name":"path:./lib/responseTime"
             }
         }
 

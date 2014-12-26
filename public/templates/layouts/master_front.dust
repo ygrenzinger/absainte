@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{+title /}</title>
-    <meta name="description" content="">
+    <meta name="description" content="{+description /}">
+    <meta name="keywords" content='{@pre type="content" key="keywords"/}'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/components/ionicons/css/ionicons.min.css">
     <!--link href="//code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet"-->
     <link rel="stylesheet" href="/css/app.css"/>
     <!--[if lt IE 11]>
-    <script src="/components/modernizr/modernizr.js"></script><![endif]-->
+    <script src="/components/modernizr/modernizr.js"></script>
+    <![endif]-->
 
 </head>
 <body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 <!--div>{?user} {user.firstname} {user.lastname} {/user}</div-->
 
 <header>
@@ -53,14 +58,14 @@
             <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
             <ul class="centered-navigation-menu">
                 <li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>
-                <li class="nav-link"><a href="{langPath}/body-jewelry/collection">{@pre type="content" key="collectionMenu"/}</a>
-                    <!--ul class="submenu">
-
-                        {#collections}
-                        <li><a href="{langPath}/body-jewelry/collection/{.permalink}">{.name}</a></li>
-                        {/collections}
-                    </ul-->
-                </li>
+                <li class="nav-link"><a href="{langPath}/shop/fashion-harness/collections">{@pre type="content" key="fashionHarness"/}</a></li>
+                <li class="nav-link"><a href="{langPath}/shop/body-jewelry/collections">{@pre type="content" key="bodyJewelry"/}</a></li>
+                <!--li class="nav-link more">{@pre type="content" key="collectionMenu"/}
+                    <ul class="submenu">
+                        <li><a href="{langPath}/products/fashion-harness/collection/{.permalink}">{@pre type="content" key="fashionHarness"/}</a>
+                        <li><a href="{langPath}/products/body-jewelry/collection/{.permalink}">{@pre type="content" key="bodyJewelry"/}</a></li>
+                    </ul>
+                </li-->
                 <li class="nav-link"><a href="javascript:void(0)">{@pre type="content" key="aboutMenu"/}</a></li>
                 <li class="nav-link"><a href="{langPath}/contact">{@pre type="content" key="contactMenu"/}</a></li>
             </ul>

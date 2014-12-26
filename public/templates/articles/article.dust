@@ -2,6 +2,9 @@
 {<title}
     {article.title}
 {/title}
+{<description}
+{article.summary}
+{/description}
 
 {<body}
   <div class="main">

@@ -283,11 +283,11 @@ header {
 
 @include media($desktop) {
     .centered-navigation {
-        width: 150px;
+        width: 170px;
         display: inline-block;
         position: absolute;
         top: 0;
-        left: $img-width - 150px;
+        left: $img-width - 170px;
         height: 100%;
 
         ul li.nav-link {

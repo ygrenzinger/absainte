@@ -8,6 +8,7 @@ var mongoose = require('mongoose'),
 var collectionModel = function () {
 
     var collectionSchema = mongoose.Schema({
+        type: {type: String, required: true},
         name: {type: String, required: true},
         permalink: {type: String, required: true, unique: true},
         mainImage: {type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: true},
@@ -27,6 +28,20 @@ module.exports.model = model;
 module.exports.findAll = function () {
     var deferred = Q.defer();
     model.find({})
+        .populate('mainImage')
+        .exec(function (err, collections) {
+            if (err) {
+                deferred.reject(err);
+            } else {
+                deferred.resolve(collections);
+            }
+        });
+    return deferred.promise;
+};
+
+module.exports.findByType = function (type) {
+    var deferred = Q.defer();
+    model.find({type: type})
         .populate('mainImage')
         .exec(function (err, collections) {
             if (err) {

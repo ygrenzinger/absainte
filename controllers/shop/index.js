@@ -1,14 +1,16 @@
 'use strict';
 
-var ProductModel = require('../../models/productModel.js'),
+var querystring = require('querystring'),
+    ProductModel = require('../../models/productModel.js'),
     CollectionModel = require('../../models/collectionModel.js');
 
 module.exports = function (router) {
 
-    router.get('/collection', function (req, res) {
-        CollectionModel.findAll().then(function (collections) {
+    router.get('/:type/collections', function (req, res) {
+        CollectionModel.findByType(req.params.type).then(function (collections) {
             var model =
             {
+                type: req.params.type,
                 collections: collections
             };
             res.render('collections', model);
@@ -17,14 +19,26 @@ module.exports = function (router) {
         });
     });
 
-    router.get('/collection/:permalink', function (req, res) {
+    router.get('/:type/collections/:permalink', function (req, res) {
+        var collection = {};
         CollectionModel
             .findByPermalink(req.params.permalink)
-            .then(function (collection) {
+            .then(function (collectionFromDB) {
+                collection = collectionFromDB;
                 return ProductModel.findAllByCollectionId(collection.id);
             }).then(function (products) {
+                var collectionName = collection.name;
+                var descriptionToDisplay = collection.description[res.locals.language];
+                var summary = querystring.unescape(descriptionToDisplay).replace(/(<([^>]+)>)/ig,'');
+                if (!!descriptionToDisplay && descriptionToDisplay.length > 255) {
+                    summary = summary.substring(0, 255);
+                }
                 var model =
                 {
+                    collectionName: collectionName,
+                    summary: summary,
+                    descriptionToDisplay: descriptionToDisplay,
+                    type: req.params.type,
                     products: products
                 };
                 res.render('products/products', model);
@@ -33,29 +47,21 @@ module.exports = function (router) {
             });
     });
 
-    router.get('/', function (req, res) {
-        ProductModel
-            .findAll()
-            .then(function (products) {
-                var model =
-                {
-                    products: products
-                };
-                res.render('products/products', model);
-            })
-            .fail(function (err) {
-                res.send(500, err);
-            });
-    });
-
-    router.get('/:permalink', function (req, res) {
+    router.get('/:type/:permalink', function (req, res) {
         ProductModel.findByPermalink(req.params.permalink)
             .then(function (product) {
-                product.descriptionToDisplay = product.description[res.locals.language];
+                var descriptionToDisplay = product.description[res.locals.language];
+                var summary = querystring.unescape(descriptionToDisplay).replace(/(<([^>]+)>)/ig,'');
+                if (!!descriptionToDisplay && descriptionToDisplay.length > 255) {
+                    summary = summary.substring(0, 255);
+                }
                 ProductModel.findRandom(10).then(function (recommendations) {
                     product.recommendations = recommendations;
                     var model =
                     {
+                        summary: summary,
+                        descriptionToDisplay: descriptionToDisplay,
+                        type: req.params.type,
                         product: product
                     };
                     res.render('products/product', model);

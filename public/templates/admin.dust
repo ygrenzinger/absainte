@@ -27,8 +27,8 @@
       <li class="divider"></li>
       <li><a href="#/products">Products</a></li>
       <li class="divider"></li>
-      <li><a href="#/illustrations">Illustrations</a></li>
-      <li class="divider"></li>
+      <!--li><a href="#/illustrations">Illustrations</a></li>
+      <li class="divider"></li-->
     </ul>
   </section>
 </nav>

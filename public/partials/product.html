@@ -3,7 +3,7 @@
         <form ng-submit="submit()">
             <div class="row">
                 <div class="small-2 columns">
-                    <label for="collection" class="right inline">Collection</label>
+                    <label class="right inline">Collection</label>
                 </div>
                 <div class="small-10 columns">
                     <a class="button split">
@@ -46,8 +46,8 @@
                     <label for="main-image" class="right inline">Main image</label>
                 </div>
                 <div class="small-1 columns">
-                    <icon class="fi-folder" browse-image-modal type="product" selected-image="product.mainImage"/>
-                    <icon class="fi-upload" upload-image-modal type="product" uploaded-image="product.mainImage"/>
+                    <icon class="fi-folder" browse-image-modal type="product" selected-image="product.mainImage"></icon>
+                    <icon class="fi-upload" upload-image-modal type="product" uploaded-image="product.mainImage"></icon>
                 </div>
                 <div class="small-4 columns">
                     <input type="text" id="main-image" ng-model="product.mainImage.permalink" readonly>
@@ -58,9 +58,9 @@
             </div>
             <div class="row">
                 <div class="small-2 columns">
-                    <label class="right inline">Description</label>
+                    <label for="lang-selected" class="right inline">Description</label>
                     <div>
-                        <select ng-model="langSelected" ng-options="language for language in languages"></select>
+                        <select id="lang-selected" ng-model="langSelected" ng-options="language for language in languages"></select>
                     </div>
                 </div>
                 <div class="small-10 columns">
@@ -70,14 +70,14 @@
             </div>
             <div class="row">
                 <div class="small-2 columns">
-                    <label class="right inline">Other images</label>
+                    <label for="other-image" class="right inline">Other images</label>
                 </div>
                 <div class="small-4 columns">
-                    <input type="text" class="small" id="main-image" ng-model="otherImage.permalink" readonly>
+                    <input type="text" class="small" id="other-image" ng-model="otherImage.permalink" readonly/>
                 </div>
                 <div class="small-1 columns">
-                    <icon class="fi-folder" browse-image-modal type="product" selected-image="otherImage"/>
-                    <icon class="fi-upload" upload-image-modal type="product" uploaded-image="otherImage"/>
+                    <icon class="fi-folder" browse-image-modal type="product" selected-image="otherImage"></icon>
+                    <icon class="fi-upload" upload-image-modal type="product" uploaded-image="otherImage"></icon>
                 </div>
                 <div class="small-2 columns">
                     <button class="button tiny expand" ng-click="addOtherImage()">Add</button>
@@ -87,10 +87,10 @@
             </div>
             <div class="row" ng-repeat="image in product.otherImages">
                 <div class="small-2 columns">
-                    <label class="right inline">Image {{$index}}</label>
+                    <label for="image" class="right inline">Image {{$index}}</label>
                 </div>
                 <div class="small-4 columns">
-                    <input type="text" class="small" id="main-image" ng-model="image.permalink" readonly>
+                    <input type="text" class="small" id="image" ng-model="image.permalink" readonly/>
                 </div>
                 <div class="small-1 columns">
                     <i class="fi-x" ng-click="removeOtherImage($index)"></i>

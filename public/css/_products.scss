@@ -76,6 +76,10 @@
 .products {
     @include clearfix;
 
+    @include media($mobile) {
+        text-align: center;
+    }
+
     h1 {
         width: 100%;
         text-align: center;
@@ -87,17 +91,6 @@
         position: relative;
         display: inline-block;
         text-align: center;
-
-        @include span-columns(12);
-
-        @include media($bigger-than-mobile) {
-            @include span-columns(6);
-        }
-
-        @include media($desktop) {
-            @include span-columns(3);
-            @include omega(4n);
-        }
 
         img {
             margin-top: 5px;

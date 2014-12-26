@@ -54,6 +54,7 @@ module.exports.findRandom = function (number) {
     if (!number) { number = 3; }
     var deferred = Q.defer();
     model.find({})
+        .populate('collectionFrom')
         .populate('mainImage')
         .exec(function (err, products) {
             if (err) {

@@ -9,8 +9,8 @@ Absainte collections
     {?collections}
     {#collections}
         <div class="product-thumbnail">
-            <a class="product-link" href="{langPath}/body-jewelry/collection/{.permalink}">
-                <img src="{.mainImage.thumbnailUrl}" alt="">
+            <a class="product-link" href="{langPath}/shop/{type}/collections/{.permalink}">
+                <img width="200" height="300" src="{.mainImage.thumbnailUrl}" alt="">
                 <h4>{.name}</h4>
             </a>
         </div>

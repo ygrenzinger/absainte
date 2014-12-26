@@ -3,10 +3,16 @@
 controllers.controller('CollectionCtrl', ['$scope', '$http', '$location', '$routeParams', '_', 'PermalinkService',
     function ($scope, $http, $location, $routeParams, _, PermalinkService) {
 
+        $scope.types = [
+            {value: 'fashion-harness', label: 'Fashion harness'},
+            {value: 'body-jewelry', label: 'body jewelry'}
+        ];
+
         $scope.langSelected = 'en';
         $scope.languages = ['en','fr'];
 
         $scope.collection = {
+            type: '',
             name: '',
             permalink: '',
             description: {
@@ -15,6 +21,10 @@ controllers.controller('CollectionCtrl', ['$scope', '$http', '$location', '$rout
             },
             mainImage: {},
             otherImages: []
+        };
+
+        $scope.selectType = function(type) {
+            $scope.collection.type = type;
         };
 
         $scope.createPermalink = function() {

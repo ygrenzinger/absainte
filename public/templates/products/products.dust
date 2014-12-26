@@ -1,15 +1,20 @@
 {>"layouts/master_front" /}
 {<title}
-Absainte Products
+Absainte Collection {collectionName}
 {/title}
+{<description}
+{summary}
+{/description}
 
 {<body}
 <div class="main products">
+    <h1>Collection {collectionName}</h1>
+    <div>{descriptionToDisplay|s}</div>
     {?products}
     {#products}
     <div class="product-thumbnail">
-        <a class="product-link" href="{langPath}/body-jewelry/{.permalink}">
-            <img src="{.mainImage.thumbnailUrl}"/>
+        <a class="product-link" href="{langPath}/shop/{type}/{.permalink}">
+            <img width="200" height="300" src="{.mainImage.thumbnailUrl}"/>
         </a>
     </div>
     {/products}
