@@ -1,0 +1,26 @@
+{>"layouts/master_front" /}
+{<title}
+    {@pre type="content" key="title"/}
+{/title}
+{<description}
+    {@pre type="content" key="description"/}
+{/description}
+
+{<body}
+    <div class="main about">
+        <div class="about-img">
+            <img src="/img/about-absainte.jpg" alt="Absainte Paris" />
+        </div>
+        <div class="about-txt">
+            <p>{@pre type="content" key="part1"/}</p>
+            <p>{@pre type="content" key="part2"/}</p>
+            <p>{@pre type="content" key="part3"/}</p>
+            <p>{@pre type="content" key="part4"/}</p>
+            <p>{@pre type="content" key="part5"/}</p>
+            <p>{@pre type="content" key="part6"/}</p>
+            <p>{@pre type="content" key="part7"/}</p>
+            <p>{@pre type="content" key="part8"/}</p>
+            <p>{@pre type="content" key="part9"/}</p>
+        </div>
+    </div>
+{/body}

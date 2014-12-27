@@ -29,7 +29,7 @@ module.exports = function (router) {
             }).then(function (products) {
                 var collectionName = collection.name;
                 var descriptionToDisplay = collection.description[res.locals.language];
-                var summary = querystring.unescape(descriptionToDisplay).replace(/(<([^>]+)>)/ig,'');
+                var summary = descriptionToDisplay.replace(/(<([^>]+)>)/ig,'');
                 if (!!descriptionToDisplay && descriptionToDisplay.length > 255) {
                     summary = summary.substring(0, 255);
                 }
@@ -51,7 +51,7 @@ module.exports = function (router) {
         ProductModel.findByPermalink(req.params.permalink)
             .then(function (product) {
                 var descriptionToDisplay = product.description[res.locals.language];
-                var summary = querystring.unescape(descriptionToDisplay).replace(/(<([^>]+)>)/ig,'');
+                var summary = descriptionToDisplay.replace(/(<([^>]+)>)/ig,'');
                 if (!!descriptionToDisplay && descriptionToDisplay.length > 255) {
                     summary = summary.substring(0, 255);
                 }
