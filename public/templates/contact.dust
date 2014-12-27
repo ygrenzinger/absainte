@@ -2,9 +2,13 @@
 {<title}
     {@pre type="content" key="title"/}
 {/title}
+{<description}
+{@pre type="content" key="description"/}
+{/description}
 
 {<body}
     <div class="main">
+        <p class="contact-txt">{@pre type="content" key="description"/}</p>
         <form class="contact-form" action="/contact" method="post">
             <div>
                 <label for="contact-email">{@pre type="content" key="email"/}</label>

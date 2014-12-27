@@ -1,5 +1,12 @@
 {>"layouts/master_front" /}
 
+{<title}
+{@pre type="content" key="title"/}
+{/title}
+{<description}
+{@pre type="content" key="description"/}
+{/description}
+
 {<body}
     <div id="homepage" class="homepage">
         <div class="blank-container"></div>

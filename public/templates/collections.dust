@@ -1,11 +1,31 @@
 {>"layouts/master_front" /}
 {<title}
-Absainte collections
+    {@eq key=type value="fashion-harness"}
+        {@pre type="content" key="titleFashionHarness"/}
+    {/eq}
+    {@eq key=type value="body-jewelry"}
+        {@pre type="content" key="titleBodyJewelry"/}
+    {/eq}
 {/title}
+{<description}
+{@eq key=type value="fashion-harness"}
+{@pre type="content" key="descriptionFashionHarness"/}
+{/eq}
+{@eq key=type value="body-jewelry"}
+{@pre type="content" key="descriptionBodyJewelry"/}
+{/eq}
+{/description}
 
 {<body}
 <div class="main products">
-    <h1><span>Collections Absainte</span></h1>
+    <h1>
+        {@eq key=type value="fashion-harness"}
+        {@pre type="content" key="descriptionFashionHarness"/}
+        {/eq}
+        {@eq key=type value="body-jewelry"}
+        {@pre type="content" key="descriptionBodyJewelry"/}
+        {/eq}
+    </h1>
     {?collections}
     {#collections}
         <div class="product-thumbnail">
