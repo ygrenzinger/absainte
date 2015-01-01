@@ -9,16 +9,6 @@ var kraken = require('kraken-js'),
 
 app.use(kraken(options));
 
-app.use(function (req, res, next) {
-    if (!app.locals.collections) {
-        CollectionModel.findAll().then(function(collections) {
-            app.locals.collections = collections;
-        });
-    }
-    next();
-});
-
-
 app.listen(port, function (err) {
     console.log('[%s] Listening on http://localhost:%d', app.settings.env, port);
 });
