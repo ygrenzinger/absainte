@@ -57,6 +57,14 @@
             }
         },
 
+        "compress": {
+            "enabled": true,
+            "priority": 10,
+            "module": {
+                "name":"compression"
+            }
+        },
+
         "method-override": {
             "enabled": true,
             "priority": 75,
@@ -136,13 +144,6 @@
                 "method": "injectUser"
             }
         },
-        "compress": {
-            "enabled": true,
-            "priority": 60,
-            "module": {
-                "name": "compression"
-            }
-        },
         "responseTime": {
             "enabled": true,
             "priority": 113,
@@ -150,6 +151,5 @@
                 "name":"path:./lib/responseTime"
             }
         }
-
     }
 }
