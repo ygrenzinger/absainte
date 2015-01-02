@@ -285,10 +285,15 @@ header {
     .centered-navigation {
         width: 170px;
         display: inline-block;
-        position: absolute;
+        position: relative;
+        background-color: rgba(0,0,0,0.8);
         top: 0;
         left: $img-width - 170px;
-        height: 100%;
+        min-height: 650px;
+
+        .centered-navigation-wrapper {
+            margin-top: 4em;
+        }
 
         ul li.nav-link {
             display: inline-block;

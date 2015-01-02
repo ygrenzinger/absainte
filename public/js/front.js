@@ -43,7 +43,7 @@ $(document).ready(function () {
     });
 
     var bLazy = new Blazy({
-        offset: 100, // Loads images 100px before they're visible
+        offset: 300, // Loads images 100px before they're visible
         container: '#homepage' // Default is window
     });
 

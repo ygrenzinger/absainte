@@ -79,7 +79,7 @@ module.exports = function (router) {
     /**
      * Add an item to the shopping cart
      */
-    router.post('/:permalink/buy', function (req, res) {
+    router.post('/:type/:permalink/buy', function (req, res) {
 
         //Load (or initialize) the cart
         if (!req.session.cart) {
@@ -112,7 +112,7 @@ module.exports = function (router) {
                 };
             }
             //res.status(200).send('Product added to cart');
-            res.redirect('/body-jewelry/' + req.params.permalink);
+            res.redirect('/shop/'+req.params.type+'/' + req.params.permalink);
 
         });
     });

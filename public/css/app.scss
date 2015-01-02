@@ -19,6 +19,19 @@ html, body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 14px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    vertical-align: middle;
+}
+
+#content-wrapper {
+    margin: auto 1em;
+    width: 100%;
 }
 
 a {
@@ -60,6 +73,7 @@ input {
 @include media($desktop) {
     .main {
        margin-left: $img-width;
+        min-height: 400px;
     }
 }
 

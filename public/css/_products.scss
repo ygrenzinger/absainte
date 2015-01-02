@@ -1,4 +1,9 @@
 .product {
+
+    @include media($desktop) {
+        max-width: 1000px;
+    }
+
     .left {
         @include span-columns(6);
         text-align: right;
@@ -47,6 +52,10 @@
             text-align: right;
             font-weight: 600;
             border-bottom: 1px solid #ffffff;
+        }
+
+        .buy {
+            float: right;
         }
     }
 

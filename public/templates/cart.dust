@@ -28,7 +28,12 @@
         </tr>
         {/cart.items}
         <tr>
-            <td colspan="2"></td>
+            <td colspan="2">{@pre type="content" key="delivery"/}</td>
+            <td>{delivery}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">Total</td>
             <td>{total}</td>
             <td></td>
         </tr>

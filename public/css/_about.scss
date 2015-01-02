@@ -1,7 +1,7 @@
 .about {
     @include outer-container;
     .about-img {
-        @include span-columns(4);
+        @include span-columns(3);
 
         @include media($mobile) {
             text-align: center;
@@ -10,7 +10,9 @@
     }
 
     .about-txt {
-        @include span-columns(8);
+        text-align: justify;
+
+        @include span-columns(9);
 
         @include media($mobile) {
             text-align: center;

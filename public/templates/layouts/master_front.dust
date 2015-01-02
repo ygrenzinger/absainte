@@ -21,6 +21,7 @@
 <![endif]-->
 <!--div>{?user} {user.firstname} {user.lastname} {/user}</div-->
 
+<div id="content-wrapper">
 <header>
 
     <div class="top-bar">
@@ -83,6 +84,7 @@
     </ul>
 </footer>
 
+</div>
 
 <!--script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
 <script src="/components/jquery/dist/jquery.min.js"></script>

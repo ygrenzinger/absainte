@@ -22,7 +22,7 @@ Absainte {product.name}
         </div>
         <div class="right">
 
-            <form method="POST" action="{product.permalink}/buy" id="buy-form">
+            <form method="POST" action="/shop/{product.collectionFrom.type}/{product.permalink}/buy" id="buy-form">
                 <input type="hidden" name="item_id" value="{product.id}">
                 <input type="hidden" name="_csrf" value="{_csrf}">
 
@@ -43,7 +43,7 @@ Absainte {product.name}
                         <option value="gold">{@pre type="content" key="gold"/}</option>
                         <option value="silver">{@pre type="content" key="silver"/}</option>
                     </select>
-                    <button id="buy" type="submit"><i class="ion-heart"></i> {@pre type="content" key="addToCart"/}</button>
+                    <button class="buy" type="submit"><i class="ion-heart"></i> {@pre type="content" key="addToCart"/}</button>
                 </div>
             </form>
         </div>

@@ -1,8 +1,10 @@
 'use strict';
 
 var Product = require('../../models/productModel'),
+    User = require('../../models/userModel'),
     getBundle = require('../../lib/getBundle'),
     paypal = require('paypal-rest-sdk'),
+    _ = require('lodash'),
     port = process.env.PORT || 8000;
 
 module.exports = function (router) {
@@ -37,11 +39,10 @@ module.exports = function (router) {
             return;
         }
 
-        //Ready the products for display
-        for (var item in cart) {
-            displayCart.items.push(cart[item]);
-            total += (cart[item].qty * cart[item].price);
-        }
+        _.forEach(cart, function(item) {
+            displayCart.items.push(item);
+            total += (item.qty * item.price);
+        });
 
         req.session.total = total;
         var cartLength = Object.keys(cart).length;
@@ -64,23 +65,34 @@ module.exports = function (router) {
 
     router.post('/finalize', function (req, res) {
 
-        var fullname = (req.body.firstname + ' ' + req.body.lastname).substring(0, 50);
+        var firstname = req.body.firstname;
+        var lastname = req.body.lastname;
+        var fullname = (firstname + ' ' + lastname).substring(0, 50);
+        var email = req.body.email;
+
+        var shipping_address = {
+            'recipient_name': fullname,
+            'line1': req.body.address1,
+            'line2': req.body.address2,
+            'city': req.body.city,
+            'country_code': req.body.country,
+            'postal_code': req.body.postalcode,
+            'state': req.body.state
+        };
+
+        var user = {
+            firstname: firstname,
+            lastname: lastname,
+            fullname: fullname,
+            email: email
+        };
 
         var paypalPayment = {
             'intent': 'sale',
             'payer': {
                 'payment_method': 'paypal',
                 'payer_info': {
-                    //'email': req.body.email,
-                    'shipping_address': {
-                        'recipient_name': fullname,
-                        'line1': req.body.address1,
-                        'line2': req.body.address1,
-                        'city': req.body.address1,
-                        'country_code': req.body.country,
-                        'postal_code': req.body.postalcode,
-                        'state': req.body.state
-                    }
+                    'shipping_address': shipping_address
                 }
             },
             'redirect_urls': {
@@ -95,40 +107,43 @@ module.exports = function (router) {
         };
 
         var transaction = paypalPayment.transactions[0];
-        transaction.amount.total = req.session.total;
-        transaction.description = 'Absainte';
+        transaction.amount.total = Number(req.session.total).toFixed(2);
+        transaction.description = 'Absainte order';
 
         transaction.item_list = {
             'items': []
         };
         var cart = req.session.cart;
-        for (var cartItem in cart) {
-            var item = {
-                'name': cart[cartItem].name,
-                'quantity': cart[cartItem].qty,
-                'price': cart[cartItem].price,
-                'currency': 'EUR'
+
+        _.forEach(cart, function(item) {
+            var cartitem = {
+                'name': item.name,
+                'quantity': item.qty,
+                'price': Number(item.price).toFixed(2),
+                'currency': 'eur'
 
             };
-            transaction.item_list.items.push(item);
-        }
+            transaction.item_list.items.push(cartitem);
+        });
 
+        User.insertNewOrder(user, paypalPayment).then(function() {
+            paypal.payment.create(paypalPayment, {}, function (err, resp) {
+                if (err) {
+                    res.render('cart', {message: [{desc: 'Payment API call failed', type: 'error'}]});
+                }
 
-        paypal.payment.create(paypalPayment, {}, function (err, resp) {
-            if (err) {
-                res.render('cart', {message: [{desc: 'Payment API call failed', type: 'error'}]});
-            }
+                if (resp) {
+                    var now = (new Date()).toISOString().replace(/\.[\d]{3}Z$/, 'Z ');
 
-            if (resp) {
-                var now = (new Date()).toISOString().replace(/\.[\d]{3}Z$/, 'Z ');
-
-                var link = resp.links;
-                for (var i = 0; i < link.length; i++) {
-                    if (link[i].rel === 'approval_url') {
-                        res.redirect(link[i].href);
+                    var link = resp.links;
+                    for (var i = 0; i < link.length; i++) {
+                        if (link[i].rel === 'approval_url') {
+                            res.redirect(link[i].href);
+                        }
                     }
                 }
-            }
+            });
         });
+
     });
 };
