@@ -81,6 +81,7 @@
         <li><a href="http://eepurl.com/1a_51">{@pre type="content" key="newsletter"/}</a></li>
         <li><a href="/">{@pre type="content" key="cgv"/}</a></li>
         <li><a href="/">{@pre type="content" key="sizeGuide"/}</a></li>
+        <li>&copy; 2013<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Absainte.</li>
     </ul>
 </footer>
 
