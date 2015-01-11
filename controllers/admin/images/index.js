@@ -1,6 +1,6 @@
 'use strict';
 
-var image = require('../../../lib/image.js');
+var image = require('../../../lib/imageToS3.js');
 
 module.exports = function(router) {
 

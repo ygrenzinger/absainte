@@ -2,7 +2,7 @@
 <div class="row">
     <div class="large-3 medium-4 small-6 columns" ng-repeat="product in products">
         <a ng-href="#/product/{{product.permalink}}">
-            <img style="width: 100%;" ng-src="{{product.mainImage.thumbnailUrl}}">
+            <img style="width: 100%;" ng-src="{{product.mainImage.listImgUrl}}">
             <h6 class="panel">{{product.name}}</h6>
         </a>
     </div>

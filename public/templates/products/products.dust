@@ -14,7 +14,7 @@ Absainte Collection {collectionName}
     {#products}
     <div class="product-thumbnail">
         <a class="product-link" href="{langPath}/shop/{type}/{.permalink}">
-            <img width="200" height="300" src="{.mainImage.thumbnailUrl}"/>
+            <img width="200" height="300" src="{.mainImage.listImgUrl}"/>
         </a>
     </div>
     {/products}

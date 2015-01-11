@@ -2,7 +2,7 @@
 
 var ImageModel = require('../../models/imageModel.js'),
     _ = require('lodash'),
-    image = require('../../lib/image.js');
+    image = require('../../lib/imageToS3.js');
 
 module.exports = function (router) {
 

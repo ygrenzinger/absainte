@@ -30,7 +30,7 @@
                     <label for="permalink" class="right inline">Permalink</label>
                 </div>
                 <div class="small-10 columns">
-                    <input type="text" id="permalink" ng-model="product.permalink" placeholder="Collection's permalink" required="true"/>
+                    <input type="text" id="permalink" ng-model="product.permalink" placeholder="Product's permalink" required="true"/>
                 </div>
             </div>
             <div class="row">
@@ -53,7 +53,7 @@
                     <input type="text" id="main-image" ng-model="product.mainImage.permalink" readonly>
                 </div>
                 <div class="small-5 columns">
-                    <img ng-src="{{product.mainImage.thumbnailUrl}}"/>
+                    <img ng-src="{{product.mainImage.thumbnailImgUrl}}"/>
                 </div>
             </div>
             <div class="row">
@@ -96,7 +96,7 @@
                     <i class="fi-x" ng-click="removeOtherImage($index)"></i>
                 </div>
                 <div class="small-5 columns">
-                    <img ng-src="{{image.thumbnailUrl}}"/>
+                    <img ng-src="{{image.thumbnailImgUrl}}"/>
                 </div>
             </div>
             <div class="row">

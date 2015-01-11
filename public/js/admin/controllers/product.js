@@ -1,7 +1,7 @@
 'use strict';
 
-controllers.controller('ProductCtrl', ['$scope', '$http', '$location', '$routeParams', '_',
-    function ($scope, $http, $location, $routeParams, _) {
+controllers.controller('ProductCtrl', ['$scope', '$http', '$location', '$routeParams', '_', 'PermalinkService',
+    function ($scope, $http, $location, $routeParams, _, PermalinkService) {
 
         $scope.langSelected = 'en';
         $scope.languages = ['en','fr'];

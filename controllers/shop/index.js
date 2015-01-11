@@ -1,7 +1,6 @@
 'use strict';
 
-var querystring = require('querystring'),
-    ProductModel = require('../../models/productModel.js'),
+var ProductModel = require('../../models/productModel.js'),
     CollectionModel = require('../../models/collectionModel.js');
 
 module.exports = function (router) {
@@ -29,9 +28,12 @@ module.exports = function (router) {
             }).then(function (products) {
                 var collectionName = collection.name;
                 var descriptionToDisplay = collection.description[res.locals.language];
-                var summary = descriptionToDisplay.replace(/(<([^>]+)>)/ig,'');
-                if (!!descriptionToDisplay && descriptionToDisplay.length > 255) {
-                    summary = summary.substring(0, 255);
+                var summary = '';
+                if (descriptionToDisplay) {
+                    summary = descriptionToDisplay.replace(/(<([^>]+)>)/ig,'');
+                    if (!!descriptionToDisplay && descriptionToDisplay.length > 255) {
+                        summary = summary.substring(0, 255);
+                    }
                 }
                 var model =
                 {

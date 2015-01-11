@@ -86,8 +86,9 @@ module.exports.findByLanguageAndPermalink = function(language, permalink) {
 
 module.exports.upsert = function(article) {
     var deferred = Q.defer();
-    var id = !!article._id ? article._id : new mongoose.Types.ObjectId();
-    model.findByIdAndUpdate(id, article, {upsert: true}, function (err, articleFromDB) {
+
+    delete article._id;
+    model.update({permalink: article.permalink}, article, {upsert: true}, function (err, articleFromDB) {
         if (err) {
             deferred.reject(err);
         } else {

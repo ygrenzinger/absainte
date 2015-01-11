@@ -14,9 +14,9 @@ Absainte {product.name}
             <img class="main-img" src="{product.mainImage.imageUrl}"/>
 
             <div class="thumbnails">
-                <img data-url="{product.mainImage.imageUrl}" src="{product.mainImage.thumbnailUrl}"/>
+                <img data-url="{product.mainImage.imageUrl}" src="{product.mainImage.thumbnailImgUrl}"/>
                 {#product.otherImages}
-                <img data-url="{.imageUrl}" src="{.thumbnailUrl}"/>
+                <img data-url="{.imageUrl}" src="{.thumbnailImgUrl}"/>
                 {/product.otherImages}
             </div>
         </div>
@@ -52,7 +52,7 @@ Absainte {product.name}
         <div>{@pre type="content" key="recommendation"/}</div>
         {#product.recommendations}
         <a class="product-link" href="/shop/{.collectionFrom.type}/{.permalink}">
-            <img src="{.mainImage.thumbnailUrl}"/>
+            <img src="{.mainImage.thumbnailImgUrl}"/>
         </a>
         {/product.recommendations}
     </div>

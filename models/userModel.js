@@ -78,7 +78,7 @@ var upsert = function (user, isNewPassword) {
         user.password = bcrypt.hashSync(user.password, 8);
     }
 
-    if (_.contains(process.env.ADMINS, user.email)) {
+    if (process.env.NODE_ENV !== 'production' || _.contains(process.env.ADMINS, user.email)) {
         user.role = 'admin';
     } else {
         user.role = 'client';
