@@ -11,7 +11,7 @@
         "angular-route": "~1.2.23",
         "angular-sanitize": "~1.2.23",
         "ckeditor": "#full/4.4.4",
-        "ckeditor-imagebrowser-plugin": "git@github.com:ygrenzinger/ckeditor-imagebrowser.git",
+        "ckeditor-imagebrowser-plugin": "https://github.com/ygrenzinger/ckeditor-imagebrowser.git",
         "dustjs-linkedin-helpers": "^1.1.1",
         "dustjs-linkedin": "^2.0.3",
         "foundation": "~5.3.3",
