@@ -29,7 +29,7 @@ $(document).ready(function () {
     $('.product .thumbnails img').each(function () {
         var imageUrl = $(this).attr('data-url');
         $(this).click(function () {
-            $('.product .left  .main-img').attr('src', imageUrl);
+            $('.product-left .main-img').attr('src', imageUrl);
         })
     });
 

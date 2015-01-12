@@ -10,7 +10,7 @@ Absainte {product.name}
 {<body}
 <div class="main">
     <div class="product">
-        <div class="left">
+        <div class="product-left">
             <img class="main-img" src="{product.mainImage.imageUrl}"/>
 
             <div class="thumbnails">
@@ -20,7 +20,7 @@ Absainte {product.name}
                 {/product.otherImages}
             </div>
         </div>
-        <div class="right">
+        <div class="product-right">
 
             <form method="POST" action="/shop/{product.collectionFrom.type}/{product.permalink}/buy" id="buy-form">
                 <input type="hidden" name="item_id" value="{product.id}">
@@ -28,22 +28,25 @@ Absainte {product.name}
 
                 <h2>{product.name}</h2>
 
+                <div>
+                    <div><span class="price">{product.prettyPrice}</span></div>
+                    <div>
+                        <select name="color">
+                            <option value="gold">{@pre type="content" key="gold"/}</option>
+                            <option value="silver">{@pre type="content" key="silver"/}</option>
+                        </select>
+                    </div>
+                    <div><button type="submit"><i class="ion-heart"></i> {@pre type="content" key="addToCart"/}</button></div>
+                </div>
+
+                <div class="description">{descriptionToDisplay|s}</div>
+
                 <div class="social">
                     <i data-share-url="https://www.facebook.com/sharer/sharer.php?u=" class="share ion-social-facebook"></i>
                     <i data-share-url="https://plus.google.com/share?url=" class="share fa ion-social-googleplus"></i>
                     <i data-share-url="http://pinterest.com/pinthis?url=" class="share fa ion-social-pinterest"></i>
                     <i data-share-url='http://twitter.com/share?text={@pre type="content" key="twitterShare"/}&url='
                        class="share ion-social-twitter"></i>
-                </div>
-
-                <div>{descriptionToDisplay|s}</div>
-                <div class="price">{product.prettyPrice}</div>
-                <div>
-                    <select name="color">
-                        <option value="gold">{@pre type="content" key="gold"/}</option>
-                        <option value="silver">{@pre type="content" key="silver"/}</option>
-                    </select>
-                    <button class="buy" type="submit"><i class="ion-heart"></i> {@pre type="content" key="addToCart"/}</button>
                 </div>
             </form>
         </div>

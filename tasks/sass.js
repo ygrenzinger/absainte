@@ -13,7 +13,7 @@ module.exports = function sass(grunt) {
         build: {
             options: {
                 style: 'compressed',
-        				includePaths: refillPaths
+                includePaths: refillPaths
             },
             files: [{
                 expand: true,

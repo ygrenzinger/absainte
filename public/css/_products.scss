@@ -4,7 +4,7 @@
         max-width: 1000px;
     }
 
-    .left {
+    .product-left {
         @include span-columns(6);
         text-align: right;
 
@@ -13,23 +13,36 @@
         }
 
         .main-img {
-            max-height: 400px;
         }
 
         .thumbnails img {
-            height: 80px;
             margin: 4px;
         }
     }
 
-    .right {
-        div {
-            margin: 1em 0;
+    .product-right {
+        h2 {
+           margin-bottom: 1em;
         }
 
         select {
             display: inline;
             width: auto;
+            margin: 0;
+        }
+
+        button {
+            padding: 3px;
+        }
+
+        .price {
+            font-size: 1.3em;
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        .description {
+            margin-top: 1em
         }
 
         @include span-columns(6);
@@ -47,16 +60,6 @@
                 }
             }
         }
-
-        .price {
-            text-align: right;
-            font-weight: 600;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        .buy {
-            float: right;
-        }
     }
 
     @include clearfix;
@@ -64,7 +67,6 @@
 
 .recommendations {
     img {
-        width: 150px;
         margin: 0 5px;
     }
 }
@@ -73,7 +75,6 @@
     .recommendations {
         text-align: center;
         img {
-            width: 100px;
             margin: 0 5px;
         }
     }
