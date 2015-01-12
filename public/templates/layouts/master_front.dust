@@ -58,7 +58,6 @@
         <div class="centered-navigation-wrapper">
             <a href="" class="centered-navigation-menu-button">{@pre type="content" key="menuTitle"/}</a>
             <ul class="centered-navigation-menu">
-                <li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>
                 <li class="nav-link"><a href="{langPath}/shop/fashion-harness/collections">{@pre type="content" key="fashionHarness"/}</a></li>
                 <li class="nav-link"><a href="{langPath}/shop/body-jewelry/collections">{@pre type="content" key="bodyJewelry"/}</a></li>
                 <!--li class="nav-link more">{@pre type="content" key="collectionMenu"/}
@@ -67,6 +66,7 @@
                         <li><a href="{langPath}/products/body-jewelry/collection/{.permalink}">{@pre type="content" key="bodyJewelry"/}</a></li>
                     </ul>
                 </li-->
+                <li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>
                 <li class="nav-link"><a href="{langPath}/about">{@pre type="content" key="aboutMenu"/}</a></li>
                 <li class="nav-link"><a href="{langPath}/contact">{@pre type="content" key="contactMenu"/}</a></li>
             </ul>
