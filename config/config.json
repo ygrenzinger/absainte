@@ -1,7 +1,7 @@
 {
 
     "express": {
-        "view cache": false,
+        "view cache": true,
         "view engine": "js",
         "views": "path:./.build/templates"
     },
@@ -47,7 +47,7 @@
 
         "static": {
             "module": {
-                "arguments": [ "path:./.build" ]
+                "arguments": [ "path:./.build" , {"maxAge" : 86400000} ]
             }
         },
 

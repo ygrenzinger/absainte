@@ -6,14 +6,14 @@ module.exports = function sass(grunt) {
 	// Load task
 	grunt.loadNpmTasks('grunt-sass');
 	var refillPaths = refills.includePaths;
-    console.log("refillPaths: " +refillPaths);
 
 	// Options
 	return {
         build: {
             options: {
-                style: 'compressed',
-                includePaths: refillPaths
+                includePaths: refillPaths,
+                sourceMap: true,
+                outputStyle: 'compressed'
             },
             files: [{
                 expand: true,

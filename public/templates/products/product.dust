@@ -30,13 +30,15 @@ Absainte {product.name}
 
                 <div>
                     <div><span class="price">{product.prettyPrice}</span></div>
-                    <div>
+                    <!--div>
                         <select name="color">
                             <option value="gold">{@pre type="content" key="gold"/}</option>
                             <option value="silver">{@pre type="content" key="silver"/}</option>
                         </select>
                     </div>
-                    <div><button type="submit"><i class="ion-heart"></i> {@pre type="content" key="addToCart"/}</button></div>
+                    <div>
+                        <button type="submit"><i class="ion-heart"></i> {@pre type="content" key="addToCart"/}</button>
+                    </div-->
                 </div>
 
                 <div class="description">{descriptionToDisplay|s}</div>

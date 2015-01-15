@@ -18,7 +18,7 @@ html, body {
     color: $white;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
     height: 100%;
     width: 100%;
@@ -27,6 +27,8 @@ html, body {
 body {
     display: flex;
     vertical-align: middle;
+    max-height: 100em;
+    margin: auto;
 }
 
 #content-wrapper {

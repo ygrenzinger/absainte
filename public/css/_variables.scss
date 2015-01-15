@@ -49,7 +49,7 @@ $screen: "only screen" !default;
 $mobile: new-breakpoint(max-width 480px);
 $bigger-than-mobile: new-breakpoint(min-width 480px);
 
-$tablet: new-breakpoint(min-width 768px);
+$tablet: new-breakpoint(min-width 600px);
 $desktop: new-breakpoint(min-width 1024px);
 
 $landscape: "#{$screen} and (orientation: landscape)" !default;
