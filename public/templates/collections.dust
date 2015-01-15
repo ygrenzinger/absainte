@@ -36,7 +36,7 @@
         </div>
     {/collections}
     {:else}
-    Nothing found :(
+    {@pre type="content" key="nothing"/}
     {/collections}
 </div>
 {/body}

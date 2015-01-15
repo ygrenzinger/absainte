@@ -22,7 +22,7 @@ Absainte News
             </a>
         {/articles}
         {:else}
-        Nothing found :(
+        {@pre type="content" key="nothing"/}
         {/articles}
     </div>
 </div>

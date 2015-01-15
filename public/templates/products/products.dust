@@ -20,7 +20,7 @@ Absainte Collection {collectionName}
     </div>
     {/products}
     {:else}
-    Nothing found :(
+    {@pre type="content" key="nothing"/}
     {/products}
 </div>
 {/body}

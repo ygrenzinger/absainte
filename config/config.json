@@ -150,6 +150,28 @@
             "module": {
                 "name":"path:./lib/responseTime"
             }
+        },
+        "session": {
+            "enabled": true,
+            "priority": 100,
+            "module": {
+                "name": "path:./lib/session",
+                "arguments": [
+                    {
+                        "key": "absainte.sid",
+                        "secret": "QDuS78gBTods7kLzxSKMkpvsh",
+                        "cookie": {
+                            "path": "/",
+                            "httpOnly": true,
+                            "maxAge": null
+                        },
+                        "proxy": null
+                    },
+                    {
+                        "db": "sessions"
+                    }
+                ]
+            }
         }
     }
 }
