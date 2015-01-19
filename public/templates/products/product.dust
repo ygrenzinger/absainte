@@ -8,8 +8,17 @@ Absainte {product.name}
 {/description}
 
 {<body}
-<div class="main">
-    <div class="product">
+<div class="main product">
+
+    <div class="breadcrumb">
+        <a href="{langPath}/"><i class="ion-home"></i></a>
+        <span class="separator"><i class="ion-arrow-right-b"></i></span>
+        <a href="{langPath}/shop/{type}/collections/{product.collectionFrom.permalink}">{product.collectionFrom.name}</a>
+        <span class="separator"><i class="ion-arrow-right-b"></i></span>
+        {product.name}
+    </div>
+
+    <div>
         <div class="product-left">
             <img class="main-img" src="{product.mainImage.imageUrl}"/>
 

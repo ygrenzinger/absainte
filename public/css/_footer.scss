@@ -6,6 +6,8 @@ footer {
             text-align: center;
         }
     }
+
+    @include clearfix;
 }
 
 @include media($bigger-than-mobile) {

@@ -1,5 +1,4 @@
 .about {
-    @include outer-container;
     .about-img {
         @include span-columns(3);
 

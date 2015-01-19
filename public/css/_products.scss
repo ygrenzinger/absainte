@@ -1,3 +1,9 @@
+.breadcrumb {
+    .separator {
+        margin: 1em 0;
+    }
+}
+
 .product {
 
     @include media($desktop) {
@@ -88,6 +94,11 @@
 
     @include media($mobile) {
         text-align: center;
+    }
+
+    .description {
+        text-align: center;
+        margin-bottom: 3em;
     }
 
     h1 {

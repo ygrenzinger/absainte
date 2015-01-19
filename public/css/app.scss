@@ -3,7 +3,7 @@
 @import "base/grid-settings";
 @import "neat";
 
-@import "_variables.scss";
+@import "_variables";
 @import "_header";
 @import "_footer";
 @import "_contact";
@@ -29,16 +29,19 @@ body {
     display: table-cell;
     display: flex;
     vertical-align: middle;
-    max-height: 100em;
-    max-width: 100em;
     margin: auto;
 }
 
 #content-wrapper {
+    max-width: $max-width;
     margin: auto;
-    max-width: 100em;
     width: 100%;
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 2em;
 }
 
 .right {
