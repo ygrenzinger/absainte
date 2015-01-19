@@ -9,7 +9,7 @@ Absainte Collection {collectionName}
 {<body}
 <div class="main products">
     <h1>Collection {collectionName}</h1>
-    <div>{descriptionToDisplay|s}</div>
+    <div class="description">{descriptionToDisplay|s}</div>
     {?products}
     {#products}
     <div class="product-thumbnail">

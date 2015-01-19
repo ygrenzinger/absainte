@@ -8,3 +8,13 @@
     margin-right: auto;
     max-width: initial;
 }
+
+.image-browser-modal {
+
+    top: 1em;
+    position: absolute !important;
+
+    div {
+        position: relative !important;
+    }
+}

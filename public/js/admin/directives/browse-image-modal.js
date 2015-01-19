@@ -37,6 +37,7 @@ directivesModule.directive('browseImageModal', ['$modal', '$log',
                 var browse = function () {
 
                     var modalInstance = $modal.open({
+                        windowClass: 'image-browser-modal',
                         templateUrl: '/partials/browse-image-modal.html',
                         controller: BrowseImageModalCtrl,
                         resolve: {

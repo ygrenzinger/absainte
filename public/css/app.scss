@@ -18,22 +18,27 @@ html, body {
     color: $white;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
+    display: table;
     display: flex;
     height: 100%;
     width: 100%;
 }
 
 body {
+    display: table-cell;
     display: flex;
     vertical-align: middle;
     max-height: 100em;
+    max-width: 100em;
     margin: auto;
 }
 
 #content-wrapper {
-    margin: auto 1em;
+    margin: auto;
+    max-width: 100em;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .right {
