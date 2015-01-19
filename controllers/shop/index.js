@@ -26,7 +26,6 @@ module.exports = function (router) {
                 collection = collectionFromDB;
                 return ProductModel.findAllByCollectionId(collection.id);
             }).then(function (products) {
-                var collectionName = collection.name;
                 var descriptionToDisplay = collection.description[res.locals.language];
                 var summary = '';
                 if (descriptionToDisplay) {
@@ -37,7 +36,7 @@ module.exports = function (router) {
                 }
                 var model =
                 {
-                    collectionName: collectionName,
+                    collection: collection,
                     summary: summary,
                     descriptionToDisplay: descriptionToDisplay,
                     type: req.params.type,

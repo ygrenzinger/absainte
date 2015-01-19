@@ -8,17 +8,24 @@ Absainte {product.name}
 {/description}
 
 {<body}
-<div class="main product">
+<div class="main">
 
     <div class="breadcrumb">
         <a href="{langPath}/"><i class="ion-home"></i></a>
+        <span class="separator"><i class="ion-arrow-right-b"></i></span>
+        {@eq key=type value="fashion-harness"}
+        <a href="{langPath}/shop/fashion-harness/collections">{@pre type="content" key="fashionHarness"/}</a>
+        {/eq}
+        {@eq key=type value="body-jewelry"}
+        <a href="{langPath}/shop/body-jewelry/collections">{@pre type="content" key="bodyJewelry"/}</a>
+        {/eq}
         <span class="separator"><i class="ion-arrow-right-b"></i></span>
         <a href="{langPath}/shop/{type}/collections/{product.collectionFrom.permalink}">{product.collectionFrom.name}</a>
         <span class="separator"><i class="ion-arrow-right-b"></i></span>
         {product.name}
     </div>
 
-    <div>
+    <div class="product">
         <div class="product-left">
             <img class="main-img" src="{product.mainImage.imageUrl}"/>
 

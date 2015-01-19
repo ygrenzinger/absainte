@@ -1,14 +1,4 @@
-.breadcrumb {
-    .separator {
-        margin: 1em 0;
-    }
-}
-
 .product {
-
-    @include media($desktop) {
-        max-width: 1000px;
-    }
 
     .product-left {
         @include span-columns(6);
@@ -101,10 +91,10 @@
         margin-bottom: 3em;
     }
 
-    h1 {
+    h2 {
         width: 100%;
         text-align: center;
-        padding-bottom: 1em;
+        margin-bottom: 10px;
     }
 
     .product-thumbnail {

@@ -8,7 +8,21 @@ Absainte Collection {collectionName}
 
 {<body}
 <div class="main products">
-    <h1>Collection {collectionName}</h1>
+
+    <div class="breadcrumb">
+        <a href="{langPath}/"><i class="ion-home"></i></a>
+        <span class="separator"><i class="ion-arrow-right-b"></i></span>
+        {@eq key=type value="fashion-harness"}
+            <a href="{langPath}/shop/fashion-harness/collections">{@pre type="content" key="fashionHarness"/}</a>
+        {/eq}
+        {@eq key=type value="body-jewelry"}
+            <a href="{langPath}/shop/body-jewelry/collections">{@pre type="content" key="bodyJewelry"/}</a>
+        {/eq}
+        <span class="separator"><i class="ion-arrow-right-b"></i></span>
+        {collection.name}
+    </div>
+
+    <h2>{collection.name}</h2>
     <div class="description">{descriptionToDisplay|s}</div>
     {?products}
     {#products}
