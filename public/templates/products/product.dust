@@ -3,10 +3,10 @@
 {<title}
 Absainte&nbsp;
 {@eq key=type value="fashion-harness"}
-{@pre type="content" key="titleFashionHarness"/}
+{@pre type="content" key="fashionHarness"/}
 {/eq}
 {@eq key=type value="body-jewelry"}
-{@pre type="content" key="titleBodyJewelry"/}
+{@pre type="content" key="bodyJewelry"/}
 {/eq}
 &nbsp;{product.name}
 {/title}
