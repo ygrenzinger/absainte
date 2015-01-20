@@ -1,5 +1,5 @@
 {>"layouts/master_front" /}
-{<title}
+{<title}Absainte&nbsp;
     {@eq key=type value="fashion-harness"}
         {@pre type="content" key="titleFashionHarness"/}
     {/eq}

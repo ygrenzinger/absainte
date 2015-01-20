@@ -1,7 +1,14 @@
 {>"layouts/master_front" /}
 
 {<title}
-Absainte {product.name}
+Absainte&nbsp;
+{@eq key=type value="fashion-harness"}
+{@pre type="content" key="titleFashionHarness"/}
+{/eq}
+{@eq key=type value="body-jewelry"}
+{@pre type="content" key="titleBodyJewelry"/}
+{/eq}
+&nbsp;{product.name}
 {/title}
 {<description}
 {summary}

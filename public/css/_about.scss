@@ -10,6 +10,7 @@
 
     .about-txt {
         text-align: justify;
+        padding-right: 2em;
 
         @include span-columns(9);
 

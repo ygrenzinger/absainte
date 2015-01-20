@@ -1,6 +1,13 @@
 {>"layouts/master_front" /}
 {<title}
-Absainte Collection {collectionName}
+Absainte&nbsp;
+{@eq key=type value="fashion-harness"}
+{@pre type="content" key="fashionHarness"/}
+{/eq}
+{@eq key=type value="body-jewelry"}
+{@pre type="content" key="bodyJewelry"/}
+{/eq}
+&nbsp;Collection {collection.name}
 {/title}
 {<description}
 {summary}
@@ -30,7 +37,7 @@ Absainte Collection {collectionName}
         <a class="product-link" href="{langPath}/shop/{type}/{.permalink}">
             <img height="300" src="{.mainImage.listImgUrl}"/>
             <h5>{name}</h5>
-            <h5>{prettyPrice}</h5>
+            <h6>{prettyPrice}</h6>
         </a>
     </div>
     {/products}
