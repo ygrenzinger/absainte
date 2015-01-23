@@ -58,7 +58,7 @@ module.exports = function(router) {
           _id: req.body._id,
           collectionFrom: req.body.collectionFrom._id,
           name: req.body.name,
-          permalink: req.body.name,
+          permalink: req.body.permalink,
           price: req.body.price,
           mainImage: req.body.mainImage._id,
           description: {

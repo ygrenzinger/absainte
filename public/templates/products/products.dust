@@ -29,15 +29,15 @@ Absainte&nbsp;
         {collection.name}
     </div>
 
-    <h2>{collection.name}</h2>
+    <h1>{collection.name}</h1>
     <div class="description">{descriptionToDisplay|s}</div>
     {?products}
     {#products}
     <div class="product-thumbnail">
         <a class="product-link" href="{langPath}/shop/{type}/{.permalink}">
             <img height="300" src="{.mainImage.listImgUrl}"/>
-            <h5>{name}</h5>
-            <h6>{prettyPrice}</h6>
+            <div>{name}</div>
+            <div>{prettyPrice}</div>
         </a>
     </div>
     {/products}

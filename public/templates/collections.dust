@@ -31,7 +31,7 @@
         <div class="product-thumbnail">
             <a class="product-link" href="{langPath}/shop/{type}/collections/{.permalink}">
                 <img src="{.mainImage.listImgUrl}" alt="">
-                <h5>{.name}</h5>
+                <div>{.name}</div>
             </a>
         </div>
     {/collections}
