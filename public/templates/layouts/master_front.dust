@@ -12,7 +12,6 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link href="//cdn.jsdelivr.net/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/front.css"/>
-    <link rel="stylesheet" href="/css/ionicons.css"/>
     <!--[if lt IE 11]>
     <script src="/components/modernizr/modernizr.js"></script>
     <![endif]-->
