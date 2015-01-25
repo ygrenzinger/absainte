@@ -28,12 +28,12 @@
     </h1>
     {?collections}
     {#collections}
-        <div class="product-thumbnail">
+        <figure class="product-thumbnail">
             <a class="product-link" href="{langPath}/shop/{type}/collections/{.permalink}">
                 <img src="{.mainImage.listImgUrl}" alt="">
-                <div>{.name}</div>
+                <figcaption>{.name}</figcaption>
             </a>
-        </div>
+        </figure>
     {/collections}
     {:else}
     {@pre type="content" key="nothing"/}

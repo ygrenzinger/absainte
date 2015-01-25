@@ -1,18 +1,27 @@
 .product {
 
+    .slick-dots {
+        bottom: -30px;
+        li button:before {
+            color: white;
+        }
+    }
+
     .product-left {
         @include span-columns(6);
-        text-align: right;
+        text-align: center;
 
         @include media($mobile) {
             @include span-columns(12);
         }
 
-        .main-img {
-        }
+        .thumbnails {
+            width: 80%;
+            display: inline-block;
 
-        .thumbnails img {
-            margin: 4px;
+            img {
+                margin: 4px;
+            }
         }
     }
 
@@ -48,6 +57,7 @@
         }
 
         .social {
+            font-size: 1.3em;
             i {
                 margin: 0 0.5em;
                 color: #ffffff;
@@ -62,7 +72,9 @@
 }
 
 .recommendations {
+    margin-top: 10px;
     border-top: 1px solid white;
+
     .title {
         line-height: 2em;
         font-size: 1.2em;

@@ -33,13 +33,13 @@ Absainte&nbsp;
     <div class="description">{descriptionToDisplay|s}</div>
     {?products}
     {#products}
-    <div class="product-thumbnail">
+    <figure class="product-thumbnail">
         <a class="product-link" href="{langPath}/shop/{type}/{.permalink}">
             <img height="300" src="{.mainImage.listImgUrl}"/>
-            <div>{name}</div>
+            <figcaption>{name}</figcaption>
             <div>{prettyPrice}</div>
         </a>
-    </div>
+    </figure>
     {/products}
     {:else}
     {@pre type="content" key="nothing"/}

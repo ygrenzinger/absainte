@@ -76,4 +76,11 @@ $(document).ready(function () {
         errorElement: "span"
     });
 
+    $('.thumbnails').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 4
+    });
+
 });

@@ -37,9 +37,9 @@ Absainte&nbsp;
             <img class="main-img" src="{product.mainImage.imageUrl}"/>
 
             <div class="thumbnails">
-                <img data-url="{product.mainImage.imageUrl}" src="{product.mainImage.thumbnailImgUrl}"/>
+                <div><img data-url="{product.mainImage.imageUrl}" src="{product.mainImage.thumbnailImgUrl}"/></div>
                 {#product.otherImages}
-                <img data-url="{.imageUrl}" src="{.thumbnailImgUrl}"/>
+                <div><img data-url="{.imageUrl}" src="{.thumbnailImgUrl}"/></div>
                 {/product.otherImages}
             </div>
         </div>
