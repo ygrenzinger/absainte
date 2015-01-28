@@ -56,7 +56,7 @@ module.exports = function (router) {
                 if (!!descriptionToDisplay && descriptionToDisplay.length > 255) {
                     summary = summary.substring(0, 255);
                 }
-                ProductModel.findRandom(5).then(function (recommendations) {
+                ProductModel.findRandom(4).then(function (recommendations) {
                     product.recommendations = recommendations;
                     var model =
                     {

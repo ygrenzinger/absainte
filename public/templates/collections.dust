@@ -29,8 +29,20 @@
     {?collections}
     {#collections}
         <figure class="product-thumbnail">
-            <a class="product-link" href="{langPath}/shop/{type}/collections/{.permalink}">
-                <img src="{.mainImage.listImgUrl}" alt="">
+            <a class="product-link" href="{langPath}/shop/{type}/collections/{.permalink}"
+                title='{@eq key=type value="fashion-harness"}
+        {@pre type="content" key="titleFashionHarness"/}
+        {/eq}
+        {@eq key=type value="body-jewelry"}
+        {@pre type="content" key="titleBodyJewelry"/}
+        {/eq} {.name}'>
+                <img src="{.mainImage.listImgUrl}"
+                     alt='{@eq key=type value="fashion-harness"}
+        {@pre type="content" key="titleFashionHarness"/}
+        {/eq}
+        {@eq key=type value="body-jewelry"}
+        {@pre type="content" key="titleBodyJewelry"/}
+        {/eq} {.name}'>
                 <figcaption>{.name}</figcaption>
             </a>
         </figure>

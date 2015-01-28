@@ -34,7 +34,13 @@ Absainte&nbsp;
 
     <div class="product">
         <div class="product-left">
-            <img class="main-img" src="{product.mainImage.imageUrl}"/>
+            <img class="main-img" src="{product.mainImage.imageUrl}"
+                 alt='{@eq key=type value="fashion-harness"}
+                        {@pre type="content" key="fashionHarness"/}
+                        {/eq}
+                        {@eq key=type value="body-jewelry"}
+                        {@pre type="content" key="bodyJewelry"/}
+                        {/eq} {product.collectionFrom.name} {product.name}'/>
 
             <div class="thumbnails">
                 <div><img data-url="{product.mainImage.imageUrl}" src="{product.mainImage.thumbnailImgUrl}"/></div>
@@ -79,8 +85,20 @@ Absainte&nbsp;
     <div class="recommendations">
         <div class="title">{@pre type="content" key="recommendation"/}</div>
         {#product.recommendations}
-        <a class="product-link" href="/shop/{.collectionFrom.type}/{.permalink}">
-            <img src="{.mainImage.thumbnailImgUrl}"/>
+        <a class="product-link" href="{langPath}/shop/{.collectionFrom.type}/{.permalink}"
+           title='{@eq key=collectionFrom.type value="fashion-harness"}
+        {@pre type="content" key="fashionHarness"/}
+        {/eq}
+        {@eq key=collectionFrom.type value="body-jewelry"}
+        {@pre type="content" key="bodyJewelry"/}
+        {/eq} {.collectionFrom.name} {name}'>
+            <img src="{.mainImage.thumbnailImgUrl}"
+                alt='{@eq key=collectionFrom.type value="fashion-harness"}
+        {@pre type="content" key="fashionHarness"/}
+        {/eq}
+        {@eq key=collectionFrom.type value="body-jewelry"}
+        {@pre type="content" key="bodyJewelry"/}
+        {/eq} {.collectionFrom.name} {name}'/>
         </a>
         {/product.recommendations}
     </div>

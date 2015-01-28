@@ -1,10 +1,15 @@
 'use strict';
 
+require('nodetime').profile({
+    accountKey: process.env.NODETIME_KEY,
+    appName: 'Absainte website'
+});
+
 var kraken = require('kraken-js'),
     db = require('./lib/database'),
     app = require('express')(),
     options = require('./lib/spec')(app),
-    port = process.env.PORT || 8080;
+    port = process.env.PORT || 3000;
 
 app.use(kraken(options));
 

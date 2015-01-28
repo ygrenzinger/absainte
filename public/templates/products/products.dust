@@ -34,8 +34,20 @@ Absainte&nbsp;
     {?products}
     {#products}
     <figure class="product-thumbnail">
-        <a class="product-link" href="{langPath}/shop/{type}/{.permalink}">
-            <img height="300" src="{.mainImage.listImgUrl}"/>
+        <a class="product-link" href="{langPath}/shop/{type}/{.permalink}"
+            title='{@eq key=type value="fashion-harness"}
+        {@pre type="content" key="fashionHarness"/}
+        {/eq}
+        {@eq key=type value="body-jewelry"}
+        {@pre type="content" key="bodyJewelry"/}
+        {/eq} {collection.name} {name}'>
+            <img height="300" src="{.mainImage.listImgUrl}"
+                alt='{@eq key=type value="fashion-harness"}
+        {@pre type="content" key="fashionHarness"/}
+        {/eq}
+        {@eq key=type value="body-jewelry"}
+        {@pre type="content" key="bodyJewelry"/}
+        {/eq} {collection.name} {name}'/>
             <figcaption>{name}</figcaption>
             <div>{prettyPrice}</div>
         </a>
