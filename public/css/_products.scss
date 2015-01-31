@@ -19,6 +19,10 @@
             width: 80%;
             display: inline-block;
 
+            @include media($mobile) {
+                max-width: 300px;
+            }
+
             img {
                 margin: 4px;
             }
@@ -26,9 +30,6 @@
     }
 
     .product-right {
-        h2 {
-           margin-bottom: 1em;
-        }
 
         select {
             display: inline;
@@ -42,12 +43,13 @@
 
         .price {
             font-size: 1.3em;
-            margin: 10px 0;
+            margin: 1em;
             display: inline-block;
         }
 
         .description {
-            margin-top: 1em
+            padding: 1em;
+            text-align: justify;
         }
 
         @include span-columns(6);
@@ -64,6 +66,10 @@
                 &:hover {
                     color: darken(#ffffff, 20%);
                 }
+            }
+
+            @include media($mobile) {
+                float: right;
             }
         }
     }
@@ -122,7 +128,7 @@
     a.product-link {
         margin: 10px;
         color: $white;
-        font-weight: 700;
+        font-weight: 300;
         text-shadow: none;
         -webkit-transition: color 0.3s;
         -moz-transition: color 0.3s;

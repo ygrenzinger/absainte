@@ -57,6 +57,7 @@ header {
 }
 
 .centered-navigation {
+    z-index: 100;
     font-size: 14px;
     $centered-navigation-padding: 1em;
     $centered-navigation-background: rgba(#000, 0.8);

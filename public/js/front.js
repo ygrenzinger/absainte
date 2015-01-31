@@ -66,21 +66,39 @@ $(document).ready(function () {
         });
     });
 
-    var bLazy = new Blazy({
-        offset: 300, // Loads images 100px before they're visible
-        container: '#homepage' // Default is window
-    });
-
-
     $("#contact-form").validate({
         errorElement: "span"
     });
 
     $('.thumbnails').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
         infinite: true,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    infinite: true,
+                    dots: true,
+                    speed: 300,
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }
+        ]
+    });
+
+    $('.homepage').slick({
+        infinite: true,
+        lazyLoad: 'progressive',
+        autoplay: true,
+        autoplaySpeed: 2000,
         slidesToShow: 4,
-        slidesToScroll: 4
+        centerMode: true,
+        variableWidth: true,
+        accessibility: false,
+        arrows: false
     });
 
 });

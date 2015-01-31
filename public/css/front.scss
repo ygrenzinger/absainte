@@ -19,14 +19,12 @@ html, body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 14px;
-    display: table;
     display: flex;
     height: 100%;
     width: 100%;
 }
 
 body {
-    display: table-cell;
     display: flex;
     vertical-align: middle;
     margin: auto;
@@ -98,21 +96,7 @@ input {
 }
 
 .homepage {
-    white-space: nowrap;
-    overflow-x: auto;
-    .blank-container {
-        display: none;
-        @include media($desktop) {
-            display: inline-block;
-            width: $img-width;
-            height: $img-height;
-        }
-    }
-    img {
-        margin: 0 5px;
-        width: $img-width;
-        height: $img-height;
-    }
+    display: block;
 }
 
 .tooltip{
