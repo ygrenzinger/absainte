@@ -72,7 +72,7 @@
                         <li><a href="{langPath}/products/body-jewelry/collection/{.permalink}">{@pre type="content" key="bodyJewelry"/}</a></li>
                     </ul>
                 </li-->
-                <li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>
+                <!--<li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>-->
                 <li class="nav-link"><a href="{langPath}/about">{@pre type="content" key="aboutMenu"/}</a></li>
                 <li class="nav-link"><a href="{langPath}/contact">{@pre type="content" key="contactMenu"/}</a></li>
             </ul>
@@ -84,9 +84,9 @@
 
 <footer>
     <ul>
-        <li><a href="http://eepurl.com/1a_51">{@pre type="content" key="newsletter"/}</a></li>
+    <!--    <li><a href="http://eepurl.com/1a_51">{@pre type="content" key="newsletter"/}</a></li>
         <li><a href="/">{@pre type="content" key="cgv"/}</a></li>
-        <li><a href="/">{@pre type="content" key="sizeGuide"/}</a></li>
+        <li><a href="/">{@pre type="content" key="sizeGuide"/}</a></li>-->
         <li id="copyright"></li>
     </ul>
 </footer>

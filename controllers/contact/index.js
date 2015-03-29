@@ -22,7 +22,7 @@ module.exports = function (router) {
             mail.send('contact@absainte.com', 'Demande de Contact - Absainte', contactMessage).then(function() {
                 return mail.send(req.body.email, templates.confirmSubject, templates.confirmMessage);
             }).then(function() {
-                res.render('contact', {sended: false});
+                res.render('contact', {sended: true});
             }).fail(function(err) {
                 console.log(err);
                 res.render('contact', {sended: false});
