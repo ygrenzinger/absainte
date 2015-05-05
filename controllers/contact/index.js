@@ -1,6 +1,7 @@
 'use strict';
 
 var mail = require('../../lib/mail.js'),
+    _ = require('lodash'),
     app = require('express')();
 
 module.exports = function (router) {
@@ -10,6 +11,11 @@ module.exports = function (router) {
     });
 
     router.post('/', function (req, res) {
+
+        if (!_.isEmpty(req.body.tech)) {
+            res.render('contact', {sended: false});
+            return;
+        }
 
         var model = {
             firstname: req.body.firstname,
