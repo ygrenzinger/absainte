@@ -19,6 +19,11 @@ module.exports = function (router) {
 
     router.post('/', function (req, res) {
 
+        if (!_.isEmpty(req.body.tech)) {
+            res.render('contact', {sended: false});
+            return;
+        }
+
         var model = {
             firstname: req.body.firstname,
             lastname: req.body.lastname

@@ -17,6 +17,7 @@
             {/eq}</p>
         <p class="contact-txt">{@pre type="content" key="description"/}</p>
         <form class="contact-form" action="/buy" method="post">
+            <input type="text" name="tech" id="contact-tech" style="display: none;"/>
             <div>
                 <label for="contact-email">{@pre type="content" key="email"/}</label>
                 <input type="text" name="email" id="contact-email"/>

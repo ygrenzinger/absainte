@@ -13,7 +13,7 @@
             <input type="text" name="tech" id="contact-tech" style="display: none;"/>
             <div>
                 <label for="contact-email">{@pre type="content" key="email"/}</label>
-                <input type="text" name="email" id="contact-email"/>
+                <input type="url" name="email" id="contact-email"/>
             </div>
             <div>
                 <label for="contact-firstname">{@pre type="content" key="firstname"/}</label>
