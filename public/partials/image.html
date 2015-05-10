@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="small-12">
+        <form ng-submit="submit()">
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="type" class="right inline">Type</label>
+                </div>
+                <div class="small-10 columns">
+                    <input type="text" id="type" ng-model="image.type" placeholder="Image's type" required="true" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="name" class="right inline">Name</label>
+                </div>
+                <div class="small-10 columns">
+                    <input type="text" id="name" ng-model="image.name" placeholder="Image's name" required="true" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="permalink" class="right inline">Permalink</label>
+                </div>
+                <div class="small-10 columns">
+                    <input type="text" id="permalink" ng-model="image.permalink" placeholder="Image's permalink" required="true" readonly/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="thumbnail-image" class="right inline">Thumbnail image</label>
+                </div>
+                <div class="small-10 columns">
+                    <input type="text" id="thumbnail-image" ng-model="image.thumbnailImgUrl" required="true" readonly>
+                    <img ng-src="{{image.thumbnailImgUrl}}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="list-image" class="right inline">List image</label>
+                </div>
+                <div class="small-10 columns">
+                    <input type="text" id="list-image" ng-model="image.listImgUrl" required="true" readonly>
+                    <img ng-src="{{image.listImgUrl}}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="image" class="right inline">Image</label>
+                </div>
+                <div class="small-10 columns">
+                    <input type="text" id="image" ng-model="image.imageUrl" required="true" readonly>
+                    <img ng-src="{{image.imageUrl}}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="original-image" class="right inline">Original image</label>
+                </div>
+                <div class="small-10 columns">
+                    <input type="text" id="original-image" ng-model="image.largeImgUrl" required="true" readonly>
+                    <img ng-src="{{image.largeImgUrl}}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-8 columns">
+                    <alert ng-show="response" type="response.type">{{response.msg}}</alert>
+                </div>
+                <div class="small-4 columns">
+                    <button ng-click="saveCollection()" class="button right">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

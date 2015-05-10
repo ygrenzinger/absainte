@@ -25,10 +25,8 @@ angular.module('absainteAdmin', [
     $routeProvider.when('/collection/:permalink?', {templateUrl: '/partials/collection.html', controller: 'CollectionCtrl'});
     $routeProvider.when('/products', {templateUrl: '/partials/products.html', controller: 'ProductsCtrl'});
     $routeProvider.when('/product/:permalink?', {templateUrl: '/partials/product.html', controller: 'ProductCtrl'});
-    $routeProvider.when('/illustrations', {templateUrl: '/partials/illustrations.html', controller: 'IllustrationsCtrl'});
-    $routeProvider.when('/illustration/:permalink', {templateUrl: '/partials/illustration.html', controller: 'IllustrationCtrl'});
-    $routeProvider.when('/illustration-create', {templateUrl: '/partials/illustration-create.html', controller: 'IllustrationCreateCtrl'});
-    $routeProvider.when('/blog-create', {templateUrl: '/partials/blog-create.html', controller: 'BlogCreateCtrl'});
+    $routeProvider.when('/images', {templateUrl: '/partials/images.html', controller: 'ImagesCtrl'});
+    $routeProvider.when('/image/:permalink?', {templateUrl: '/partials/image.html', controller: 'ImageCtrl'});
     $routeProvider.otherwise({redirectTo: '/'});
 }]).run(function ($http, $cookies) {
     $http.defaults.headers.post['x-csrf-token'] = $cookies['XSRF-TOKEN'];

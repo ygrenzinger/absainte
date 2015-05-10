@@ -19,12 +19,11 @@ directivesModule.directive('richTextEditor', ['_',
             },
             templateUrl: '/partials/richTextEditor.html',
             controller: function($scope, $element){
-
                 $scope.editorOptions = {
                     language: 'en',
                     height: '200px',
-                    'skin': 'moono',
-                    'extraPlugins': "imagebrowser",
+                    skin: 'moono',
+                    extraPlugins: 'imagebrowser',
                     imageBrowser_listUrl: '/admin/images_list',
                     toolbarLocation: 'top',
                     format_tags: 'p;h2;h3;h4;h5;h6;pre;address;div',

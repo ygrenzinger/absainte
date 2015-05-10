@@ -19,7 +19,7 @@
 
 <script src="/components/jquery/dist/jquery.min.js"></script>
 <script src="/components/foundation/js/foundation.min.js"></script>
-<script src="/components/ckeditor/ckeditor.js"></script>
+<script src="/components/ckeditor-with-image-browser/ckeditor.js"></script>
 <script src="/components/angular/angular.min.js"></script>
 <script src="/components/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="/components/angular-route/angular-route.min.js"></script>
@@ -34,9 +34,8 @@
 <script src="/js/admin/services.js"></script>
 <script src="/js/admin/filters.js"></script>
 
-<!--script src="/js/admin/controllers/illustrations.js"></script>
-<script src="/js/admin/controllers/illustration.js"></script>
-<script src="/js/admin/controllers/illustration-create.js"></script-->
+<script src="/js/admin/controllers/images.js"></script>
+<script src="/js/admin/controllers/image.js"></script>
 <script src="/js/admin/controllers/collections.js"></script>
 <script src="/js/admin/controllers/collection.js"></script>
 <script src="/js/admin/controllers/products.js"></script>

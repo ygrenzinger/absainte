@@ -2,6 +2,7 @@
 
 var ProductModel = require('../../models/productModel.js'),
     mail = require('../../lib/mail.js'),
+    _ = require('lodash'),
     app = require('express')();
 
 module.exports = function (router) {

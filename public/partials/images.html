@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="large-3 medium-4 small-6 columns" ng-repeat="image in images">
+        <a ng-href="#/image/{{image.permalink}}">
+            <img style="width: 100%;" ng-src="{{image.listImgUrl}}">
+            <h6 class="panel">{{image.name}}</h6>
+        </a>
+    </div>
+</div>

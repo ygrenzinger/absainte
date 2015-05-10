@@ -36,6 +36,6 @@ function PermalinkService() {
 // Demonstrate how to register services
 // In this case it is a simple value service.
 angular.module('absainteAdmin.services', [])
-    .value('version', '0.1')
+    .value('version', '1.0.1')
     .service('AlertService', AlertService)
     .service('PermalinkService', PermalinkService);

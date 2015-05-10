@@ -9,8 +9,9 @@ var imageModel = function () {
         name: {type: String, required: true},
         permalink: {type: String, required: true, unique: true},
         imageUrl: {type: String, required: true},
-        thumbnailImgUrl: {type: String, required: true},
-        listImgUrl: {type: String, required: true}
+        thumbnailImgUrl: {type: String},
+        listImgUrl: {type: String, required: true} ,
+        largeImgUrl: {type: String}
     });
 
     return mongoose.model('Image', imageSchema);
