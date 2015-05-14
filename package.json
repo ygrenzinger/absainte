@@ -22,9 +22,7 @@
     "express": "^4.12.0",
     "express-session": "^1.10.3",
     "fs-extra": "^0.16.3",
-    "imagemagick": "^0.1.3",
-    "imagemagick-native": "^1.7.0",
-    "imagemagick-stream": "^2.0.0",
+    "gm": "^1.17.0",
     "kraken-devtools": "^1.2.1",
     "kraken-js": "^1.0.3",
     "localizr": "^1.0.2",
@@ -32,7 +30,7 @@
     "lusca": "^1.0.2",
     "mandrill-api": "^1.0.41",
     "method-override": "^2.3.1",
-    "mongoose": "^3.8.23",
+    "mongoose": "^4.0.2",
     "node-bourbon": "^1.2.3",
     "node-neat": "^1.4.2",
     "node-refills": "^1.0.1",
@@ -45,6 +43,7 @@
     "passport-local": "^1.0.0",
     "paypal-rest-sdk": "^1.5.0",
     "q": "^1.0.1",
+    "request": "^2.55.0",
     "s3-upload-stream": "^1.0.7"
   },
   "devDependencies": {
