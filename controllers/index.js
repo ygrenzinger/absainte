@@ -4,7 +4,14 @@ var passport = require('passport');
 
 var addOauthProvider = function(provider, router) {
 
-    router.get('/auth/'+provider, passport.authenticate(provider, { scope: [ 'email' ] }));
+    if (provider === 'google') {
+        router.get('/auth/'+provider, passport.authenticate(provider, {
+            scope: 'https://www.googleapis.com/auth/plus.login'
+        }));
+    } else {
+        router.get('/auth/'+provider, passport.authenticate(provider, { scope: [ 'email' ] }));
+    }
+
     router.get('/auth/'+provider+'/callback', function(req, res, next){
         passport.authenticate(provider, function(err, user, info){
             // This is the default destination upon successful login.
