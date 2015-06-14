@@ -1,6 +1,25 @@
-<p><a class="button expand" href="#/product">Nouveau produit</a></p>
+
 <div class="row">
-    <div class="large-3 medium-4 small-6 columns" ng-repeat="product in products">
+    <div class="small-6 columns">
+        <p><a class="button expand" href="#/product">Nouveau produit</a></p>
+    </div>
+    <div class="small-6 columns">
+        <form>
+            <select ng-model="selectedCollection"
+                    ng-options="collection.name for collection in collections">
+                <option value="">-- all --</option>
+            </select>
+        </form>
+        <label>
+            Name:
+            <input type="text" name="productName" ng-model="productName">
+        </label>
+    </div>
+</div>
+<div class="row">
+
+
+    <div class="large-3 medium-4 small-6 columns" ng-repeat="product in products | filter:{ collectionFrom: selectedCollection._id, name: productName }">
         <a ng-href="#/product/{{product.permalink}}">
             <img style="width: 100%;" ng-src="{{product.mainImage.listImgUrl}}">
             <h6 class="panel">{{product.name}}</h6>
