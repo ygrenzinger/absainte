@@ -29,5 +29,5 @@ angular.module('absainteAdmin', [
     $routeProvider.when('/image/:permalink?', {templateUrl: '/partials/image.html', controller: 'ImageCtrl'});
     $routeProvider.otherwise({redirectTo: '/'});
 }]).run(function ($http, $cookies) {
-    $http.defaults.headers.post['x-csrf-token'] = $cookies['XSRF-TOKEN'];
+    $http.defaults.headers.common['x-csrf-token'] = $cookies['XSRF-TOKEN'];
 });

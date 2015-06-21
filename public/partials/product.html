@@ -1,6 +1,6 @@
 <div class="row">
     <div class="small-12">
-        <form ng-submit="submit()">
+        <form name="createProduct" ng-submit="submit()">
             <div class="row">
                 <div class="small-2 columns">
                     <label class="right inline">Collection</label>
@@ -22,7 +22,7 @@
                     <label for="name" class="right inline">Name</label>
                 </div>
                 <div class="small-10 columns">
-                    <input type="text" id="name" ng-change="createPermalink()" ng-model="product.name" placeholder="Product's name">
+                    <input type="text" id="name" ng-change="createPermalink()" ng-model="product.name" required placeholder="Product's name">
                 </div>
             </div>
             <div class="row">
@@ -30,7 +30,7 @@
                     <label for="permalink" class="right inline">Permalink</label>
                 </div>
                 <div class="small-10 columns">
-                    <input type="text" id="permalink" ng-model="product.permalink" placeholder="Product's permalink" required="true"/>
+                    <input type="text" id="permalink" ng-model="product.permalink" required placeholder="Product's permalink"/>
                 </div>
             </div>
             <div class="row">
@@ -38,7 +38,7 @@
                     <label for="price" class="right inline">Price</label>
                 </div>
                 <div class="small-10 columns">
-                    <input type="number" id="price" ng-model="product.price">
+                    <input type="text" id="price" ng-model="product.price" ngPattern="\d+\.*\d*">
                 </div>
             </div>
             <div class="row">
@@ -104,7 +104,7 @@
                     <alert ng-show="response" type="response.type">{{response.msg}}</alert>
                 </div>
                 <div class="small-4 columns">
-                    <button ng-click="saveProduct()" class="button right">Submit</button>
+                    <button ng-click="saveProduct()" class="button right" ng-disabled="createProduct.$invalid">Submit</button>
                 </div>
             </div>
         </form>

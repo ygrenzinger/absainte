@@ -1,28 +1,44 @@
+<script type="text/ng-template" id="productDeleteModal.html">
+    <h3>Do you want to delete "{{product.name}}" ?</h3>
+    <button class="button" ng-click="cancel()">Cancel</button>
+    <button class="button alert" ng-click="ok()">OK</button>
+    <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+</script>
 
 <div class="row">
-    <div class="small-6 columns">
-        <p><a class="button expand" href="#/product">Nouveau produit</a></p>
+    <div class="small-12 columns">
+        <a class="button expand" href="#/product">Nouveau produit</a>
     </div>
-    <div class="small-6 columns">
-        <form>
-            <select ng-model="selectedCollection"
-                    ng-options="collection.name for collection in collections">
-                <option value="">-- all --</option>
-            </select>
-        </form>
-        <label>
-            Name:
-            <input type="text" name="productName" ng-model="productName">
-        </label>
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-6 columns">
+                <label>
+                    Collection:
+                    <select ng-model="selectedCollection"
+                            ng-options="collection.name for collection in collections">
+                        <option value="">-- all --</option>
+                    </select>
+                </label>
+            </div>
+            <div class="small-6 columns">
+                <label>
+                    Product's name:
+                    <input type="text" name="productName" ng-model="productName">
+                </label>
+            </div>
+        </div>
     </div>
 </div>
 <div class="row">
-
-
-    <div class="large-3 medium-4 small-6 columns" ng-repeat="product in products | filter:{ collectionFrom: selectedCollection._id, name: productName }">
-        <a ng-href="#/product/{{product.permalink}}">
-            <img style="width: 100%;" ng-src="{{product.mainImage.listImgUrl}}">
-            <h6 class="panel">{{product.name}}</h6>
-        </a>
-    </div>
+    <ul class="small-block-grid-5">
+        <li ng-repeat="product in products | filter:{ collectionFrom: selectedCollection._id, name: productName }">
+            <a ng-href="#/product/{{product.permalink}}">
+                <img style="width: 100%;" ng-src="{{product.mainImage.listImgUrl}}">
+            </a>
+            <div class="grid-item-name">
+                <span>{{product.name}}</span>
+                <a class="right" ng-click="delete(product)"><i class="fi-trash"></i></a>
+            </div>
+        </li>
+    </ul>
 </div>

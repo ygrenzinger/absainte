@@ -113,3 +113,15 @@ module.exports.upsert = function (product) {
     });
     return deferred.promise;
 };
+
+module.exports.delete = function (id) {
+    var deferred = Q.defer();
+    model.findByIdAndRemove(id, function (err) {
+        if (err) {
+            deferred.reject(err);
+        } else {
+            deferred.resolve();
+        }
+    });
+    return deferred.promise;
+};
