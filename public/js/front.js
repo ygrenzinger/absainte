@@ -22,7 +22,7 @@ $(document).ready(function () {
 
     (function() {
         var elmt = document.getElementById('copyright');
-        elmt.innerHTML = '&copy; 2013-' + new Date().getFullYear() + ', Absainte.';
+        elmt.innerHTML = '&copy; Absainte.';
     })();
 
     var menu = $('.centered-navigation-menu');
