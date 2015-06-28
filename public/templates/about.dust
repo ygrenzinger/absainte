@@ -20,7 +20,6 @@
             <p>{@pre type="content" key="part6"/}</p>
             <p>{@pre type="content" key="part7"/}</p>
             <p>{@pre type="content" key="part8"/}</p>
-            <p>{@pre type="content" key="part9"/}</p>
         </div>
     </div>
 {/body}
