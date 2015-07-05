@@ -66,6 +66,8 @@
             <ul class="centered-navigation-menu">
                 <li class="nav-link"><a href="{langPath}/shop/fashion-harness/collections">{@pre type="content" key="fashionHarness"/}</a></li>
                 <li class="nav-link"><a href="{langPath}/shop/body-jewelry/collections">{@pre type="content" key="bodyJewelry"/}</a></li>
+                <li class="nav-link"><a href="https://www.etsy.com/fr/shop/AbsainteParis">{@pre type="content" key="shop"/}</a></li>
+
                 <!--li class="nav-link more">{@pre type="content" key="collectionMenu"/}
                     <ul class="submenu">
                         <li><a href="{langPath}/products/fashion-harness/collection/{.permalink}">{@pre type="content" key="fashionHarness"/}</a>
