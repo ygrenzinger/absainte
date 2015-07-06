@@ -8,30 +8,70 @@
 
 {<body}
     <div class="main">
-        <p class="contact-txt">{@pre type="content" key="description"/}</p>
-        <form class="contact-form" action="/contact" method="post">
+        <form id="contact-form" class="contact-form" action="/contact" method="post" novalidate="novalidate">
             <input type="text" name="tech" id="contact-tech" style="display: none;"/>
             <div>
                 <label for="contact-email">{@pre type="content" key="email"/}</label>
-                <input type="url" name="email" id="contact-email"/>
+                <input type="email" name="email" id="contact-email" required="true"/>
             </div>
             <div>
-                <label for="contact-firstname">{@pre type="content" key="firstname"/}</label>
-                <input type="text" name="firstname" id="contact-firstname"/>
-            </div>
-            <div>
-                <label for="contact-lastname">{@pre type="content" key="lastname"/}</label>
-                <input type="text" name="lastname" id="contact-lastname"/>
+                <label for="contact-name">{@pre type="content" key="name"/}</label>
+                <input type="text" name="name" id="contact-name" required="true"/>
             </div>
             <div>
                 <label for="contact-message">{@pre type="content" key="message"/}</label>
-                <textarea rows="5" cols="50" name="message" id="contact-message"></textarea>
+                <textarea rows="5" cols="50" name="message" id="contact-message" required="true"></textarea>
             </div>
             <div>
                 <input type="hidden" name="_csrf" value="{_csrf}">
                 <div id="contact-form-error"></div>
                 <button type="submit">{@pre type="content" key="send"/}</button>
             </div>
+            {@eq key=sended value="ok"}<span class="sended ok">{@pre type="content" key="sended"/}</span>{/eq}
+            {@eq key=sended value="ko"}<span class="sended ko">{@pre type="content" key="sendError"/}</span>{/eq}
         </form>
     </div>
+    <script type="text/javascript">
+        window.onload = function() {
+            $("#contact-form").validate({
+                errorElement: "span",
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 5
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    message: {
+                        required: true,
+                        minlength: 20
+                    }
+                }
+            });
+
+            {@eq key=context.locality value="fr-FR"}
+                jQuery.extend(jQuery.validator.messages, {
+                    required: "Ce champ est requis.",
+                    remote: "Veuillez remplir ce champ pour continuer.",
+                    email: "Veuillez entrer une adresse email valide.",
+                    url: "Veuillez entrer une URL valide.",
+                    date: "Veuillez entrer une date valide.",
+                    dateISO: "Veuillez entrer une date valide (ISO).",
+                    number: "Veuillez entrer un nombre valide.",
+                    digits: "Veuillez entrer (seulement) une valeur numérique.",
+                    creditcard: "Veuillez entrer un numéro de carte de crédit valide.",
+                    equalTo: "Veuillez entrer une nouvelle fois la même valeur.",
+                    accept: "Veuillez entrer une valeur avec une extension valide.",
+                    maxlength: jQuery.validator.format("Veuillez ne pas entrer plus de {0} caractères."),
+                    minlength: jQuery.validator.format("Veuillez entrer au moins {0} caractères."),
+                    rangelength: jQuery.validator.format("Veuillez entrer entre {0} et {1} caractères."),
+                    range: jQuery.validator.format("Veuillez entrer une valeur entre {0} et {1}."),
+                    max: jQuery.validator.format("Veuillez entrer une valeur inférieure ou égale à  {0}."),
+                    min: jQuery.validator.format("Veuillez entrer une valeur supérieure ou égale à  {0}.")
+                });
+            {/eq}
+        };
+    </script>
 {/body}

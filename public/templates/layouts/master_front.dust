@@ -42,6 +42,9 @@
         </span-->
 
         <span>
+            <a href="https://www.etsy.com/fr/shop/AbsainteParis" title='shop' class="tooltip">
+                <i class="ion-bag"></i>
+            </a>
             <a href="https://www.facebook.com/pages/Absainte-Harnais-bijoux-de-corps/209587772440048?fref=ts"
                title='{@pre type="content" key="followFacebook"/}' class="tooltip">
                 <i class="ion-thumbsup"></i>

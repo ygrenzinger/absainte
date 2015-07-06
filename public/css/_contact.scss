@@ -1,28 +1,50 @@
-.contact-txt {
-    margin: 1em;
-    text-align: center;
-    width: 100%;
-}
 .contact-form {
+    margin: 0 1em;
 
-    margin: auto;
+    label,input, textarea, button {
+        margin-bottom:0.1em;
+        margin-top:0.7em;
+    }
 
     button {
         width: 100%;
     }
 
+    span.sended {
+        &.ok {
+            color: #CCFF99;
+        }
+        &.ko {
+            color: #FF9999;
+        }
+    }
+
+    span.error {
+        text-align: right;
+        width: 100%;
+        color: #FF9999;
+        padding-right: 10px;
+        display: inline-block;
+    }
+
     @include media($tablet) {
         width: 600px;
+        text-align: right;
+        margin: auto;
+
+        button {
+            width: 480px;
+        }
 
         input, textarea {
             display: inline-block;
-            width: 400px;
+            width: 480px;
         }
 
         label {
             display: inline-block;
             vertical-align: top;
-            width: 180px;
+            width: 100px;
             text-align: right;
             margin-right: 10px;
         }

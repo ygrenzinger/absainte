@@ -71,10 +71,11 @@ button {
 label {
     &.error {
         width: 100%;
+        color: #FF4D4D;
     }
 }
 
-input {
+input, textarea {
     &.valid {
         background: url(../img/icon-ok.png) no-repeat right center #e3ffe5;
         color: #002f00;
