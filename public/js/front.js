@@ -87,16 +87,4 @@ $(document).ready(function () {
         ]
     });
 
-    $('.homepage').slick({
-        infinite: true,
-        lazyLoad: 'progressive',
-        autoplay: true,
-        autoplaySpeed: 2000,
-        slidesToShow: 4,
-        centerMode: true,
-        variableWidth: true,
-        accessibility: false,
-        arrows: false
-    });
-
 });
