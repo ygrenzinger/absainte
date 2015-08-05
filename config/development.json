@@ -1,10 +1,10 @@
 {
+
     "express": {
         "view cache": false,
         "view engine": "dust",
         "views": "path:./public/templates"
     },
-
 
     "view engines": {
         "dust": {
@@ -12,7 +12,7 @@
             "renderer": {
                 "method": "dust",
                 "arguments": [
-                    { "cache": true, "helpers": "config:dust.helpers" }
+                    { "cache": false, "helpers": "config:dust.helpers" }
                 ]
             }
         }

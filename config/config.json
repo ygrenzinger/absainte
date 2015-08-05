@@ -1,6 +1,7 @@
 {
+
     "express": {
-        "view cache": false,
+        "view cache": true,
         "view engine": "js",
         "views": "path:./.build/templates"
     },
@@ -18,7 +19,7 @@
     },
 
     "dust": {
-        "helpers": ["dust-makara-helpers"]
+        "helpers": ["dust-makara-helpers", "dustjs-helpers"]
     },
 
 

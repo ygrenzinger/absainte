@@ -15,7 +15,6 @@
     {@eq key=env value="production"}
         <link rel="stylesheet" href="/css/prod.css"/>
     {:else}
-    qsdfqsdfqsdfqsddfdqs
         <link rel="stylesheet" href="/css/ionicons.css"/>
         <link rel="stylesheet" href="/css/front.css"/>
     {/eq}
