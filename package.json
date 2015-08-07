@@ -18,6 +18,7 @@
         "kraken-js": "^1.0.3",
         "makara": "^2.0.2",
         "dustjs-helpers": "~1.6.3",
+        "bcrypt": "^0.8.1",
         "aws-sdk": "^2.1.13",
         "lodash": "^3.3.0",
         "mandrill-api": "^1.0.41",
