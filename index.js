@@ -1,14 +1,6 @@
 'use strict';
 
-if (process.env.NODE_ENV === 'production' && !!process.env.NODE_ENV) {
-    require('nodetime').profile({
-        accountKey: process.env.NODETIME_KEY,
-        appName: 'Absainte website'
-    });
-}
-
 var kraken = require('kraken-js'),
-    db = require('./lib/database'),
     app = require('express')(),
     options = require('./lib/spec')(app),
     port = process.env.PORT || 3000;
