@@ -5,10 +5,10 @@
   "author": "Yannick Grenzinger <yannick.grenzinger@gmail.com>",
   "main": "index.js",
   "scripts": {
+    "postinstall": "./node_modules/grunt/bin/grunt build",
     "test": "grunt test",
     "build": "grunt build",
-    "launch": "node index.js",
-    "start": "npm run build && npm run launch"
+    "start": "node index.js"
   },
   "dependencies": {
     "adaro": "^0.1.7",
