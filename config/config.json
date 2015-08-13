@@ -31,11 +31,6 @@
         "fallback": "en-US"
     },
 
-    "databaseConfig": {
-        "host": "127.0.0.1:27017",
-        "database": "absainte"
-    },
-
     "paypalConfig": {
         "host": "api.sandbox.paypal.com",
         "port": "",
