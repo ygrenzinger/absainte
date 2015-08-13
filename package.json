@@ -5,8 +5,9 @@
   "author": "Yannick Grenzinger <yannick.grenzinger@gmail.com>",
   "main": "index.js",
   "scripts": {
+    "postinstall": "./node_modules/.bin/grunt build",
     "test": "grunt test",
-    "start": "./node_modules/grunt-cli/bin/grunt build && node index.js"
+    "start": "node index.js"
   },
   "engine": "node >= 0.12.0",
   "dependencies": {
