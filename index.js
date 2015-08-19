@@ -10,7 +10,7 @@ app.use(kraken(options));
 app.locals.env = process.env.NODE_ENV;
 
 app.listen(port, function (err) {
-    console.log('[%s] Listening on http://localhost:%d', app.settings.env, port);
+    console.log('[%s] Listening on http://localhost:%d with ENV ', app.settings.env, port, process.env.NODE_ENV);
 });
 
 
