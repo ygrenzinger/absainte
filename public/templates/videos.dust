@@ -1,0 +1,19 @@
+{>"layouts/master_front" /}
+{<title}
+    {@pre type="content" key="title"/}
+{/title}
+{<description}
+    {@pre type="content" key="description"/}
+{/description}
+
+{<body}
+    <div class="main">
+        <p><a href="https://vimeo.com/131888658">Absainte - Killing You Softly</a> from <a href="https://vimeo.com/atypic">Raphael Kindig</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        <iframe src="https://player.vimeo.com/video/131888658?color=ffffff&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lTeJGRGZHLY" frameborder="0" allowfullscreen></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OcuKX7QUs6s" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+{/body}

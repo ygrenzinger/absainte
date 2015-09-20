@@ -78,6 +78,7 @@
                     </ul>
                 </li-->
                 <!--<li class="nav-link"><a href="{langPath}/news">{@pre type="content" key="newsMenu"/}</a></li>-->
+                <li class="nav-link"><a href="{langPath}/videos">Videos</a></li>
                 <li class="nav-link"><a href="{langPath}/about">{@pre type="content" key="aboutMenu"/}</a></li>
                 <li class="nav-link"><a href="{langPath}/contact">{@pre type="content" key="contactMenu"/}</a></li>
             </ul>
