@@ -9,6 +9,11 @@
 
 {<body}
     <div id="homepage" class="homepage">
-        <img src="/img/splashscreen.jpg" alt="Absainte body jewelry"/>
+        <div><img data-lazy="/img/splashscreen1.jpg" alt="Absainte body jewelry"></div>
+        <div><img data-lazy="/img/splashscreen2.jpg" alt="Absainte body jewelry"></div>
+        <div><img data-lazy="/img/splashscreen3.jpg" alt="Absainte body jewelry"></div>
+        <div><img data-lazy="/img/splashscreen4.jpg" alt="Absainte body jewelry"></div>
+        <div><img data-lazy="/img/splashscreen5.jpg" alt="Absainte body jewelry"></div>
+        <div><img data-lazy="/img/splashscreen6.jpg" alt="Absainte body jewelry"></div>
     </div>
 {/body}

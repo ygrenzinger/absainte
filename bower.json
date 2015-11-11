@@ -11,17 +11,18 @@
     "angular-route": "~1.2.23",
     "angular-sanitize": "~1.2.23",
     "ckeditor-with-image-browser": "https://github.com/ygrenzinger/ckeditor-imagebrowser/raw/master/ckeditor.zip",
-    "dustjs-linkedin-helpers": "^1.1.1",
     "dustjs-linkedin": "^2.0.3",
+    "dustjs-linkedin-helpers": "^1.1.1",
     "foundation": "~5.3.3",
     "foundation-icon-fonts": "zurb/foundation-icon-fonts",
     "ionicons": "~2.0.0",
     "jquery": "~2.1.1",
+    "jquery-snowfall": "~1.7.4",
+    "jquery-validation": "~1.13.1",
     "lodash": "~2.4.1",
     "modernizr": "~2.8.3",
-    "ng-file-upload": "~1.6.5",
     "ng-ckeditor": "~0.2.1",
-    "jquery-validation": "~1.13.1",
+    "ng-file-upload": "~1.6.5",
     "slick.js": "~1.4.0"
   }
 }

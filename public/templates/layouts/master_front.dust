@@ -105,6 +105,7 @@
     <script src="/components/jquery-validation/src/localization/messages_fr.js"></script>
 {/eq}
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.0/slick.min.js"></script>
+<script type="text/javascript" src="/components/jquery-snowfall/dist/snowfall.jquery.min.js"></script>
 {@eq key=env value="production"}
 <script src="/js/prod.js"></script>
 {:else}

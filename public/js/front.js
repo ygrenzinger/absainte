@@ -87,4 +87,17 @@ $(document).ready(function () {
         ]
     });
 
+    $('.homepage').slick({
+        infinite: true,
+        lazyLoad: 'progressive',
+        autoplay: false,
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        centerMode: true,
+        accessibility: false,
+        arrows: false
+    });
+
+    $(document).snowfall();
+
 });
