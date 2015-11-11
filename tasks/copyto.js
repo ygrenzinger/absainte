@@ -9,7 +9,7 @@ module.exports = function copyto(grunt) {
 	return {
 	    build: {
             files: [{
-                cwd: 'public',
+                cwd: 'public/',
                 src: ['**/*'],
                 dest: '.build/'
             }],
