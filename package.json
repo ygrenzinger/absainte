@@ -9,7 +9,7 @@
     "test": "grunt test",
     "start": "node index.js"
   },
-  "engine": "node >= 0.12.0",
+  "engine": "0.12.x",
   "dependencies": {
     "adaro": "^0.1.7",
     "aws-sdk": "^2.1.13",
