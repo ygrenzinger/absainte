@@ -90,7 +90,7 @@ $(document).ready(function () {
     $('.homepage').slick({
         infinite: true,
         lazyLoad: 'progressive',
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         slidesToShow: 1,
         centerMode: true,
