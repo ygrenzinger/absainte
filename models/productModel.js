@@ -103,12 +103,11 @@ module.exports.findAllByCollectionId = function (collectionId) {
 
 module.exports.upsert = function (product) {
     var deferred = Q.defer();
-    delete product._id;
-    model.update({permalink: product.permalink}, product, {upsert: true}, function (err) {
+    model.findByIdAndUpdate({_id: product._id}, product, {upsert: true, 'new': true}, function (err, updateProduct) {
         if (err) {
             deferred.reject(err);
         } else {
-            deferred.resolve(product);
+            deferred.resolve(updateProduct);
         }
     });
     return deferred.promise;

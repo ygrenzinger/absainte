@@ -1,297 +1,509 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-<url>
-  <loc>http://absainte.com/</loc>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/collections</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/body-jewelry/collections</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://absainte.com/news</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://absainte.com/about</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://absainte.com/contact</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/collections</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/body-jewelry/collections</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/news</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/about</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/contact</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/collections/love-me-tender</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/collections/sweet-aristocratie</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/body-jewelry/collections/me-amor</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/collections/love-me-tender</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/collections/sweet-aristocratie</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/body-jewelry/collections/me-amor</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Monica</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Alexandra</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Noa</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Mouna</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Appoline</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Irina</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Christina</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Ambres</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Narcisse</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Valentina</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Etourdissante</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Douce</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Exaltante</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/delicieuse</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Envoutante</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/seduisante</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/etincelante</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Captive</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Enivrante</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Exquise</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/fashion-harness/Silver</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/body-jewelry/Idaline</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/body-jewelry/Angelina</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/body-jewelry/Anna</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/body-jewelry/Nina</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/body-jewelry/Katherine</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/shop/body-jewelry/Dallia</loc>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Monica</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Alexandra</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Noa</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Mouna</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Appoline</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Irina</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Christina</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Ambres</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Narcisse</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Valentina</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Etourdissante</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Douce</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Exaltante</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/delicieuse</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Envoutante</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/seduisante</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/etincelante</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Captive</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Enivrante</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Exquise</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/fashion-harness/Silver</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/body-jewelry/Idaline</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/body-jewelry/Angelina</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/body-jewelry/Anna</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/body-jewelry/Nina</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/body-jewelry/Katherine</loc>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://absainte.com/fr/shop/body-jewelry/Dallia</loc>
-  <priority>0.41</priority>
-</url>
+    <url>
+        <loc>http://www.absainte.com/</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/collections</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/body-jewelry/collections</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/videos</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/about</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/contact</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/collections</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/body-jewelry/collections</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/videos</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/about</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/contact</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/collections/love-me-tender</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/collections/sweet-aristocratie</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/collections/amazones</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/body-jewelry/collections/me-amor</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/collections/love-me-tender</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/collections/sweet-aristocratie</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/collections/amazones</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/body-jewelry/collections/me-amor</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Alexandra</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Monica</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Noa</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Mouna</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Appoline</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Irina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Christina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Ambres</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Narcisse</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Valentina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Etourdissante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Enivrante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Douce</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Exaltante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Envoutante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Captive</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Exquise</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/Silver</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/delicieuse</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/etincelante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/seduisante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/ozalee</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/naia</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/ama</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/ona-top</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/hawa</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/ona-tanga</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/bintou</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/syllia</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/asha</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/sakina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/imalla</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/kyra</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/fashion-harness/kaya</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/body-jewelry/Idaline</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/body-jewelry/Angelina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/body-jewelry/Anna</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/body-jewelry/Nina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/body-jewelry/Katherine</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/shop/body-jewelry/Dallia</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Alexandra</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Monica</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Noa</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Mouna</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Appoline</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Irina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Christina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Ambres</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Narcisse</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Valentina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Etourdissante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Enivrante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Douce</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Exaltante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Envoutante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Captive</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Exquise</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/Silver</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/delicieuse</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/etincelante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/seduisante</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/ozalee</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/naia</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/ama</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/ona-top</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/hawa</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/ona-tanga</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/bintou</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/syllia</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/asha</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/sakina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/imalla</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/kyra</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/fashion-harness/kaya</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/body-jewelry/Idaline</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/body-jewelry/Angelina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/body-jewelry/Anna</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/body-jewelry/Nina</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/body-jewelry/Katherine</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
+    <url>
+        <loc>http://www.absainte.com/fr/shop/body-jewelry/Dallia</loc>
+        <lastmod>2015-12-10T19:56:26+00:00</lastmod>
+        <priority>0.41</priority>
+    </url>
 </urlset>

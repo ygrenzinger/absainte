@@ -71,13 +71,11 @@ module.exports.findByPermalink = function (permalink) {
 
 module.exports.upsert = function (collection) {
     var deferred = Q.defer();
-
-    delete collection._id;
-    model.update({permalink: collection.permalink}, collection, {upsert: true}, function (err) {
+    model.findByIdAndUpdate({_id: collection._id}, collection, {upsert: true, 'new': true}, function (err, updateCollection) {
         if (err) {
             deferred.reject(err);
         } else {
-            deferred.resolve(collection);
+            deferred.resolve(updateCollection);
         }
     });
     return deferred.promise;
