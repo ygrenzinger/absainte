@@ -10,7 +10,7 @@
     "angular-foundation": "~0.3.1",
     "angular-route": "~1.2.23",
     "angular-sanitize": "~1.2.23",
-    "ckeditor-with-image-browser": "http://github.com/ygrenzinger/ckeditor-imagebrowser/raw/master/ckeditor.zip",
+    "ckeditor-with-image-browser": "https://github.com/ygrenzinger/ckeditor-imagebrowser/raw/master/ckeditor.zip",
     "dustjs-linkedin": "^2.0.3",
     "dustjs-linkedin-helpers": "^1.1.1",
     "foundation": "~5.3.3",
