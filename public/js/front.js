@@ -52,13 +52,6 @@ $(document).ready(function () {
             'width=626,height=436');
     });
 
-    $('.product .thumbnails img').each(function () {
-        var imageUrl = $(this).attr('data-url');
-        $(this).click(function () {
-            $('.product-left .main-img').attr('src', imageUrl);
-        })
-    });
-
     $('#buy-test').click(function (e) {
         e.preventDefault();
         $.post("buy", $("#buy-form").serialize()).done(function (data) {
@@ -85,6 +78,20 @@ $(document).ready(function () {
                 }
             }
         ]
+    });
+
+    function changeImageOnThumbnailClick() {
+        $('.product .thumbnails img').each(function () {
+            var imageUrl = $(this).attr('data-url');
+            $(this).click(function () {
+                $('.product-left .main-img').attr('src', imageUrl);
+            });
+        });
+    }
+    changeImageOnThumbnailClick();
+
+    $('.thumbnails').on('init', function(event, slick){
+        changeImageOnThumbnailClick();
     });
 
     $('.homepage').slick({
