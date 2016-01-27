@@ -42,9 +42,9 @@
         </span-->
 
         <span>
-            <a href="https://www.etsy.com/fr/shop/AbsainteParis" title='shop' class="tooltip">
+            <!--a href="https://www.etsy.com/fr/shop/AbsainteParis" title='shop' class="tooltip">
                 <i class="ion-bag"></i>
-            </a>
+            </a-->
             <a href="https://www.facebook.com/pages/Absainte-Harnais-bijoux-de-corps/209587772440048?fref=ts"
                title='{@pre type="content" key="followFacebook"/}' class="tooltip">
                 <i class="ion-thumbsup"></i>
@@ -69,7 +69,7 @@
             <ul class="centered-navigation-menu">
                 <li class="nav-link"><a href="{langPath}/shop/fashion-harness/collections">{@pre type="content" key="fashionHarness"/}</a></li>
                 <li class="nav-link"><a href="{langPath}/shop/body-jewelry/collections">{@pre type="content" key="bodyJewelry"/}</a></li>
-                <li class="nav-link"><a href="https://www.etsy.com/fr/shop/AbsainteParis">{@pre type="content" key="shop"/}</a></li>
+                <!--li class="nav-link"><a href="https://www.etsy.com/fr/shop/AbsainteParis">{@pre type="content" key="shop"/}</a></li-->
 
                 <!--li class="nav-link more">{@pre type="content" key="collectionMenu"/}
                     <ul class="submenu">
